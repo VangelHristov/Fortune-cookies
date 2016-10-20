@@ -1,0 +1,30 @@
+{
+  "name": "fortune-cookies",
+  "version": "1.0.0",
+  "description": "##  App description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Doncho Minkov (donchominkov@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "lowdb": "^0.10.2",
+    "underscore-db": "^0.9.0"
+  },
+  "jspm": {
+    "directories": {
+      "packages": "public/jspm_packages"
+    },
+    "configFile": "public/systemjs-config.js",
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
