@@ -27,8 +27,10 @@ export const EVENT_HANDLER = (() => {
         let validUser = getUser(ev);
 
         if (validUser) {
-            DB.createUser(validUser, UTIL.warn)
-                .then(() => UTIL.confirm('You have successfully signed up.'));
+            DB.createUser(validUser)
+                .then(() => UTIL.confirm('You have successfully signed up.'))
+		.then(() => window.location = '#/login')
+		.catch(UTIL.warn);
         }
     }
 
@@ -36,8 +38,10 @@ export const EVENT_HANDLER = (() => {
         let validUser = getUser(ev);
 
         if (validUser) {
-            DB.authUser(validUser, UTIL.warn)
-                .then(UTIL.logIn);
+            DB.authUser(validUser)
+                .then(UTIL.logIn)
+		.then(() => window.location = '#/home')
+		.catch(UTIL.warn);
         }
     }
 
@@ -56,11 +60,11 @@ export const EVENT_HANDLER = (() => {
             DB.shareCookie({
                 text: cookieText,
                 category: cookieCategory,
-                url: cookieImageUrl
+                img: cookieImageUrl
             })
               .then(() => {
                   UTIL.confirm('Successfully added new cookie.');
-                  CONTROLLER.update(window.location.hash);
+		  window.location = '#/home';
               })
               .catch(UTIL.warn);
         }
@@ -91,11 +95,11 @@ export const EVENT_HANDLER = (() => {
             return UTIL.warn('You must be logged in.');
         }
 
-        let $targetParent = $(ev.target).parent(),
+        let $targetParent = $(ev.target).parent().parent(),
             cookie = {
-                text: $targetParent.siblings('.cookie-text').val(),
-                category: $targetParent.siblings('.cookie-category').val(),
-                url: $targetParent.siblings('.cookie-img').attr('src')
+                text: $targetParent.find('.cookie-text').text(),
+                category: $targetParent.find('.cookie-category').text(),
+                img: $targetParent.find('.cookie-img').attr('src')
             };
 
         DB.shareCookie(cookie)

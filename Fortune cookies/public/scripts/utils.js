@@ -14,7 +14,9 @@ export const UTIL = (() => {
         ROOT = $('#root'),
         ALERT = $('<div />')
             .attr('id', 'alert')
-            .addClass('alert col-lg-4');
+            .addClass('alert col-lg-4'),
+	LOGOUT_BTN = $('#logout'),
+	LOGIN_BTNS = $('#login');
 
     let loggedIn = false;
 
@@ -87,7 +89,8 @@ export const UTIL = (() => {
         loggedIn = true;
 
         $('#username-placeholder').text(username);
-        toggleHidden();
+        hideLogin();
+	showLogout();
 
         STORAGE[USER] = username;
 
@@ -97,7 +100,8 @@ export const UTIL = (() => {
 
     function logOut() {
         loggedIn = false;
-        toggleHidden();
+        hideLogout();
+	showLogin();
 
         STORAGE.removeItem(USER);
         STORAGE.removeItem(PASSHASH);
@@ -110,15 +114,35 @@ export const UTIL = (() => {
         if (username) {
 
             loggedIn = true;
-            toggleHidden();
+            hideLogin();
+	    showLogout();
 
             $('#username-placeholder').text(username);
         }
     }
 
-    function toggleHidden() {
-        $('#login').toggleClass('hidden');
-        $('#logout').toggleClass('hidden');
+    function showLogout(){
+	if(LOGOUT_BTN.hasClass('hidden')){
+	     	LOGOUT_BTN.removeClass('hidden');
+	}
+    }
+
+    function showLogin(){
+	if(LOGIN_BTNS.hasClass('hidden')){
+	     	LOGIN_BTNS.removeClass('hidden');
+	}
+    }
+
+    function hideLogin(){
+	if(!LOGIN_BTNS.hasClass('hidden')){
+	     	LOGIN_BTNS.addClass('hidden');
+	}	
+    }
+
+    function hideLogout(){
+	if(!LOGOUT_BTN.hasClass('hidden')){
+	     	LOGOUT_BTN.addClass('hidden');
+	}	
     }
 
     function encrypt(password) {

@@ -64,13 +64,12 @@ export const DB = (() => {
                 dataType: 'json',
                 data: STRINGIFY(user),
                 success: (response) => resolve(response.result),
-                error: reject
+                error: (error) => reject(error.responseText)
             });
         });
     }
 
     function authUser(user) {
-        console.log(user);
         return new Promise((resolve, reject) => {
             $.ajax({
                 url: '/api/auth',
@@ -84,7 +83,7 @@ export const DB = (() => {
                 },
                 error: (error) => reject(error.responseText)
             });
-        })
+        });
     }
 
     function shareCookie(cookie) {

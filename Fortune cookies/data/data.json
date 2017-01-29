@@ -1,39 +1,8 @@
 {
   "users": [
-    {
-      "username": "Minkov",
-      "passHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-      "usernameToLower": "minkov",
-      "id": "16655985-e510-43d4-ad1c-2388c76d1ef6",
-      "authKey": "16655985-e510-43d4-ad1c-2388c76d1ef6FwHCPd*bP:.;Fu&:evl)RPGg"
-    },
-    {
-      "username": "vangelhristov",
-      "passHash": "7c4a8d09ca3762af61e59520943dc26494f8941b",
-      "usernameToLower": "vangelhristov",
-      "id": "acc8b797-d7bd-4544-a0ff-13a3481f6590",
-      "authKey": "acc8b797-d7bd-4544-a0ff-13a3481f6590JrhAmRLAgFmKfHdjlfELYnto",
-      "myCookies": [
-        {
-          "text": "Burn them with your mind power",
-          "category": "Cool",
-          "id": "2dae28aa-ee64-4bc1-8591-29284d88c9e9",
-          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
-          "likes": 0,
-          "dislikes": 0,
-          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-          "shareDate": "2016-06-26T23:01:28.588Z"
-        }
-      ]
-    },
-    {
-      "username": "Test",
-      "passHash": "itworks3",
-      "usernameToLower": "asdfgj",
-      "id": "e8ee2526-1308-4a93-aec6-baeaf0984879",
-      "authKey": "e8ee2526-1308-4a93-aec6-baeaf0984879FSNgHfCqnCxiLhVPtfOhpPkL",
-      "myCookies": [
-        {
+  ],
+  "cookies": [
+ {
           "text": "Hidden in a valley beside an open stream- This will be the type of place where you will find your dream",
           "category": "Wisdom",
           "id": "ea91a233-bcf3-48b6-933f-05857f4aea87",
@@ -65,118 +34,14 @@
           "shareDate": "2016-06-27T03:26:00.145Z",
           "id": "2a8d2693-89c4-46ca-961b-ea484e5c2aa8",
           "hours": 14
-        }
-      ]
-    },
-    {
-      "username": "vangel86",
-      "passHash": "7c4a8d09ca3762af61e59520943dc26494f8941b",
-      "usernameToLower": "vangel86",
-      "id": "81caa27f-c04a-487c-a838-74875e4464c2"
-    },
-    {
-      "username": "newTestUser",
-      "passHash": "password",
-      "usernameToLower": "newtestuser",
-      "id": "370b62c3-2d0d-4451-be13-ae044ad74eba",
-      "authKey": "370b62c3-2d0d-4451-be13-ae044ad74ebaViyxqKrtwkMxNdFaCrBHKgUd"
-    },
-    {
-      "username": "VangelHristov123456",
-      "passHash": "7c4a8d09ca3762af61e59520943dc26494f8941b",
-      "usernameToLower": "vangelhristov123456",
-      "id": "2899b977-c3e9-4fb5-9f56-3d0770631d29"
-    },
-    {
-      "username": "1234567890",
-      "passHash": "2012756f62a55082906a3f762e26fc15e37deef3",
-      "usernameToLower": "1234567890",
-      "id": "3c83ebe6-e166-4d17-b429-64eddb7e9b46"
-    },
-    {
-      "username": "qwerty",
-      "passHash": "b1b3773a05c0ed0176787a4f1574ff0075f7521e",
-      "usernameToLower": "qwerty",
-      "id": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "authKey": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5RzMKldWlmSvfRNHnoxFYZKzx",
-      "myCookies": [
-        {
-          "text": "Today it's up to you to create the peacefulness you long for",
-          "category": "Wisdom",
-          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
-          "likes": 2,
-          "dislikes": 2,
-          "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "shareDate": "2016-06-27T01:43:12.706Z",
-          "id": "1c21b26a-6f2f-4982-898b-ade8ad9bd243",
-          "hours": 19
         },
-        {
-          "text": "",
-          "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-          "likes": 2,
-          "dislikes": 1,
-          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-          "shareDate": "2016-10-03T16:39:59.450Z",
-          "id": "15af689a-9754-4e8c-8489-f44f76376dd9",
-          "hours": 20
-        },
-        {
-          "text": "",
-          "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-          "likes": 2,
-          "dislikes": 1,
-          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-          "shareDate": "2016-10-03T16:39:59.450Z",
-          "id": "15af689a-9754-4e8c-8489-f44f76376dd9",
-          "hours": 20
-        },
-        {
-          "text": "",
-          "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-          "likes": 2,
-          "dislikes": 1,
-          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-          "shareDate": "2016-10-03T16:39:59.450Z",
-          "id": "15af689a-9754-4e8c-8489-f44f76376dd9",
-          "hours": 20
-        },
-        {
-          "text": "",
-          "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-          "likes": 2,
-          "dislikes": 1,
-          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-          "shareDate": "2016-10-03T16:39:59.450Z",
-          "id": "15af689a-9754-4e8c-8489-f44f76376dd9",
-          "hours": 20
-        },
-        {
-          "text": "",
-          "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-          "likes": 2,
-          "dislikes": 1,
-          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-          "shareDate": "2016-10-03T16:39:59.450Z",
-          "id": "15af689a-9754-4e8c-8489-f44f76376dd9",
-          "hours": 20
-        }
-      ]
-    }
-  ],
-  "cookies": [
     {
       "text": "Burn them with your mind powers",
       "category": "Cool",
       "id": "2dae28aa-ee64-4bc1-8591-29284d88c9e9",
       "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
-      "likes": 0,
-      "dislikes": 0,
+      "likes": 4,
+      "dislikes": 1,
       "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
       "shareDate": "2016-06-26T23:01:28.588Z",
       "hours": 19
@@ -243,236 +108,35 @@
       "id": "56458e53-7056-414d-a433-5641fe3b5479"
     },
     {
-      "username": "newTestUser",
-      "passHash": "password",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 1,
+      "text": "hello world!!!",
+      "category": "Programming",
+      "img": "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsd.keepcalm-o-matic.co.uk%2Fi%2Fkeep-calm-and-system-out-println-hello-world.png&f=1",
+      "userId": "da7a2ee2-73dc-485f-8c28-1f576a587b48",
+      "likes": 0,
       "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:29:10.912Z",
-      "id": "ef01612a-d999-4f28-bbd5-53127c9bd43d"
+      "shareDate": "2017-01-29T09:47:32.637Z",
+      "id": "1a985a48-24bb-4a6a-97c1-5dc62fcd5cef"
     },
     {
-      "text": "chwecking",
-      "category": "checking",
-      "url": "",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 2,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:29:31.390Z",
-      "id": "8df711ae-68db-4e06-a34a-a28614871ebf"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
+      "text": "Your high-minded principles spell success",
+      "category": "Inspiration",
+      "url": "http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg",
+      "userId": "da7a2ee2-73dc-485f-8c28-1f576a587b48",
       "likes": 0,
       "dislikes": 0,
       "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:35:07.543Z",
-      "id": "f157deb4-22d3-4a3a-af42-3ce3afc33e31"
+      "shareDate": "2017-01-29T09:58:07.961Z",
+      "id": "99739905-99ab-4722-a1ef-2c61bf374d59"
     },
     {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
+      "text": "Today it's up to you to create the peacefulness you long for",
+      "category": "Wisdom",
+      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "userId": "b9809dd1-1a14-4cd5-a278-f7b5e8d13aee",
       "likes": 0,
       "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:35:12.649Z",
-      "id": "11f86951-cc45-447a-89ae-517a5cb9a8b6"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:39:58.329Z",
-      "id": "02447937-ee97-4c57-9831-6a4199e46b2b"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 2,
-      "dislikes": 1,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:39:59.450Z",
-      "id": "15af689a-9754-4e8c-8489-f44f76376dd9",
-      "hours": 20
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:05.337Z",
-      "id": "24254e8e-39c6-4e38-9cef-8b207077f7ca"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:05.641Z",
-      "id": "92e42c3f-8b39-4bb1-8d40-f7ead8ef1ae2"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:05.807Z",
-      "id": "18efe0a8-9774-4f62-9e70-a1831e2bf226"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:05.958Z",
-      "id": "0b0fbc31-737d-4499-ab27-4c401066c4ba"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:06.123Z",
-      "id": "3521522f-f65f-4261-9f7d-0e84e62de06c"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:06.310Z",
-      "id": "69b65972-bd82-46db-9234-ae5744d32fc2"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:06.459Z",
-      "id": "a265c0ff-db0c-476c-a93f-f2d0762a0d18"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:06.608Z",
-      "id": "dc25aa85-f0f6-4dc2-9e62-cd310d0d7b7d"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:40:06.758Z",
-      "id": "1eb0b167-fcf4-4017-9b65-a1fd9aa57d8f"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:42:24.770Z",
-      "id": "0f1a16d5-7c29-4b90-b3df-7052dd5a2ba9"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:46:03.458Z",
-      "id": "e207ea4e-693d-499f-bc58-149b11e6db03"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:47:26.737Z",
-      "id": "601c30e9-251d-4103-80f1-c4b6956b6ea5"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/Child-Girl-with-Sunflowers-Images.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T16:47:38.832Z",
-      "id": "97138223-225b-4b4e-912c-558fef0fc98a"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T17:40:21.447Z",
-      "id": "7c178394-cce1-499e-80fa-4e6515a79daf"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/Child-Girl-with-Sunflowers-Images.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T17:40:34.047Z",
-      "id": "4eacb9f4-d7fc-4d05-90f6-d908fc4f132b"
-    },
-    {
-      "text": "",
-      "url": "http://www.planwallpaper.com/static/images/Child-Girl-with-Sunflowers-Images.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T17:40:59.616Z",
-      "id": "629586ab-37d8-49a4-812a-3079c12b43b9"
-    },
-    {
-      "text": "",
-      "url": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "userId": "489423d2-b78d-4cef-bcc7-f2be7d39e7d5",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-10-03T17:41:24.238Z",
-      "id": "2da08bae-d2a8-4ba2-aa40-d00f5c48fb9d"
+      "shareDate": "2017-01-29T10:03:53.442Z",
+      "id": "9a69848e-d35c-48b1-bdb9-dffcf3c85773"
     }
   ]
 }
