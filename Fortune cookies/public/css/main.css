@@ -1,3 +1,7 @@
+
+/* Bug Bootstrap V4.0.6 - Mobile - SCSS _navbar*/ 
+.navbar {display: block;}
+
 body {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -54,9 +58,23 @@ body {
     visibility: hidden !important;
 }
 
-img {
-    width: 356px;
-    height: 280px;
+.cookie-img{
+    width: 550px;
+    height: 350px;
+}
+
+.cookie-text{
+    height:50px;
+    overflow:auto;
+}
+
+.cookie-details{
+    width:700px;
+    height:700px;
+}
+
+.cookie-details .card{
+    padding:40px;
 }
 
 #alert {

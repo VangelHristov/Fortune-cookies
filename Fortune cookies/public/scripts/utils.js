@@ -1,5 +1,5 @@
 import 'jquery';
-import * as CryptoJS from 'crypto';
+import * as CryptoJS from 'crypto-js';
 
 export const UTIL = (() => {
     "use strict";
@@ -146,6 +146,7 @@ export const UTIL = (() => {
     }
 
     function encrypt(password) {
+console.log(CryptoJS.SHA1(password).toString());
         return CryptoJS.SHA1(password).toString();
     }
 

@@ -1,20 +1,23 @@
 import 'jquery';
 import {CONTROLLER} from 'controllers';
 import {UTIL} from 'utils';
+import Sammy from 'sammy';
+import 'bootstrap';
 
-$(() => {
-    const router = new Navigo(null, false);
 
-    UTIL.checkForUsername();
+	const app = Sammy('#content', function () {
+		this.get('/home', CONTROLLER.home);
+		this.get('/category/:category', function(context){
+			CONTROLLER.category(context.params.category)
+		});
+		this.get('/my-cookie', CONTROLLER.myCookie);
+		this.get('/login', CONTROLLER.login);
+		this.get('/share-new-cookie', CONTROLLER.shareNewCookie);
+		this.get('/sign-up', CONTROLLER.signUp);
+		this.get('/', function(context){
+			 context.redirect('#/home');
+		});
+	});
 
-    router.on({
-        '/home': CONTROLLER.home,
-        '/category/:category':(params) => CONTROLLER.category(params.category),
-        '/my-cookie': CONTROLLER.myCookie,
-        '/login': CONTROLLER.login,
-        '/share-new-cookie': CONTROLLER.shareNewCookie,
-        '/sign-up': CONTROLLER.signUp,
-        '*': () => router.navigate('/home')
-    })
-        .resolve();
-});
+$(() => app.run());
+
