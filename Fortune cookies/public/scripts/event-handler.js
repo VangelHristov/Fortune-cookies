@@ -44,20 +44,26 @@ function signUp(ev) {
 
     if (validUser) {
         db.createUser(validUser)
-          .then(() => toastr.success('You have successfully signed up.'))
-          .then(() => window.location = '#/login')
-          .catch(toastr.error);
+          .then(() => {
+              toastr.success('You have successfully signed up.');
+              window.location = '#/login';
+          }, toastr.error);
     }
 }
 
 function login(ev) {
     let validUser = getCredentials(ev);
-
     if (validUser) {
         db.authUser(validUser)
-          .then(userAuthenticator.logIn)
-          .then(() => window.location = '#/home')
-          .catch(toastr.error);
+          .then(() => {
+              userAuthenticator.logIn();
+              window.location = '#/home';
+          }, (error) => {
+            toastr.error(error);
+            return false;
+          });
+    }else{
+        return false;
     }
 }
 
@@ -90,14 +96,11 @@ function shareNew(ev) {
 
 function saveClicked(id) {
     let clicked = window.localStorage.getItem('clicked');
-    console.log(clicked);
     if (!clicked || clicked === 'null') {
-        console.log('yes');
         clicked = "[]";
     }
 
     clicked = JSON.parse(clicked);
-    console.log('parsed', clicked);
     if (clicked.indexOf(id) === -1) {
         clicked.push(id);
     }

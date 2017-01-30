@@ -1,99 +1,28 @@
 {
   "users": [
     {
-      "username": "qwertyuiop",
-      "passHash": "01b307acba4f54f55aafc33bb06bbbf6ca803e9a",
-      "usernameToLower": "qwertyuiop",
-      "id": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "authKey": "6c01df54-c52a-4c4d-8257-0ccba3d9135eXmwShIybTbpdHOkzJaEZljHg",
-      "myCookies": [
-        {
-          "text": "Today it's up to you to create the peacefulness you long for",
-          "category": "Wisdom",
-          "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-          "likes": 0,
-          "dislikes": 0,
-          "shareDate": "2017-01-29T19:14:05.888Z",
-          "id": "fde34220-e36b-4ec9-97b5-1f23e40b1a2b",
-          "hours": 8
-        }
-      ]
+      "username": "asdasdasd",
+      "passHash": "00ea1da4192a2030f9ae023de3b3143ed647bbab",
+      "usernameToLower": "asdasdasd",
+      "id": "45e1c72d-275f-405c-b4c6-b6a1fdacb997"
     },
     {
-      "username": "qwertyuiop2",
-      "passHash": "01b307acba4f54f55aafc33bb06bbbf6ca803e9a",
-      "usernameToLower": "qwertyuiop2",
-      "id": "9108b2c5-9779-4a20-a137-cc75acc5ae6a",
-      "authKey": "9108b2c5-9779-4a20-a137-cc75acc5ae6aNomSLMZUlBsBwbpYOTsNDTyg",
-      "myCookies": [
-        {
-          "text": "Today it's up to you to create the peacefulness you long for",
-          "category": "Wisdom",
-          "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-          "likes": 2,
-          "dislikes": 0,
-          "shareDate": "2017-01-29T19:14:05.252Z",
-          "id": "2a134028-d4d2-4c53-88be-e973342d9f96",
-          "hours": 23
-        },
-        {
-          "text": "Today it's up to you to create the peacefulness you long for",
-          "category": "Wisdom",
-          "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-          "likes": 2,
-          "dislikes": 0,
-          "shareDate": "2017-01-29T19:14:05.252Z",
-          "id": "2a134028-d4d2-4c53-88be-e973342d9f96",
-          "hours": 23
-        },
-        {
-          "text": "Today it's up to you to create the peacefulness you long for",
-          "category": "Wisdom",
-          "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-          "likes": 2,
-          "dislikes": 0,
-          "shareDate": "2017-01-29T19:14:05.252Z",
-          "id": "2a134028-d4d2-4c53-88be-e973342d9f96",
-          "hours": 23
-        },
-        {
-          "text": "Today it's up to you to create the peacefulness you long for",
-          "category": "Wisdom",
-          "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-          "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-          "likes": 2,
-          "dislikes": 0,
-          "shareDate": "2017-01-29T19:14:05.252Z",
-          "id": "2a134028-d4d2-4c53-88be-e973342d9f96",
-          "hours": 23
-        },
-        {
-          "text": "May the Force be with you",
-          "category": "Star wars",
-          "id": "e2fdbf82-54c3-488f-add4-9af3262c2572",
-          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
-          "likes": 0,
-          "dislikes": 0,
-          "img": "http://vignette2.wikia.nocookie.net/starwars/images/d/d5/MP-YodaSpecies.png/revision/latest?cb=20140412000157",
-          "shareDate": "2016-06-26T23:16:06.753Z",
-          "hours": 0
-        },
-        {
-          "text": "May the Force be with you",
-          "category": "Star wars",
-          "id": "e2fdbf82-54c3-488f-add4-9af3262c2572",
-          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
-          "likes": 0,
-          "dislikes": 0,
-          "img": "http://vignette2.wikia.nocookie.net/starwars/images/d/d5/MP-YodaSpecies.png/revision/latest?cb=20140412000157",
-          "shareDate": "2016-06-26T23:16:06.753Z",
-          "hours": 0
-        }
-      ]
+      "username": "qweqweqwe",
+      "passHash": "606fd96dcdac6cae332c334c0f50aaf8cb974203",
+      "usernameToLower": "qweqweqwe",
+      "id": "77455ed5-2bd4-4875-8e05-de369e15ff43"
+    },
+    {
+      "username": "asdasdasdasdasd",
+      "passHash": "4150953a511f9f6d74e17d5ac22e8be54e9fab56",
+      "usernameToLower": "asdasdasdasdasd",
+      "id": "8582b255-b8c4-4c8f-8fa1-7272c4c36f24"
+    },
+    {
+      "username": "asasdasdasdasdasdasdasd",
+      "passHash": "4150953a511f9f6d74e17d5ac22e8be54e9fab56",
+      "usernameToLower": "asasdasdasdasdasdasdasd",
+      "id": "a2e91086-3d50-4141-915b-017c6bf4348e"
     }
   ],
   "cookies": [
@@ -115,7 +44,7 @@
       "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
       "likes": 0,
       "dislikes": 0,
-      "img": "http://vignette2.wikia.nocookie.net/starwars/images/d/d5/MP-YodaSpecies.png/revision/latest?cb=20140412000157",
+      "img": "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.animationinsider.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fyoda.jpg&f=1",
       "shareDate": "2016-06-26T23:16:06.753Z",
       "hours": 0
     },
@@ -129,17 +58,6 @@
       "shareDate": "2016-06-27T03:26:00.145Z",
       "id": "2a8d2693-89c4-46ca-961b-ea484e5c2aa8",
       "hours": 14
-    },
-    {
-      "text": "Burn them with your mind powers",
-      "category": "Cool",
-      "id": "2dae28aa-ee64-4bc1-8591-29284d88c9e9",
-      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
-      "likes": 5,
-      "dislikes": 1,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2016-06-26T23:01:28.588Z",
-      "hours": 19
     },
     {
       "text": "A friend asks only for your time not your money",
@@ -201,159 +119,6 @@
       "dislikes": 0,
       "shareDate": "2016-06-29T02:51:19.877Z",
       "id": "56458e53-7056-414d-a433-5641fe3b5479"
-    },
-    {
-      "text": "hello world!!!",
-      "category": "Programming",
-      "img": "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsd.keepcalm-o-matic.co.uk%2Fi%2Fkeep-calm-and-system-out-println-hello-world.png&f=1",
-      "userId": "da7a2ee2-73dc-485f-8c28-1f576a587b48",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T09:47:32.637Z",
-      "id": "1a985a48-24bb-4a6a-97c1-5dc62fcd5cef"
-    },
-    {
-      "text": "Your high-minded principles spell success",
-      "category": "Inspiration",
-      "url": "http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg",
-      "userId": "da7a2ee2-73dc-485f-8c28-1f576a587b48",
-      "likes": 0,
-      "dislikes": 0,
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2017-01-29T09:58:07.961Z",
-      "id": "99739905-99ab-4722-a1ef-2c61bf374d59"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "b9809dd1-1a14-4cd5-a278-f7b5e8d13aee",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T10:03:53.442Z",
-      "id": "9a69848e-d35c-48b1-bdb9-dffcf3c85773"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T19:14:03.753Z",
-      "id": "33b6d268-34b2-486e-99bc-dbf279dee0f9"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 2,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T19:14:05.252Z",
-      "id": "2a134028-d4d2-4c53-88be-e973342d9f96",
-      "hours": 23
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T19:14:05.888Z",
-      "id": "fde34220-e36b-4ec9-97b5-1f23e40b1a2b",
-      "hours": 8
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T19:14:06.345Z",
-      "id": "b393aa2e-5032-45a5-a0b7-4c460677d22a"
-    },
-    {
-      "text": "qawsdadf",
-      "category": "asdasdadad",
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 56,
-      "dislikes": 1,
-      "shareDate": "2017-01-29T19:15:01.879Z",
-      "id": "90718d68-83e8-4f00-95ed-3ed2a0f1fcd4"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "9108b2c5-9779-4a20-a137-cc75acc5ae6a",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T21:58:30.792Z",
-      "id": "227a0a18-b1e0-4367-90e3-7be179b6deab"
-    },
-    {
-      "text": "asdfasdfsgfsd",
-      "category": "asfsadfsdfsdfs",
-      "img": "https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fcreateyoursuccess.files.wordpress.com%2F2012%2F05%2Fsuccess_blkboard.jpg&f=1",
-      "userId": "9108b2c5-9779-4a20-a137-cc75acc5ae6a",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T22:00:26.694Z",
-      "id": "32949e57-6add-4bb1-840f-0360b94763e7"
-    },
-    {
-      "text": "something really long aop;sjdaslfchakj ashdakjsdhakjdh aksijdlkadhakjsdhakjsdhakjsdh  ansdbmsnadvbaas ajhdsg assdhgasjdhgasjdgajhsdgas das dasdasj dajsdhgajsdh as dasjhdg asjd hashdg ashd sahd gasjd hgsa h dgashd",
-      "category": "testing long text",
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "userId": "9108b2c5-9779-4a20-a137-cc75acc5ae6a",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T22:16:11.032Z",
-      "id": "ee8a36de-2f28-461c-9d96-5b85342acf5f"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "9108b2c5-9779-4a20-a137-cc75acc5ae6a",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-29T22:28:21.087Z",
-      "id": "e575b388-48a8-4f44-9b6d-9f0c82740cd1"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-30T06:51:21.069Z",
-      "id": "607541de-23cc-4607-ae96-cf5ad6944ba8"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-30T09:53:58.691Z",
-      "id": "e4290f44-fd4b-4ead-a04e-aee5d7a7d5ed"
-    },
-    {
-      "text": "Today it's up to you to create the peacefulness you long for",
-      "category": "Wisdom",
-      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-      "userId": "6c01df54-c52a-4c4d-8257-0ccba3d9135e",
-      "likes": 0,
-      "dislikes": 0,
-      "shareDate": "2017-01-30T10:12:19.542Z",
-      "id": "9590b6aa-cf30-4f64-a821-5ed5611d866b"
     }
   ]
 }

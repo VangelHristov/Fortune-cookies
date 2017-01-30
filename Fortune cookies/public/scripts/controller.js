@@ -38,7 +38,8 @@ function category(category) {
 function myCookie() {
     if (!userAuthenticator.isLoggedIn()) {
         window.location = '#/home';
-        return toastr.error('You must be logged in.');
+        toastr.error('You must be logged in.');
+        return;
     }
 
     let myCookie         = db.getMyCookie(),
@@ -72,7 +73,8 @@ function signUp() {
 function shareNewCookie() {
     if (!userAuthenticator.isLoggedIn()) {
         window.location = '#/home';
-        return toastr.error('You must be logged in.');
+        toastr.error('You must be logged in.');
+        return;
     }
 
     getTemplate('share-cookie')
