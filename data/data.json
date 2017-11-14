@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "username": "asdasdasd",
+      "passHash": "00ea1da4192a2030f9ae023de3b3143ed647bbab",
+      "usernameToLower": "asdasdasd",
+      "id": "45e1c72d-275f-405c-b4c6-b6a1fdacb997"
+    },
+    {
+      "username": "qweqweqwe",
+      "passHash": "606fd96dcdac6cae332c334c0f50aaf8cb974203",
+      "usernameToLower": "qweqweqwe",
+      "id": "77455ed5-2bd4-4875-8e05-de369e15ff43"
+    },
+    {
+      "username": "asdasdasdasdasd",
+      "passHash": "4150953a511f9f6d74e17d5ac22e8be54e9fab56",
+      "usernameToLower": "asdasdasdasdasd",
+      "id": "8582b255-b8c4-4c8f-8fa1-7272c4c36f24"
+    },
+    {
+      "username": "asasdasdasdasdasdasdasd",
+      "passHash": "4150953a511f9f6d74e17d5ac22e8be54e9fab56",
+      "usernameToLower": "asasdasdasdasdasdasdasd",
+      "id": "a2e91086-3d50-4141-915b-017c6bf4348e"
+    }
+  ],
+  "cookies": [
+    {
+      "text": "Hidden in a valley beside an open stream- This will be the type of place where you will find your dream",
+      "category": "Wisdom",
+      "id": "ea91a233-bcf3-48b6-933f-05857f4aea87",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 8,
+      "dislikes": 1,
+      "img": "http://www.planwallpaper.com/static/images/images-7_kACPBns.jpg",
+      "shareDate": "2016-06-26T23:08:44.996Z",
+      "hours": 13
+    },
+    {
+      "text": "May the Force be with you",
+      "category": "Star wars",
+      "id": "e2fdbf82-54c3-488f-add4-9af3262c2572",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 0,
+      "dislikes": 0,
+      "img": "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.animationinsider.com%2Fwp-content%2Fuploads%2F2012%2F08%2Fyoda.jpg&f=1",
+      "shareDate": "2016-06-26T23:16:06.753Z",
+      "hours": 0
+    },
+    {
+      "text": "If you refuse to accept anything but the best, you very often get it",
+      "category": "Motivation",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 2,
+      "dislikes": 0,
+      "img": "http://www.planwallpaper.com/static/images/foggygoldengatebridge.jpg",
+      "shareDate": "2016-06-27T03:26:00.145Z",
+      "id": "2a8d2693-89c4-46ca-961b-ea484e5c2aa8",
+      "hours": 14
+    },
+    {
+      "text": "A friend asks only for your time not your money",
+      "category": "Wisdom",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 0,
+      "dislikes": 0,
+      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image.jpg",
+      "shareDate": "2016-06-27T01:41:48.608Z",
+      "id": "f2d202a2-6cae-406a-8e84-1c809270e696"
+    },
+    {
+      "text": "Today it's up to you to create the peacefulness you long for",
+      "category": "Wisdom",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 92,
+      "dislikes": 48,
+      "img": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
+      "shareDate": "2016-06-27T01:43:12.706Z",
+      "id": "1c21b26a-6f2f-4982-898b-ade8ad9bd243",
+      "hours": 19
+    },
+    {
+      "text": "A smile is your passport into the hearts of others",
+      "category": "Wisdom",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 0,
+      "dislikes": 0,
+      "img": "http://www.planwallpaper.com/static/images/Child-Girl-with-Sunflowers-Images.jpg",
+      "shareDate": "2016-06-27T17:47:35.116Z",
+      "id": "2523b557-53c9-45b5-a361-98f2bfddd892"
+    },
+    {
+      "text": "Your high-minded principles spell success",
+      "category": "Inspiration",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 0,
+      "dislikes": 0,
+      "img": "http://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg",
+      "shareDate": "2016-06-29T01:17:27.582Z",
+      "id": "aea1963a-b396-4243-b1f3-7ed48f0ac75c"
+    },
+    {
+      "text": "Hard work pays off in the future, laziness pays off now",
+      "category": "Motivation",
+      "img": "http://blog.mcafeeinstitute.com/wp-content/uploads/2015/03/success.jpg",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2016-06-29T02:49:21.738Z",
+      "id": "a82cf7f2-f8d5-4bbb-ab10-485368510634"
+    },
+    {
+      "text": "Change can hurt, but it leads a path to something better",
+      "category": "Inspiration",
+      "img": "http://www.chainimage.com/images/success-strategies-book-excerpt-charlene-day-potentials-within.jpg",
+      "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+      "likes": 1,
+      "dislikes": 0,
+      "shareDate": "2016-06-29T02:51:19.877Z",
+      "id": "56458e53-7056-414d-a433-5641fe3b5479"
+    }
+  ]
+}

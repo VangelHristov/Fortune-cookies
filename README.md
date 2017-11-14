@@ -1,2 +1,2 @@
 # Fortune-cookies
-SPA with jQuery and Handlebars
+SPA with angularjs
