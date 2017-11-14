@@ -15,7 +15,7 @@ require('./utils/authorize-user')(app, db);
 var usersController = require('./controllers/users-controller')(db);
 app.get('/api/users', usersController.get);
 app.post('/api/users', usersController.post);
-app.put('/api/auth', usersController.put);
+app.put('/api/users', usersController.put);
 
 // Fortune cookies
 var cookiesController = require('./controllers/cookies-controller')(db);

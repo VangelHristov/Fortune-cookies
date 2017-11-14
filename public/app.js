@@ -1,9 +1,9 @@
-(function initApp(){
-    'use strict';
+(function appModule() {
+	'use strict';
 
-    angular
-      .module('app',[
-        'ngResource',
-        'ui.router'
-      ]);
+	angular
+		.module('app', [
+			'ngResource',
+			'ui.router'
+		]);
 }());
