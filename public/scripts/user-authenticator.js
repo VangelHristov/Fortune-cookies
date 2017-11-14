@@ -1,9 +1,5 @@
 'use strict';
 
-import $ from 'jquery';
-import * as CryptoJS from 'crypto-js';
-import toastr from 'toastr';
-
 const
   storage   = window.localStorage,
   user  = 'username-key',
@@ -80,7 +76,7 @@ function encrypt(password) {
     return CryptoJS.SHA1(password).toString();
 }
 
-export const userAuthenticator = {
+const userAuthenticator = {
     logIn,
     logOut,
     isLoggedIn,

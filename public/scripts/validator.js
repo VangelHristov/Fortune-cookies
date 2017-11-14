@@ -1,7 +1,5 @@
 'use strict';
 
-import toastr from 'toastr';
-
 const
   usernameRegx    = /^[A-Za-z0-9._]{6,30}/,
   passwordRegx    = /^[^\s]{6,}$/,
@@ -49,7 +47,7 @@ function validateText(text) {
     return false;
 }
 
-export const validator = {
+const validator = {
     validatePassword,
     validateText,
     validateUrl,

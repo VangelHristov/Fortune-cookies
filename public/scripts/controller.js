@@ -1,11 +1,5 @@
 'use strict';
 
-import {db} from 'database-access';
-import {getTemplate} from 'template-getter';
-import {eventHandler} from 'event-handler';
-import {userAuthenticator} from 'user-authenticator';
-import toastr from 'toastr';
-
 const sammyApp = $('#content');
 
 function home() {
@@ -84,7 +78,7 @@ function shareNewCookie() {
       });
 }
 
-export const controller = {
+const controller = {
     home,
     category,
     myCookie,

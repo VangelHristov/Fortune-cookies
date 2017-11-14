@@ -1,11 +1,7 @@
 "use strict";
 
-import $ from 'jquery';
-import * as Handlebars from 'handlebars';
-
 const templateCache = {};
-
-export const getTemplate = (templateName) => {
+const getTemplate = (templateName) => {
 
     return new Promise((resolve, reject) => {
 

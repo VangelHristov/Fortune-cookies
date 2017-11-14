@@ -1,13 +1,5 @@
 'use strict';
 
-import $ from 'jquery';
-import toastr from 'toastr';
-import {app} from 'router';
-import {userAuthenticator} from 'user-authenticator';
-import '/css/main.css!';
-import 'bootstrap';
-import 'jspm_packages/github/twbs/bootstrap@3.3.7/css/bootstrap.css!';
-
 $(() => {
     app.run();
 

@@ -1,12 +1,5 @@
 'use strict';
 
-import $ from 'jquery';
-import {validator} from 'validator';
-import {userAuthenticator} from 'user-authenticator';
-import toastr from 'toastr';
-import {db} from 'database-access';
-import {controller} from 'controller';
-
 function refresh(location) {
     switch (location) {
         case '#/home' :
@@ -158,7 +151,7 @@ function reShare(ev) {
       .catch(toastr.error);
 }
 
-export const eventHandler = {
+const eventHandler = {
     signUp,
     login,
     shareNew,

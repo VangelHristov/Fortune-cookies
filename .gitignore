@@ -1,6 +1,6 @@
-.vscode
-.code
-.idea
+.vscode/
+.code/
+.idea/
 node_modules/
 public/bower_components/
 jspm_packages/

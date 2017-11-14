@@ -1,8 +1,5 @@
 'use strict';
 
-import $ from 'jquery';
-import moment from 'moment';
-
 const header  = 'x-auth-key',
       authKey  = 'fortune-cookie-auth-key',
       storage   = window.localStorage,
@@ -129,7 +126,7 @@ function getCategory(category) {
     });
 }
 
-export const db = {
+const db = {
     getAllUsers,
     createUser,
     authUser,
