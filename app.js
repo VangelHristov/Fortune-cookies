@@ -1,6 +1,6 @@
 var express = require('express'),
-  bodyParser = require('body-parser'),
-  lowdb = require('lowdb');
+	bodyParser = require('body-parser'),
+	lowdb = require('lowdb');
 
 var db = lowdb('./data/data.json');
 db._.mixin(require('underscore-db'));
@@ -31,8 +31,7 @@ app.get('/api/my-cookie', myCookiesController.get);
 var categoriesController = require('./controllers/categories-controller')(db);
 app.get('/api/categories', categoriesController.get);
 
-
 var port = 3000;
-app.listen(port, function() {
-  console.log('Server is running at http://localhost:' + port);
+app.listen(port, function () {
+	console.log('Server is running at http://localhost:' + port);
 });

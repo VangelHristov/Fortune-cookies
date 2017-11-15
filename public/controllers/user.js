@@ -1,10 +1,10 @@
-(function mainControllerModule() {
+(function userControllerModule() {
 	'use strict';
 
 	angular
 		.module('app')
 		.controller(
-			'MainController',
+			'UserController',
 			[
 				'$scope',
 				'$state',
@@ -13,7 +13,7 @@
 				'dataContext',
 				'notification',
 				'crypto',
-				function mainController(
+				function userController(
 					$scope,
 					$state,
 					$window,

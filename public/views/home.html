@@ -1,14 +1,15 @@
-<div class = "">
+<div>
 	<section class = "jumbotron text-xs-center">
 		<div class = "container">
-			<h1 class = "jumbotron-heading">Fortune cookies</h1>
+			<h3 class = "jumbotron-heading">Fortune cookies</h3>
 			<p>
-				<a href = "#" id = "by-date" class = "btn btn-primary">Sort by
-					date
-				</a>
-				<a href = "#" id = "by-likes" class = "btn btn-secondary">Sort
-					by likes
-				</a>
+				Sort by:
+				<select ng-model = "sortBy">
+					<option value = "date">date</option>
+					<option value = "likes">likes</option>
+					<option value = "category">category</option>
+				</select>
+			<div ng-repeat = "cookie in cookies">{{cookie.text}}</div>
 			</p>
 		</div>
 	</section>
@@ -35,7 +36,7 @@
 			<!--</div>-->
 			<!--</div>-->
 			<!--{{/each}}-->
-			it works!
+			<h1>list of all the cookies</h1>
 		</div>
 	</div>
 </div>

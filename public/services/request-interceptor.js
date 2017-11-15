@@ -9,19 +9,16 @@
 				'$state',
 				'$window',
 				'userData',
-				'secureRoutes',
 				'notification',
 				function requestInterceptor(
 					$state,
 					$window,
 					userData,
-					secureRoutes,
 					notification
 				) {
 					return {
 						request: function (config) {
-							if (secureRoutes.some(
-									route => route.test(config.url))) {
+							if ($state.reqireAuthentication === true) {
 								let key = $window.localStorage.getItem(userData.authKey);
 								if (key === null) {
 									$state.go('home');

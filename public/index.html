@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang = "en" ng-app="app">
+<html lang = "en" ng-app = "app">
 <head>
-	<meta charset = "UTF-8">
+	<meta charset = "utf-8">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	
 	<title>Fortune cookies</title>
 	<link rel = "stylesheet"
 	      href = "bower_components/bootstrap/dist/css/bootstrap.css">
@@ -9,115 +12,75 @@
 	      href = "bower_components/bootstrap/dist/css/bootstrap-theme.css">
 	<link rel = "stylesheet" href = "css/main.css">
 </head>
-<body ng-controller = "MainController">
+<body>
 
-<!--<div id = "root" class = "container-fluid">-->
-<!--<header class = "navbar navbar-toggleable-md navbar-light bg-faded">-->
-<!--<div class = "container">-->
-<!--<button class = "navbar-toggler navbar-toggler-right"-->
-<!--type = "button"-->
-<!--data-toggle = "collapse"-->
-<!--data-target = "#navbarTogglerDemo02"-->
-<!--aria-controls = "navbarTogglerDemo02"-->
-<!--aria-expanded = "false"-->
-<!--aria-label = "Toggle navigation">-->
-<!--<span class = "navbar-toggler-icon"></span>-->
-<!--</button>-->
-<!--&lt;!&ndash; Menu &ndash;&gt;-->
-<!--<div class = "collapse navbar-collapse" id = "navbarTogglerDemo02">-->
-<!--<ul class = "navbar-nav">-->
-<!--<li class = "nav-item active">-->
-<!--<a class = "btn btn-default"-->
-<!--ui-sref = "home"-->
-<!--ui-sref-active-eq = "active">Home-->
-<!--<span class = "sr-only">(current)</span>-->
-<!--</a>-->
-<!--</li>-->
-<!--<li class = "nav-item">-->
-<!--<a class = "btn btn-default"-->
-<!--ui-sref = "home.my-cookie"-->
-<!--ui-sref-active-eq = "active">My cookie-->
-<!--</a>-->
-<!--</li>-->
-<!--<li class = "nav-item">-->
-<!--<a class = "btn btn-default"-->
-<!--ui-sref = "home.share-new-cookie"-->
-<!--ui-sref-active-eq = "active">Share new cookie-->
-<!--</a>-->
-<!--</li>-->
-<!--<li id = "login" class = "nav-item pull-right">-->
-<!--<a class = "btn btn-success" ui-sref = "home.login">-->
-<!--Login-->
-<!--</a>-->
-<!--<a class = "btn btn-primary" ui-sref = "home.sign-up">-->
-<!--Sign up-->
-<!--</a>-->
-<!--</li>-->
-<!--<li id = "logout" class = "nav-item pull-right hidden">-->
-<!--Hello,-->
-<!--<span id = "username-placeholder"></span>-->
-<!--<a class = "btn btn-danger" href = "#">Logout</a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--</div>-->
-<!--</div>-->
-<!--</header>-->
-<!--<ui-view></ui-view>-->
-<!--<footer class = "footer">-->
-<!--<div class = "container">-->
-<!--<p class = "text-muted">Fortune Cookies</p>-->
-<!--</div>-->
-<!--</footer>-->
-<!--</div>-->
-<div class = "row">
-	<nav id = "navigation" role = "navigation" class = "navbar">
+<nav ng-controller = "UserController" class =
+	"navbar navbar-inverse bg-inverse navbar-fixed-top" role =
+	     "navigation">
+	<div class = "container">
 		<div class = "navbar-header">
 			<button type = "button"
+			        class = "navbar-toggle collapsed"
 			        data-toggle = "collapse"
-			        data-target = ".navbar-ex1-collapse"
-			        class = "navbar-toggle">
+			        data-target = "#navbar"
+			        aria-expanded = "false"
+			        aria-controls = "navbar">
 				<span class = "sr-only">Toggle navigation</span>
 				<span class = "icon-bar"></span>
 				<span class = "icon-bar"></span>
 				<span class = "icon-bar"></span>
 			</button>
+			<a class = "navbar-brand" ui-sref = "home">
+				<img src = "images/logo-55x45.png"
+				     alt = "fortune cookies logo"
+				     class = "logo">
+			</a>
 		</div>
-		<div class = "collapse navbar-collapse navbar-ex1-collapse">
-			<ul class = "nav navbar-nav">
-				<li>
-					<a ui-sref = "home" ui-sref-active-eq = "active">Home</a>
+		<div id = "navbar" class = "navbar-collapse collapse">
+			<ul class = "nav navbar-nav navbar-center">
+				<li ui-sref-active-eq = "active">
+					<a ui-sref = "home">
+						<span class = "glyphicon glyphicon-home"
+						      aria-hidden = "true"></span>
+						Home
+					</a>
+				</li>
+				<li ui-sref-active-eq = "active">
+					<a ui-sref = "myCookie">
+						<i class = "glyphicon glyphicon-gift"></i>
+						My Cookie
+					</a>
+				</li>
+				<li ui-sref-active-eq = "active">
+					<a ui-sref = "categories">
+						<i class = "glyphicon glyphicon-tags"></i>
+						Categories
+					</a>
 				</li>
 			</ul>
-			<!--<ul class = "nav navbar-nav navbar-right">-->
-				<!--<li>-->
-					<!--<a ui-sref = "home.categories"-->
-					   <!--ui-sref-active-eq = "active">Categories-->
-					<!--</a>-->
-				<!--</li>-->
-				<!--<li>-->
-					<!--<a ui-sref = "home.myCookie"-->
-					   <!--ui-sref-active-eq = "active">My cookie-->
-					<!--</a>-->
-				<!--</li>-->
-				<!--<li>-->
-					<!--<a ui-sref = "home.shareNew">-->
-						<!--Share new-->
-					<!--</a>-->
-				<!--</li>-->
-				<!--<li>-->
-					<!--<a ui-sref = "home.login" ui-sref-active-eq = "active">-->
-						<!--Login-->
-					<!--</a>-->
-				<!--</li>-->
-				<!--<li>-->
-					<!--<a ui-sref = "home.register" ui-sref-active-eq = "active">-->
-						<!--Register-->
-					<!--</a>-->
-				<!--</li>-->
-			<!--</ul>-->
+			<ul class = "nav navbar-nav navbar-right">
+				<li ui-sref-active-eq = "active">
+					<a ui-sref = "login">
+						<i class = "glyphicon glyphicon-log-in"></i>
+						Login
+					</a>
+				</li>
+				<li ui-sref-active-eq = "active">
+					<a ui-sref = "register">
+						<i class = "glyphicon glyphicon-pencil"></i>
+						Register
+					</a>
+				</li>
+				<li>
+					<a>
+						<i class = "glyphicon glyphicon-log-out"></i>
+						Logout
+					</a>
+				</li>
+			</ul>
 		</div>
-	</nav>
-</div>
+	</div>
+</nav>
 
 <ui-view></ui-view>
 
@@ -125,7 +88,6 @@
 	<hr>
 	<div class = "text-center">Fortune Cookies</div>
 </footer>
-</body>
 
 <script src = "bower_components/jquery/dist/jquery.js"></script>
 <script src = "bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -142,8 +104,8 @@
 <script src = "services/data-context.js"></script>
 <script src = "services/notification.js"></script>
 <script src = "services/request-interceptor.js"></script>
-<script src = "controllers/main.js"></script>
-<script src = "controllers/cookies.js"></script>
+<script src = "controllers/user.js"></script>
+<script src = "controllers/fortune-cookies.js"></script>
 <script src = "constants/user-data.js"></script>
-<script src = "constants/secure-routes.js"></script>
+</body>
 </html>

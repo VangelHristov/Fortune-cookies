@@ -8,16 +8,19 @@
 			[
 				'$scope',
 				'$state',
-				'$window',
 				'dataContext',
 				'notification',
-				'userData',
+				'cookies',
 				function fortuneCookiesController(
 					$scope,
 					$state,
 					dataContext,
-					notification
+					notification,
+					cookies
 				) {
+					$scope.cookies = cookies;
+					console.log($scope.cookies);
+					$scope.sortBy = 'date';
 					$scope.fortuneCookie = {
 						text    : '',
 						category: '',
@@ -54,7 +57,7 @@
 									.success('Your rating was submitted')
 							})
 							.catch(error => notification.error(error));
-					}
+					};
 				}
 			]
 		);

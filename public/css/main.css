@@ -1,90 +1,70 @@
 
-/* Bug Bootstrap V4.0.6 - Mobile - SCSS _navbar*/ 
-.navbar {display: block;}
-
 body {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #eee;
 }
 
-#form-sign-up,
-#form-login,
-#form-share {
-    max-width: 450px;
-    padding: 15px;
-    margin: 0 auto;
-}
-
-#form-sign-up .form-sign-up-heading,
-#form-login .form-login-heading,
-#form-share .form-share-heading {
-    margin-bottom: 10px;
-}
-
-#form-sign-up .form-control,
-#form-login .form-control,
-#form-share .form-control {
-    position: relative;
-    height: auto;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px;
-    font-size: 16px;
-}
-
-#form-sign-up .form-control:focus,
-#form-login .form-control:focus,
-.form-share .form-control:focus {
-    z-index: 2;
-}
-
-#form-sign-up input[type="text"],
-#form-login input[type="text"],
-#form-share input[type="text"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-#form-sign-up input[type="password"],
-#form-log-in input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.hidden {
-    visibility: hidden !important;
-}
-
-.cookie-img{
-    width: 600px;
-    height: 350px;
-}
-
-.cookie-text{
-    height:50px;
-    overflow:auto;
-}
-
-.cookie-details{
-    width:700px;
-    height:700px;
-}
-
-.cookie-details .card{
-    padding:40px;
-}
-
-#alert {
-    position: absolute;
-    top: 0;
-    left: 60%;
-    z-index: 100000;
-    font-size: 18px;
-}
-
 footer div p {
-    padding-left:35%;
+    padding-left: 35%;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 3px;
+}
+
+/*change collapsible navbar break point */
+@media (max-width: 994px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-left, .navbar-right {
+        float: none !important;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin-top: 7px;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .collapse.in {
+        display: block !important;
+    }
 }

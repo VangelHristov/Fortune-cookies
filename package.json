@@ -2,7 +2,7 @@
   "name": "fortune-cookies",
   "version": "1.0.0",
   "description": "##  App description",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
@@ -16,5 +16,8 @@
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",
     "underscore-db": "^0.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
