@@ -1,42 +1,62 @@
 <div>
 	<section class = "jumbotron text-xs-center">
 		<div class = "container">
-			<h3 class = "jumbotron-heading">Fortune cookies</h3>
 			<p>
-				Sort by:
-				<select ng-model = "sortBy">
-					<option value = "date">date</option>
-					<option value = "likes">likes</option>
+				<label for = "filter">
+					Sort by:
+				</label>
+				
+				<select ng-model = "order" id = "filter">
+					<option value = "-shareDate">date</option>
+					<option value = "-likes">likes</option>
 					<option value = "category">category</option>
 				</select>
-			<div ng-repeat = "cookie in cookies">{{cookie.text}}</div>
 			</p>
 		</div>
 	</section>
-	<div class = "album text-muted">
-		<div class = "container">
-			<!--{{#each this}}-->
-			<!--<div class="row">-->
-			<!--<div class="cookie-details" data-id="{{id}}">-->
-			<!--<div class="card">-->
-			<!--<img src="{{img}}" class="cookie-img">-->
-			<!--<h3><a href="#/category/{{category}}" class="cookie-category">{{category}}</a></h3>-->
-			<!--<p class="card-text cookie-text">{{text}}</p>-->
-			<!--<p>-->
-			<!--<span class="likes-count">Likes: {{likes}}</span><br>-->
-			<!--<span class="dislikes-count">Dislikes: {{dislikes}}</span><br>-->
-			<!--<span class="shareDate">Shared on: {{shareDate}}</span>-->
-			<!--</p>-->
-			<!--<p>-->
-			<!--<button id="{{id}}like" class="like btn btn-primary">Like</button>-->
-			<!--<button id="{{id}}dislike" class="dislike btn btn-danger">Dislike</button>-->
-			<!--<button id="{{id}}reshared" class="share btn btn-success">Re-share</button>-->
-			<!--</p>-->
-			<!--</div>-->
-			<!--</div>-->
-			<!--</div>-->
-			<!--{{/each}}-->
-			<h1>list of all the cookies</h1>
+	<div class = "container">
+		<div class = "row" ng-repeat = "c in cookies| orderBy:order">
+			
+			<div class = "col-xs-12 col-sm-5">
+				
+				<h3>{{c.text}}</h3>
+				<div class = "btn btn-info">
+					<a class="btn-category"
+						ui-sref = "category({category:c.category})">
+						#{{c.category}}
+					</a>
+				</div>
+				<button id = "{{c.id}}like"
+				        class = "like btn btn-primary">Like
+				</button>
+				<button id = "{{c.id}}dislike"
+				        class = "dislike btn btn-danger">Dislike
+				</button>
+				<div align = "right">Likes:
+					<span class = "badge">{{c.likes}}</span>
+				</div>
+				<div align = "right">Dislikes:
+					<span class = "badge">{{c.dislikes}}</span>
+				</div>
+				<div align = "right">Share Date:
+					<span class = "badge">{{c.shareDate | date:'MMM d yyyy'}}
+					</span>
+				</div>
+			
+			
+			</div>
+			<div class = "col-xs-12 col-sm-7">
+				<div class = "media">
+					
+					<div class = "media-right">
+						<a ui-sref = "category({category:c.category})">
+							<img class = "img-responsive img-thumbnail"
+							     ng-src = "{{c.img}}">
+						</a>
+					</div>
+				</div>
+			</div>
+		
 		</div>
 	</div>
 </div>

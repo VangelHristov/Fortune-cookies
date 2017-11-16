@@ -10,13 +10,13 @@
 	      href = "bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel = "stylesheet"
 	      href = "bower_components/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel = "stylesheet" href = "bower_components/toastr/toastr.css">
 	<link rel = "stylesheet" href = "css/main.css">
 </head>
-<body>
+<body ng-controller = "UserController">
 
-<nav ng-controller = "UserController" class =
-	"navbar navbar-inverse bg-inverse navbar-fixed-top" role =
-	     "navigation">
+<nav class = "navbar navbar-inverse bg-inverse navbar-fixed-top"
+     role = "navigation">
 	<div class = "container">
 		<div class = "navbar-header">
 			<button type = "button"
@@ -45,7 +45,8 @@
 						Home
 					</a>
 				</li>
-				<li ui-sref-active-eq = "active">
+				<li ng-if = "isLoggedIn()"
+				    ui-sref-active-eq = "active">
 					<a ui-sref = "myCookie">
 						<i class = "glyphicon glyphicon-gift"></i>
 						My Cookie
@@ -57,21 +58,30 @@
 						Categories
 					</a>
 				</li>
+				<li ng-if = "category"
+				    ui-sref-active-eq = "active">
+					<a ui-sref = "category">
+						<i class = "glyphicon glyphicon-tag"></i>
+						{{category}}
+					</a>
+				</li>
 			</ul>
-			<ul class = "nav navbar-nav navbar-right">
+			<ul ng-if = "!isLoggedIn()"
+			    class = "nav navbar-nav navbar-right">
 				<li ui-sref-active-eq = "active">
 					<a ui-sref = "login">
 						<i class = "glyphicon glyphicon-log-in"></i>
 						Login
 					</a>
 				</li>
-				<li ui-sref-active-eq = "active">
+				<li ng-if = "!isLoggedIn()"
+				    ui-sref-active-eq = "active">
 					<a ui-sref = "register">
 						<i class = "glyphicon glyphicon-pencil"></i>
 						Register
 					</a>
 				</li>
-				<li>
+				<li ng-if = "isLoggedIn()">
 					<a>
 						<i class = "glyphicon glyphicon-log-out"></i>
 						Logout
@@ -100,12 +110,21 @@
 
 <script src = "app.js"></script>
 <script src = "app.config.js"></script>
+
+<script src = "constants/storage-keys.js"></script>
+
 <script src = "services/crypto.js"></script>
 <script src = "services/data-context.js"></script>
 <script src = "services/notification.js"></script>
 <script src = "services/request-interceptor.js"></script>
-<script src = "controllers/user.js"></script>
-<script src = "controllers/fortune-cookies.js"></script>
-<script src = "constants/user-data.js"></script>
+<script src = "services/fortune-cookies-service.js"></script>
+<script src = "services/user-auth.js"></script>
+
+<script src = "controllers/user-controller.js"></script>
+<script src = "controllers/share-cookie-controller.js"></script>
+<script src = "controllers/home-controller.js"></script>
+<script src = "controllers/my-cookie-controller.js"></script>
+<script src = "controllers/categories-controller.js"></script>
+<script src = "controllers/cookies-by-category-controller.js"></script>
 </body>
 </html>

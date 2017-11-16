@@ -67,4 +67,8 @@ footer div p {
     .collapse.in {
         display: block !important;
     }
+
+    .btn-category {
+        color: #FFFFFF !important;
+    }
 }

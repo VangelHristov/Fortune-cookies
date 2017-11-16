@@ -23,10 +23,10 @@
 
 			return {
 				success: function (text) {
-					toastr.success(text, 'Success');
+					toastr.success(text, 'Succes');
 				},
 				error  : function (text) {
-					toastr.error(text, 'Error');
+					toastr.error(text.data, 'Error');
 				}
 			};
 		});

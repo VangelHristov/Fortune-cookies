@@ -15,132 +15,72 @@
 
 				$stateProvider
 					.state('home', {
-						url                  : '/home',
-						templateUrl          : '/views/home.html',
-						requireAuthentication: false,
-						resolve              : {
-							'cookies': [
-								'dataContext',
-								'notification',
-								function resolveCookies(
-									dataContext,
-									notification
-								) {
-
-									return dataContext
-										.cookies
-										.get()
-										.$promise
-										.then(res => res.result)
-										.catch(err => notification.error(err));
-
-								}
-							]
-						},
-						controller:'FortuneCookiesController'
+						url        : '/home',
+						templateUrl: '/views/home.html',
+						controller : 'HomeController'
 					})
 					.state('categories', {
-						url                  : '/categories',
-						templateUrl          : '/views/categories.html',
-						requireAuthentication: false,
-						resolve              : {
-							categories: [
-								'dataContext',
-								'notification',
-								function resolveCategories(
-									dataContext,
-									notification
-								) {
-									return dataContext
-										.categories
-										.get()
-										.$promise
-										.then(res => res.result)
-										.catch(err => notification.error(err));
-								}
-							]
-						},
-						controller:'FortuneCookiesController'
+						url        : '/categories',
+						templateUrl: '/views/categories.html',
+						controller : 'CategoriesController'
 					})
 					.state('category', {
-						url                  : '/categories/:category',
-						templateUrl          : '/views/category.html',
-						requireAuthentication: false,
-						resolve              : {
-							cookies: [
-								'dataContext',
-								'$stateParams',
-								'notification',
-								function resolveCookies(
-									dataContext,
-									$stateParams,
-									notification
-								) {
-									dataContext
-										.cookies
-										.get()
-										.$promise
-										.then(function resolveCookiesSuccess(res) {
-											return res.result.filter(function filterCookies(cookie) {
-												return cookie.category === $stateParams.category;
-											});
-										})
-										.catch(err => notification.error(err));
-								}
-							]
-						},
-						controller:'FortuneCookiesController'
+						url        : '/categories/:category',
+						templateUrl: '/views/category.html',
+						controller : 'CookiesByCategoryController'
 					})
 					.state('myCookie', {
-						url                  : '/my-cookie',
-						templateUrl          : '/views/my-fortune-cookie.html',
-						requireAuthentication: true,
-						controller:'FortuneCookiesController'
+						url        : '/my-cookie',
+						templateUrl: '/views/my-fortune-cookie.html',
+						controller : 'MyCookieController'
 					})
 					.state('share', {
-						url                  : '/share',
-						templateUrl          : '/views/share-fortune-cookie.html',
-						requireAuthentication: true,
-						controller:'FortuneCookiesController'
+						url        : '/share',
+						templateUrl: '/views/share-fortune-cookie.html',
+						controller : 'ShareCookieController'
 					})
 					.state('login', {
-						url                  : '/login',
-						templateUrl          : '/views/login.html',
-						requireAuthentication: false
+						url        : '/login',
+						templateUrl: '/views/login.html'
 					})
 					.state('register', {
-						url                  : '/register',
-						templateUrl          : '/views/register.html',
-						requireAuthentication: false
+						url        : '/register',
+						templateUrl: '/views/register.html'
 					});
 
 				$urlRouterProvider.otherwise('/home');
 
-				$httpProvider.interceptors.push('requestInterceptor');
+				$httpProvider
+					.interceptors
+					.push('requestInterceptor');
 			}
 		])
 		.run([
 			'$rootScope',
 			'$state',
 			'$window',
-			'userData',
-			'notification',
+			'storageKeys',
 			function appRun(
 				$rootScope,
 				$state,
 				$window,
-				userData,
-				notification
+				storageKeys
 			) {
 				$rootScope.$on(
-					'$routeChangeStart',
-					function routeChange(event, requestedRoute) {
+					'$locationChangeStart',
+					function locationChange(event, route) {
+						// User have to be authenticated to access these routes
+						if (route.endsWith('/share') ||
+							route.endsWith('/my-cookie')) {
 
-						if (requestedRoute.requireAuthentication === true &&
-							!$window.localStorage.getItem(userData.authKey)) {
-							event.preventDefault();
-							$state.go('home');
-							notification.error('You must login');
+							let authKey = $window
+								.localStorage
+								.getItem(storageKeys.authKey);
+
+							if (!authKey) {
+								event.preventDefault();
+								$state.go('home');
+							}
 						}
 					}
 				);

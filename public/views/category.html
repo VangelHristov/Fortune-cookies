@@ -1,8 +1,48 @@
-<div class = "album text-muted">
+<div>
+	<section class = "jumbotron text-xs-center">
+		<div class = "container">
+			<p>
+				{{category}}
+			</p>
+		</div>
+	</section>
 	<div class = "container">
-		<!--<div class="row" ng-repeat="category in categories">-->
-		<!--<h3><a href="#/category/{{category}}" class="cookie-category">{{category}}</a></h3>-->
-		<!--</div>-->
-		<h1>list of categories</h1>
+		<div class = "row" ng-repeat = "c in cookies">
+			
+			<div class = "col-xs-12 col-sm-5">
+				
+				<h3>{{c.text}}</h3>
+				<button id = "{{c.id}}like"
+				        class = "like btn btn-primary">Like
+				</button>
+				<button id = "{{c.id}}dislike"
+				        class = "dislike btn btn-danger">Dislike
+				</button>
+				<div align = "right">Likes:
+					<span class = "badge">{{c.likes}}</span>
+				</div>
+				<div align = "right">Dislikes:
+					<span class = "badge">{{c.dislikes}}</span>
+				</div>
+				<div align = "right">Share Date:
+					<span class = "badge">{{c.shareDate | date:'MMM d yyyy'}}
+					</span>
+				</div>
+			
+			
+			</div>
+			<div class = "col-xs-12 col-sm-7">
+				<div class = "media">
+					
+					<div class = "media-right">
+						<a ui-sref = "category({category:c.category})">
+							<img class = "img-responsive img-thumbnail"
+							     ng-src = "{{c.img}}">
+						</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
 	</div>
 </div>
