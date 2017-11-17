@@ -1,28 +1,285 @@
 {
   "users": [
     {
-      "username": "asdasdasd",
-      "passHash": "00ea1da4192a2030f9ae023de3b3143ed647bbab",
-      "usernameToLower": "asdasdasd",
-      "id": "45e1c72d-275f-405c-b4c6-b6a1fdacb997"
+      "name": "",
+      "username": "vanegel",
+      "passHash": "eab0e357e139af50eff4542d60f161ec",
+      "usernameToLower": "vanegel",
+      "id": "aa6b06f9-193f-46bf-98e6-6da2df1fded3"
     },
     {
-      "username": "qweqweqwe",
-      "passHash": "606fd96dcdac6cae332c334c0f50aaf8cb974203",
-      "usernameToLower": "qweqweqwe",
-      "id": "77455ed5-2bd4-4875-8e05-de369e15ff43"
-    },
-    {
-      "username": "asdasdasdasdasd",
-      "passHash": "4150953a511f9f6d74e17d5ac22e8be54e9fab56",
-      "usernameToLower": "asdasdasdasdasd",
-      "id": "8582b255-b8c4-4c8f-8fa1-7272c4c36f24"
-    },
-    {
-      "username": "asasdasdasdasdasdasdasd",
-      "passHash": "4150953a511f9f6d74e17d5ac22e8be54e9fab56",
-      "usernameToLower": "asasdasdasdasdasdasdasd",
-      "id": "a2e91086-3d50-4141-915b-017c6bf4348e"
+      "name": "",
+      "username": "vangel",
+      "passHash": "eab0e357e139af50eff4542d60f161ec",
+      "usernameToLower": "vangel",
+      "id": "352f0831-96ea-47dc-8ede-97d946035079",
+      "authKey": "352f0831-96ea-47dc-8ede-97d946035079MfJDflqdfmpeJuCynGxLwxDq",
+      "myCookies": [
+        {
+          "text": "Your high-minded principles spell success",
+          "category": "Inspiration",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "http://amritanshusingh.com/blog/wp-content/uploads/2016/08/3-Steps-of-Success-2.jpg",
+          "shareDate": "2016-06-29T01:17:27.582Z",
+          "id": "aea1963a-b396-4243-b1f3-7ed48f0ac75c",
+          "hours": 18
+        },
+        {
+          "text": "Your high-minded principles spell success",
+          "category": "Inspiration",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "http://amritanshusingh.com/blog/wp-content/uploads/2016/08/3-Steps-of-Success-2.jpg",
+          "shareDate": "2016-06-29T01:17:27.582Z",
+          "id": "aea1963a-b396-4243-b1f3-7ed48f0ac75c",
+          "hours": 18
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 0,
+          "dislikes": 0,
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+          "hours": 20
+        },
+        {
+          "text": "Today it's up to you to create the peacefulness you long for",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 92,
+          "dislikes": 48,
+          "img": "https://consciouslifenews.com/wp-content/uploads/2015/12/inner-peace.jpg",
+          "shareDate": "2016-06-27T01:43:12.706Z",
+          "id": "1c21b26a-6f2f-4982-898b-ade8ad9bd243",
+          "hours": 21
+        },
+        {
+          "text": "Today it's up to you to create the peacefulness you long for",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 92,
+          "dislikes": 48,
+          "img": "https://consciouslifenews.com/wp-content/uploads/2015/12/inner-peace.jpg",
+          "shareDate": "2016-06-27T01:43:12.706Z",
+          "id": "1c21b26a-6f2f-4982-898b-ade8ad9bd243",
+          "hours": 21
+        },
+        {
+          "text": "Today it's up to you to create the peacefulness you long for",
+          "category": "Wisdom",
+          "userId": "32230b7c-5d1e-44f1-a97a-04954078268b",
+          "likes": 92,
+          "dislikes": 48,
+          "img": "https://consciouslifenews.com/wp-content/uploads/2015/12/inner-peace.jpg",
+          "shareDate": "2016-06-27T01:43:12.706Z",
+          "id": "1c21b26a-6f2f-4982-898b-ade8ad9bd243",
+          "hours": 21
+        }
+      ]
     }
   ],
   "cookies": [
@@ -78,7 +335,7 @@
       "img": "https://consciouslifenews.com/wp-content/uploads/2015/12/inner-peace.jpg",
       "shareDate": "2016-06-27T01:43:12.706Z",
       "id": "1c21b26a-6f2f-4982-898b-ade8ad9bd243",
-      "hours": 19
+      "hours": 21
     },
     {
       "text": "A smile is your passport into the hearts of others",
@@ -88,7 +345,8 @@
       "dislikes": 0,
       "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
       "shareDate": "2016-06-27T17:47:35.116Z",
-      "id": "2523b557-53c9-45b5-a361-98f2bfddd892"
+      "id": "2523b557-53c9-45b5-a361-98f2bfddd892",
+      "hours": 20
     },
     {
       "text": "Your high-minded principles spell success",
@@ -98,7 +356,8 @@
       "dislikes": 0,
       "img": "http://amritanshusingh.com/blog/wp-content/uploads/2016/08/3-Steps-of-Success-2.jpg",
       "shareDate": "2016-06-29T01:17:27.582Z",
-      "id": "aea1963a-b396-4243-b1f3-7ed48f0ac75c"
+      "id": "aea1963a-b396-4243-b1f3-7ed48f0ac75c",
+      "hours": 18
     },
     {
       "text": "Hard work pays off in the future, laziness pays off now",
@@ -119,6 +378,16 @@
       "dislikes": 0,
       "shareDate": "2016-06-29T02:51:19.877Z",
       "id": "56458e53-7056-414d-a433-5641fe3b5479"
+    },
+    {
+      "text": "Expect the unexpected",
+      "category": "Luck",
+      "img": "http://www.redarrowinternational.tv/photo/formats/real_life/mr_luck_50.jpg",
+      "userId": "352f0831-96ea-47dc-8ede-97d946035079",
+      "likes": 0,
+      "dislikes": 0,
+      "shareDate": "2017-11-17T18:20:06.571Z",
+      "id": "5931b7a8-36e9-465f-b3f7-6f2d706690de"
     }
   ]
 }

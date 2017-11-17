@@ -6,7 +6,7 @@
 		.factory('crypto', function crypto() {
 			return {
 				encrypt: function (text) {
-					return 42;
+					return CryptoJS.MD5(text).toString();
 				}
 			};
 		});

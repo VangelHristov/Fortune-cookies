@@ -5,13 +5,11 @@
 		.module('app')
 		.factory('userAuth', [
 			'dataContext',
-			'notification',
 			'$window',
 			'crypto',
 			'storageKeys',
 			function userAuth(
 				dataContext,
-				notification,
 				$window,
 				crypto,
 				storageKeys
@@ -19,31 +17,35 @@
 				let hashPassword = function hashPassword(user) {
 					user.passHash = crypto.encrypt(user.password);
 					user.password = undefined;
+					user.confirmPassword = undefined;
+
 					return user;
 				};
 
 				let logIn = function logIn(user) {
 					user = hashPassword(user);
 
-					dataContext
+					return dataContext
 						.users
-						.save(user)
+						.authenticate(user)
 						.$promise
 						.then(function loginSuccess(res) {
-							notification.success(`Welcome ${res.result.username}`);
+							$window
+								.localStorage
+								.setItem(
+									storageKeys.username,
+									res.result.username
+								);
+							$window
+								.localStorage
+								.setItem(
+									storageKeys.authKey,
+									res.result.authKey
+								);
 
-							$window.localStorage.setItem(
-								storageKeys.username,
-								res.result.username
-							);
-							$window.localStorage.setItem(
-								storageKeys.authKey,
-								res.result.authKey
-							);
-
-							return Promise.resolve();
+							return setTimeout(() => Promise.resolve(), 300);
 						})
-						.catch(error => notification.error(error));
+						.catch(error => Promise.reject(error));
 				};
 
 				let logOut = function logOut() {
@@ -52,35 +54,39 @@
 					$window.localStorage.removeItem(storageKeys.userid);
 					$window.localStorage.removeItem(storageKeys.authKey);
 
-					notification.success('You have logged out');
-					return Promise.resolve();
+					return setTimeout(() => Promise.resolve(), 300);
 				};
 
 				let isLoggedIn = function () {
-					return $window.localStorage.getItem(storageKeys.authKey) !== null;
-				}
+					return $window
+						.localStorage
+						.getItem(storageKeys.authKey) !== null;
+				};
 
 				let register = function register(user) {
 					user = hashPassword(user);
 
-					dataContext
+					return dataContext
 						.users
 						.save(user)
 						.$promise
 						.then(function registerSuccess(res) {
-							$window.localStorage.setItem(
-								storageKeys.username,
-								res.result.username
-							);
+							$window
+								.localStorage
+								.setItem(
+									storageKeys.username,
+									res.result.username
+								);
 
-							notification.success('You are now registered');
 							return Promise.resolve();
 						})
-						.catch(error => notification.error(error));
+						.catch(error => Promise.reject(error));
 				};
 
 				let getUsername = function () {
-					return $window.localStorage.getItem(storageKeys.username);
+					return $window
+						.localStorage
+						.getItem(storageKeys.username);
 				};
 
 				return {

@@ -19,10 +19,10 @@
 						templateUrl: '/views/home.html',
 						controller : 'HomeController'
 					})
-					.state('categories', {
-						url        : '/categories',
-						templateUrl: '/views/categories.html',
-						controller : 'CategoriesController'
+					.state('favorites', {
+						url        : '/favorites',
+						templateUrl: '/views/favorites.html',
+						controller : 'FavoritesController'
 					})
 					.state('category', {
 						url        : '/categories/:category',
@@ -79,7 +79,7 @@
 
 							if (!authKey) {
 								event.preventDefault();
-								$state.go('home');
+								$state.go('login');
 							}
 						}
 					}

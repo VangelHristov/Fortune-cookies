@@ -1,12 +1,113 @@
-<form id = "form-share">
-	<h1>share a new fortune cookie</h1>
-	<!--<h2 class="form-share-heading">Please fill in the form</h2>-->
-	<!--<label for="text" class="sr-only">Text</label>-->
-	<!--<input type="text" id="text" class="form-control" placeholder="Text">-->
-	<!--<label for="category" class="sr-only">Category</label>-->
-	<!--<input type="text" id="category" class="form-control" placeholder="category">-->
-	<!--<label for="url" class="sr-only">Image url</label>-->
-	<!--<input type="text" id="url" class="form-control" placeholder="image url">-->
-	<!--<button class="btn btn-lg btn-success btn-block" type="submit">Share</button>-->
-	{{url}}
-</form>
+<div class = "jumbotron text-xs-center">
+	
+	<div class = "container">
+		<form name = "form.share"
+		      class = "form-horizontal"
+		      ng-submit = "share()"
+		      novalidate>
+			
+			<div class = "row"
+			     ng-class = "{'has-error':
+			                    !form.share.text.$pristine &&
+									(form.share.text.$error.required ||
+									form.share.text.$error.pattern)}">
+				<div class = "form-group col-xs-12 col-sm-6">
+					<label for = "text" class = "sr-only">Text</label>
+					
+					<input type = "text"
+					       id = "text"
+					       class = "form-control col-sm-offset-6"
+					       name = "text"
+					       placeholder = "Text"
+					       ng-model = "cookie.text"
+					       ng-required = "true"
+					       ng-pattern = "/^[A-Za-z0-9-_.,?\s]{6,230}$/"/>
+					
+					<div ng-show = "!form.share.text.$pristine"
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show =
+							     "form.share.text.$error.required">
+							Fortune cookie text is required.
+						</div>
+						<div ng-show = "form.share.text.$error.pattern"
+						     class = "help-block">
+							Text should be between 6 and 230 characters long.
+							Only alpha numeric characters, _,.,? and -
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "row"
+			     ng-class = "{'has-error':
+			                    !form.share.category.$pristine &&
+									(form.share.category.$error.required ||
+							        form.share.category.$error.pattern)}">
+				<div class = "form-group col-xs-12 col-sm-6">
+					<label for = "category" class = "sr-only">Category</label>
+					
+					<input type = "text"
+					       id = "category"
+					       class = "form-control col-sm-offset-6"
+					       name = "category"
+					       placeholder = "Category"
+					       ng-model = "cookie.category"
+					       ng-required = "true"
+					       ng-pattern = "/^[A-Za-z0-9]{1,40}$/"/>
+					
+					<div ng-show = "!form.share.category.$pristine"
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show =
+							     "form.share.category.$error.required">
+							Your password is required.
+						</div>
+						<div ng-show = "form.share.category.$error.pattern"
+						     class = "help-block">
+							Text should be between 6 and 40 characters long.
+							Only alpha numeric characters.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "row"
+			     ng-class = "{'has-error':
+				                !form.share.url.$pristine &&
+									(form.share.url.$error.required ||
+							        form.share.url.$error.pattern)}">
+				<div class = "form-group col-xs-12 col-sm-6">
+					<label for = "url" class = "sr-only">url</label>
+					
+					<input type = "text"
+					       id = "url"
+					       class = "form-control col-sm-offset-6"
+					       name = "url"
+					       placeholder = "url"
+					       ng-model = "cookie.img"
+					       ng-pattern = "url"/>
+					
+					<div ng-show = "!form.share.url.$pristine"
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show = "form.share.url.$error.pattern"
+						     class = "help-block">
+							Invalid url
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "row">
+				<div class = "form-group">
+					<div class = "">
+						<button type = "submit"
+						        class = "btn btn-success
+								         col-xs-6 col-xs-offset-2
+								         col-sm-2 col-sm-offset-5">
+							Share
+						</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -5,45 +5,40 @@
 		.module('app')
 		.factory('fortuneCookies', [
 			'dataContext',
-			'notification',
-			function fortuneCookies(dataContext, notification) {
+			function fortuneCookies(dataContext) {
+				let filter = function (col, cat) {
+					return col.filter(function f(e) {
+						return e.category.toLowerCase() === cat.toLowerCase();
+					});
+				};
+
 				return {
 					getAll       : function () {
 						return dataContext
 							.cookies
 							.get()
 							.$promise
-							.then(res => res.result)
-							.catch(err => notification.error(err));
+							.then(res => Promise.resolve(res.result))
+							.catch(err => Promise.reject(err));
 					},
 					rate         : function (cookie) {
-						dataContext
+						return dataContext
 							.cookies
 							.rate(
 								{id: cookie.id},
 								cookie
 							)
 							.$promise
-							.then(function rateSuccess() {
-								notification
-									.success('Your rating was submitted');
-
-								return Promise.resolve();
-							})
-							.catch(error => notification.error(error));
+							.then(() => Promise.resolve())
+							.catch(err => Promise.reject(err));
 					},
 					share        : function (cookie) {
-						dataContext
+						return dataContext
 							.cookies
 							.save(cookie)
 							.$promise
-							.then(function shareSuccess() {
-								notification.success(
-									'You shared a fortune cookie');
-
-								return Promise.resolve();
-							})
-							.catch(error => notification.error(error));
+							.then(() => Promise.resolve())
+							.catch(err => Promise.reject(err));
 
 					},
 					getByCategory: function (category) {
@@ -51,17 +46,11 @@
 							.cookies
 							.get()
 							.$promise
-							.then((res) => {
-								let filtered =
-									res.result
-									   .filter(
-										   function filter(c) {
-											   return c.category.toLowerCase() === category.toLowerCase();
-										   });
-
-								return Promise.resolve(filtered);
-							})
-							.catch(err => notification.error(err));
+							.then(res => Promise.resolve(filter(
+								res.result,
+								category
+							)))
+							.catch(err => Promise.reject(err));
 					},
 					getCategories: function () {
 						return dataContext
@@ -69,7 +58,7 @@
 							.get()
 							.$promise
 							.then(res => Promise.resolve(res.result))
-							.catch(err => notification.error(err));
+							.catch(err => Promise.reject(err));
 					},
 					getMyCookie  : function () {
 						return dataContext
@@ -77,10 +66,7 @@
 							.get()
 							.$promise
 							.then(res => Promise.resolve(res.result))
-							.catch(err => {
-								notification.error(err);
-								return Promise.reject();
-							});
+							.catch(err => Promise.reject(err));
 					}
 				};
 			}

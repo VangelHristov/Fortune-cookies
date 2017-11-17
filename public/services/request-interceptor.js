@@ -9,17 +9,15 @@
 				'$state',
 				'$window',
 				'storageKeys',
-				'notification',
 				function requestInterceptor(
 					$state,
 					$window,
-					storageKeys,
-					notification
+					storageKeys
 				) {
 					return {
 						'request': function (config) {
-							if ($state.name === 'myCookie' ||
-								$state.name === 'share') {
+							if ($state.$current.name === 'myCookie' ||
+								$state.$current.name === 'share') {
 								let key = $window
 									.localStorage
 									.getItem(storageKeys.authKey);
@@ -28,10 +26,6 @@
 								 * This way the caching mechanism can kick in and bypass the XHR call.
 								 * We return an empty response because, at this point, we do not care about the
 								 * behaviour of the app. */
-
-
-								console.log('key--->', key);
-
 								if (key === null) {
 									config.method = 'GET';
 									config.cache = {
@@ -40,8 +34,7 @@
 										}
 									};
 
-									$state.go('home');
-									notification.error('Please login');
+									$state.go('login');
 									return config;
 								}
 

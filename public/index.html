@@ -52,13 +52,21 @@
 						My Cookie
 					</a>
 				</li>
-				<li ui-sref-active-eq = "active">
-					<a ui-sref = "categories">
-						<i class = "glyphicon glyphicon-tags"></i>
-						Categories
+				<li ng-if = "isLoggedIn()"
+				    ui-sref-active-eq = "active">
+					<a ui-sref = "share">
+						<i class = "glyphicon glyphicon-share-alt"></i>
+						Share
 					</a>
 				</li>
-				<li ng-if = "category"
+				<li ng-if = "isLoggedIn()"
+					ui-sref-active-eq = "active">
+					<a ui-sref = "favorites">
+						<i class = "glyphicon glyphicon-heart"></i>
+						Favorites
+					</a>
+				</li>
+				<li ng-show = "category"
 				    ui-sref-active-eq = "active">
 					<a ui-sref = "category">
 						<i class = "glyphicon glyphicon-tag"></i>
@@ -66,23 +74,23 @@
 					</a>
 				</li>
 			</ul>
-			<ul ng-if = "!isLoggedIn()"
-			    class = "nav navbar-nav navbar-right">
-				<li ui-sref-active-eq = "active">
+			<ul class = "nav navbar-nav navbar-right">
+				<li ng-hide = "isLoggedIn()"
+					ui-sref-active-eq = "active">
 					<a ui-sref = "login">
 						<i class = "glyphicon glyphicon-log-in"></i>
 						Login
 					</a>
 				</li>
-				<li ng-if = "!isLoggedIn()"
+				<li ng-hide = "isLoggedIn()"
 				    ui-sref-active-eq = "active">
 					<a ui-sref = "register">
 						<i class = "glyphicon glyphicon-pencil"></i>
 						Register
 					</a>
 				</li>
-				<li ng-if = "isLoggedIn()">
-					<a>
+				<li ng-show = "isLoggedIn()">
+					<a ng-click="logOut()">
 						<i class = "glyphicon glyphicon-log-out"></i>
 						Logout
 					</a>
@@ -102,8 +110,7 @@
 <script src = "bower_components/jquery/dist/jquery.js"></script>
 <script src = "bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src = "bower_components/toastr/toastr.js"></script>
-<!--<script src = "bower_components/crypto-js/md5.js"></script>-->
-<script src = "bower_components/moment/moment.js"></script>
+<script src = "bower_components/crypto-js/crypto-js.js"></script>
 <script src = "bower_components/angular/angular.js"></script>
 <script src = "bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src = "bower_components/angular-resource/angular-resource.js"></script>
@@ -124,7 +131,7 @@
 <script src = "controllers/share-cookie-controller.js"></script>
 <script src = "controllers/home-controller.js"></script>
 <script src = "controllers/my-cookie-controller.js"></script>
-<script src = "controllers/categories-controller.js"></script>
+<script src = "controllers/favorites-controller.js"></script>
 <script src = "controllers/cookies-by-category-controller.js"></script>
 </body>
 </html>

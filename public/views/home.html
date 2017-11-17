@@ -8,7 +8,6 @@
 				
 				<select ng-model = "order" id = "filter">
 					<option value = "-shareDate">date</option>
-					<option value = "-likes">likes</option>
 					<option value = "category">category</option>
 				</select>
 			</p>
@@ -17,35 +16,30 @@
 	<div class = "container">
 		<div class = "row" ng-repeat = "c in cookies| orderBy:order">
 			
-			<div class = "col-xs-12 col-sm-5">
+			<div class = "col-xs-12 col-sm-6">
 				
 				<h3>{{c.text}}</h3>
-				<div class = "btn btn-info">
-					<a class="btn-category"
-						ui-sref = "category({category:c.category})">
-						#{{c.category}}
+				<div class = "btn btn-default btn-label">
+					<a class = "btn-category"
+					   ui-sref = "category({category:c.category})">
+						<span
+							class = "glyphicon glyphicon-tag"></span>
+						{{c.category}}
 					</a>
 				</div>
-				<button id = "{{c.id}}like"
-				        class = "like btn btn-primary">Like
+				<button id = "{{c.id}}"
+				        class = "btn btn-danger">
+					<i class = "glyphicon glyphicon-plus"></i>
+					<span class = "">Add to favorite</span>
 				</button>
-				<button id = "{{c.id}}dislike"
-				        class = "dislike btn btn-danger">Dislike
-				</button>
-				<div align = "right">Likes:
-					<span class = "badge">{{c.likes}}</span>
-				</div>
-				<div align = "right">Dislikes:
-					<span class = "badge">{{c.dislikes}}</span>
-				</div>
-				<div align = "right">Share Date:
+				<br>
+				<br>
+				<div >Share Date:
 					<span class = "badge">{{c.shareDate | date:'MMM d yyyy'}}
 					</span>
 				</div>
-			
-			
 			</div>
-			<div class = "col-xs-12 col-sm-7">
+			<div class = "col-xs-0 col-sm-5">
 				<div class = "media">
 					
 					<div class = "media-right">

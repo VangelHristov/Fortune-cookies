@@ -9,7 +9,7 @@ footer div p {
     padding-left: 35%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 994px)  {
     .navbar-nav.navbar-center {
         position: absolute;
         left: 50%;
@@ -24,6 +24,10 @@ footer div p {
 
 /*change collapsible navbar break point */
 @media (max-width: 994px) {
+    .navbar-nav.navbar-center {
+        position: relative;
+    }
+
     .navbar-header {
         float: none;
     }
@@ -67,8 +71,29 @@ footer div p {
     .collapse.in {
         display: block !important;
     }
+}
 
-    .btn-category {
-        color: #FFFFFF !important;
+div#category-container a.category {
+    background: linear-gradient(-90deg, #798988, rgba(121, 137, 136, 0.77));
+    display: block;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+div#category-container a.category span {
+    display: block;
+    padding-left: 35%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+@media (max-width: 776px) and (min-width: 340px) {
+    div#category-container a.category span {
+        padding: 10% 20px 10% 20%;
+    }
+
+    div#category-container a.category span {
+        padding-left: 40%;
     }
 }
