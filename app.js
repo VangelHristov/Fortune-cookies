@@ -1,37 +1,54 @@
-var express = require('express'),
+'use strict';
+
+let express = require('express'),
 	bodyParser = require('body-parser'),
 	lowdb = require('lowdb');
 
-var db = lowdb('./data/data.json');
+let db = lowdb('./data/data.json');
 db._.mixin(require('underscore-db'));
 
-var app = express();
+let app = express();
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-require('./utils/authorize-user')(app, db);
+// Authentication
+app.use('/api', function authenticate(req, res, next) {
+	req.user = db('users')
+		.find({authKey: req.headers['x-auth-key']});
+
+	next();
+});
 
 //User routes
-var usersController = require('./controllers/users-controller')(db);
-app.get('/api/users', usersController.get);
+let usersController = require('./controllers/users-controller')(db);
 app.post('/api/users', usersController.post);
 app.put('/api/users', usersController.put);
 
 // Fortune cookies
-var cookiesController = require('./controllers/cookies-controller')(db);
+let cookiesController = require('./controllers/cookies-controller')(db);
 app.get('/api/cookies', cookiesController.get);
 app.post('/api/cookies', cookiesController.post);
-app.put('/api/cookies/:id', cookiesController.put);
-//
-// My fortune cookies
-var myCookiesController = require('./controllers/my-cookies-controller')(db);
-app.get('/api/my-cookie', myCookiesController.get);
+
+// My daily fortune cookies
+let dailyCookieController = require('./controllers/daily-cookie-controller')(db);
+app.get('/api/my-cookie', dailyCookieController.get);
 
 // Categories
-var categoriesController = require('./controllers/categories-controller')(db);
-app.get('/api/categories', categoriesController.get);
+let favoritesController = require('./controllers/favorites-controller')(db);
+app.get('/api/favorites', favoritesController.get);
+app.post('/api/favorites/:cookieId', favoritesController.post);
+app.delete('/api/favorites/:cookieId', favoritesController.del);
 
-var port = 3000;
-app.listen(port, function () {
+app.use(function errorHandler(err,req,res,next){
+    if(err){
+        return next('ERROR');
+    }
+
+    return next();
+});
+
+let port = 3000;
+app.listen(port, function listen() {
+	//eslint-disable-next-line no-console
 	console.log('Server is running at http://localhost:' + port);
 });

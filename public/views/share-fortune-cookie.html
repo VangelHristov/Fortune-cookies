@@ -14,7 +14,8 @@
 				<div class = "form-group col-xs-12 col-sm-6">
 					<label for = "text" class = "sr-only">Text</label>
 					
-					<input type = "text"
+					<input autofocus
+					       type = "text"
 					       id = "text"
 					       class = "form-control col-sm-offset-6"
 					       name = "text"
@@ -99,7 +100,8 @@
 			<div class = "row">
 				<div class = "form-group">
 					<div class = "">
-						<button type = "submit"
+						<button ng-disabled = "form.share.$invalid"
+						        type = "submit"
 						        class = "btn btn-success
 								         col-xs-6 col-xs-offset-2
 								         col-sm-2 col-sm-offset-5">

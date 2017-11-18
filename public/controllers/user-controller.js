@@ -8,13 +8,17 @@
 			[
 				'$scope',
 				'$state',
+				'$timeout',
 				'userAuth',
 				'notification',
+				'favorites',
 				function userController(
 					$scope,
 					$state,
+					$timeout,
 					userAuth,
-					notification
+					notification,
+					favorites
 				) {
 					let initUser = function () {
 						return {
@@ -22,6 +26,12 @@
 							password       : '',
 							confirmPassword: ''
 						};
+					};
+
+					let stateGo = function (state) {
+						//When calling both $state.go and notification
+						//without timeout only one of them executes.
+						$timeout($state.transitionTo, 200, true, state);
 					};
 
 					$scope.category = '';
@@ -32,19 +42,14 @@
 					$scope.logIn = function ligIn() {
 						userAuth
 							.logIn($scope.user)
-							.then(() => {
+							.then((username) => {
 								$scope.user = initUser();
 								$scope.form.login.$setPristine();
 
-								notification.success(`Welcome back, ${$scope.displayName}`);
-
-								//Without using timeout the notification
-								// does not show up.
-								setTimeout(function timeout() {
-									$state.go('myCookie');
-								}, 500);
+								notification.success(`You are logged in as ${username}`);
+								stateGo('myCookie');
 							})
-							.catch(err=>{
+							.catch(err => {
 								$scope.user = initUser();
 								$scope.form.login.$setPristine();
 								notification.error(err);
@@ -59,12 +64,7 @@
 								$scope.form.register.$setPristine();
 
 								notification.success('You have registered');
-
-								//Without using timeout the notification
-								// does not show up.
-								setTimeout(function interval() {
-									$state.go('login');
-								}, 300);
+								stateGo('login');
 							})
 							.catch(err => {
 								$scope.user = initUser();
@@ -77,13 +77,25 @@
 						return $scope.user.password === $scope.user.confirmPassword;
 					};
 
-					$scope.logOut = userAuth.logOut;
+					$scope.logOut = function logOut() {
+						userAuth
+							.logOut()
+							.then(() => {
+								notification.success('You have logged out');
+							})
+							.catch(err => notification.error(err));
+					};
 
 					$scope.isLoggedIn = userAuth.isLoggedIn;
 
-					$scope.displayName = userAuth.getUsername();
-
 					$scope.passwordsMatch = $scope.matchPasswords();
+
+					$scope.saveToFavorites = function save(cookieId) {
+						favorites
+							.save({cookieId:cookieId})
+							.then(res => notification.success(res))
+							.catch(err => notification.error(err));
+					};
 				}
 			]
 		);

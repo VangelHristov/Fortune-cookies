@@ -5,11 +5,11 @@
 		.module('app')
 		.config([
 			'$stateProvider',
-			'$urlRouterProvider',
+			'$urlServiceProvider',
 			'$httpProvider',
 			function appConfig(
 				$stateProvider,
-				$urlRouterProvider,
+				$urlServiceProvider,
 				$httpProvider
 			) {
 
@@ -19,25 +19,28 @@
 						templateUrl: '/views/home.html',
 						controller : 'HomeController'
 					})
-					.state('favorites', {
-						url        : '/favorites',
-						templateUrl: '/views/favorites.html',
-						controller : 'FavoritesController'
-					})
 					.state('category', {
 						url        : '/categories/:category',
 						templateUrl: '/views/category.html',
 						controller : 'CookiesByCategoryController'
 					})
+					.state('favorites', {
+						url        : '/favorites',
+						templateUrl: '/views/favorites.html',
+						controller : 'FavoritesController',
+						data       : {authenticate: true}
+					})
 					.state('myCookie', {
 						url        : '/my-cookie',
 						templateUrl: '/views/my-fortune-cookie.html',
-						controller : 'MyCookieController'
+						controller : 'MyCookieController',
+						data       : {authenticate: true}
 					})
 					.state('share', {
 						url        : '/share',
 						templateUrl: '/views/share-fortune-cookie.html',
-						controller : 'ShareCookieController'
+						controller : 'ShareCookieController',
+						data       : {authenticate: true}
 					})
 					.state('login', {
 						url        : '/login',
@@ -48,7 +51,9 @@
 						templateUrl: '/views/register.html'
 					});
 
-				$urlRouterProvider.otherwise('/home');
+				$urlServiceProvider
+					.rules
+					.otherwise('home');
 
 				$httpProvider
 					.interceptors
@@ -57,30 +62,27 @@
 		])
 		.run([
 			'$rootScope',
-			'$state',
-			'$window',
-			'storageKeys',
+			'$transitions',
+			'notification',
+			'userAuth',
 			function appRun(
 				$rootScope,
-				$state,
-				$window,
-				storageKeys
+				$transitions,
+				notification,
+				userAuth
 			) {
-				$rootScope.$on(
-					'$locationChangeStart',
-					function locationChange(event, route) {
-						// User have to be authenticated to access these routes
-						if (route.endsWith('/share') ||
-							route.endsWith('/my-cookie')) {
+				$transitions.onBefore(
+					{},
+					function transitionBefore(transition) {
+						// check if the state should be protected
+						if (transition.to().data &&
+							transition.to().data.authenticate
+							&& !userAuth.isLoggedIn()) {
 
-							let authKey = $window
-								.localStorage
-								.getItem(storageKeys.authKey);
+							notification.warn('Please log in');
 
-							if (!authKey) {
-								event.preventDefault();
-								$state.go('login');
-							}
+							// redirect to the 'login' state
+							return transition.router.stateService.target('login');
 						}
 					}
 				);

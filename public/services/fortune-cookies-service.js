@@ -21,17 +21,6 @@
 							.then(res => Promise.resolve(res.result))
 							.catch(err => Promise.reject(err));
 					},
-					rate         : function (cookie) {
-						return dataContext
-							.cookies
-							.rate(
-								{id: cookie.id},
-								cookie
-							)
-							.$promise
-							.then(() => Promise.resolve())
-							.catch(err => Promise.reject(err));
-					},
 					share        : function (cookie) {
 						return dataContext
 							.cookies
@@ -50,14 +39,6 @@
 								res.result,
 								category
 							)))
-							.catch(err => Promise.reject(err));
-					},
-					getCategories: function () {
-						return dataContext
-							.categories
-							.get()
-							.$promise
-							.then(res => Promise.resolve(res.result))
 							.catch(err => Promise.reject(err));
 					},
 					getMyCookie  : function () {

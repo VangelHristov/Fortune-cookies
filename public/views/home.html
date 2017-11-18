@@ -27,9 +27,10 @@
 						{{c.category}}
 					</a>
 				</div>
-				<button id = "{{c.id}}"
+				<button ng-show="isLoggedIn()"
+						ng-click = "saveToFavorites(c.id)"
 				        class = "btn btn-danger">
-					<i class = "glyphicon glyphicon-plus"></i>
+					<i class = "glyphicon glyphicon-heart"></i>
 					<span class = "">Add to favorite</span>
 				</button>
 				<br>

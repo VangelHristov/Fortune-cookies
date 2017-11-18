@@ -9,7 +9,7 @@ footer div p {
     padding-left: 35%;
 }
 
-@media (min-width: 994px)  {
+@media (min-width: 994px) {
     .navbar-nav.navbar-center {
         position: absolute;
         left: 50%;
@@ -71,6 +71,10 @@ footer div p {
     .collapse.in {
         display: block !important;
     }
+}
+
+ul.nav.navbar.navbar-right li a{
+    cursor: pointer !important;
 }
 
 div#category-container a.category {

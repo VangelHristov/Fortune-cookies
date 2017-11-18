@@ -1,14 +1,14 @@
-<div class="jumbotron">
+<div class = "jumbotron">
 	<div class = "container">
 		<div class = "row" ng-repeat = "c in cookies">
 			
 			<div class = "col-xs-12 col-sm-6">
 				
-				<h3 class="text-xs-center">{{c.text}}</h3>
-				<button id = "{{c.id}}"
+				<h3 class = "text-xs-center">{{c.text}}</h3>
+				<button ng-click = "deleteFromFavorites(c.id)"
 				        class = "btn btn-warning">
 					<i class = "glyphicon glyphicon-trash"></i>
-					<span class = "">Remove from favorites</span>
+					<span class = "">Delete from Favorites</span>
 				</button>
 				<br>
 				<br>

@@ -43,18 +43,17 @@
 									res.result.authKey
 								);
 
-							return setTimeout(() => Promise.resolve(), 300);
+							return Promise.resolve(res.result.username);
 						})
 						.catch(error => Promise.reject(error));
 				};
 
 				let logOut = function logOut() {
-
 					$window.localStorage.removeItem(storageKeys.username);
 					$window.localStorage.removeItem(storageKeys.userid);
 					$window.localStorage.removeItem(storageKeys.authKey);
 
-					return setTimeout(() => Promise.resolve(), 300);
+					return Promise.resolve();
 				};
 
 				let isLoggedIn = function () {
@@ -83,17 +82,10 @@
 						.catch(error => Promise.reject(error));
 				};
 
-				let getUsername = function () {
-					return $window
-						.localStorage
-						.getItem(storageKeys.username);
-				};
-
 				return {
 					logIn,
 					logOut,
 					register,
-					getUsername,
 					isLoggedIn
 				};
 			}

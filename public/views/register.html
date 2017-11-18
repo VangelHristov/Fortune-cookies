@@ -5,7 +5,7 @@
 		      class = "form-horizontal"
 		      ng-submit = "register()"
 		      novalidate>
-		
+			
 			<div class = "row"
 			     ng-class = "{'has-error':
 			                    !form.register.username.$pristine &&
@@ -14,7 +14,8 @@
 				<div class = "form-group col-xs-12 col-sm-6">
 					<label for = "email" class = "sr-only">Email</label>
 					
-					<input type = "text"
+					<input autofocus
+					       type = "text"
 					       id = "email"
 					       class = "form-control col-sm-offset-6"
 					       name = "username"
@@ -24,9 +25,9 @@
 					       ng-pattern = "/^[A-Za-z0-9-_]{6,30}$/"/>
 					
 					<div ng-show = "!form.register.username.$pristine"
-					      class = "help-block  col-sm-offset-6">
-						<div ng-show=
-								"form.register.username.$error.required">
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show =
+							     "form.register.username.$error.required">
 							Your username is required.
 						</div>
 						<div ng-show = "form.register.username.$error.pattern"
@@ -57,7 +58,7 @@
 					
 					<div ng-show = "!form.register.password.$pristine"
 					     class = "help-block  col-sm-offset-6">
-						<div ng-show=
+						<div ng-show =
 							     "form.register.password.$error.required">
 							Your password is required.
 						</div>
@@ -88,11 +89,11 @@
 					
 					<div ng-show = "!form.register.confirmPassword.$pristine"
 					     class = "help-block  col-sm-offset-6">
-						<div ng-show=
+						<div ng-show =
 							     "form.register.confirmPassword.$error.required">
 							Please confirm your password.
 						</div>
-						<div ng-show ="!passwordsMatch"
+						<div ng-show = "!passwordsMatch"
 						     class = "help-block">
 							Passwords don't match.
 						</div>
@@ -106,7 +107,8 @@
 			<div class = "row">
 				<div class = "form-group">
 					<div class = "">
-						<button type = "submit"
+						<button ng-disabled = "form.register.$invalid"
+						        type = "submit"
 						        class = "btn btn-info
 								         col-xs-6 col-xs-offset-2
 								         col-sm-2 col-sm-offset-5">

@@ -9,18 +9,20 @@
 				'$resource',
 				function dataContext($resource) {
 					return {
-						myCookie  : $resource('/api/my-cookie'),
-						cookies   : $resource(
+						myCookie : $resource('/api/my-cookie'),
+						cookies  : $resource(
 							'/api/cookies/:id',
-							{id: '@id'},
-							{rate: {method: 'PUT'}}
+							{id: '@id'}
 						),
-						users     : $resource(
+						users    : $resource(
 							'/api/users/:id',
 							{id: '@id'},
 							{authenticate: {method: 'PUT'}}
 						),
-						categories: $resource('/api/categories')
+						favorites: $resource(
+							'/api/favorites/:cookieId',
+							{cookieId: '@cookieId'}
+						)
 					};
 				}
 			]

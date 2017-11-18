@@ -9,7 +9,7 @@
 				"newestOnTop"      : true,
 				"progressBar"      : false,
 				"positionClass"    : "toast-top-right",
-				"preventDuplicates": true,
+				"preventDuplicates": false,
 				"onclick"          : null,
 				"showDuration"     : "400",
 				"hideDuration"     : "1000",
@@ -23,10 +23,13 @@
 
 			return {
 				success: function (text) {
-					toastr.success(text, 'Succes');
+					toastr.success(text, 'Success:');
 				},
 				error  : function (text) {
-					toastr.error(text.data, 'Error');
+					toastr.error(text.data, 'Error:');
+				},
+				warn   : function (text) {
+					toastr.warning(text, 'Warning:');
 				}
 			};
 		});

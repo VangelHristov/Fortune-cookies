@@ -1,13 +1,14 @@
-<div class="jumbotron">
+<div class = "jumbotron">
 	<div class = "container">
 		<div class = "row" ng-repeat = "c in cookies">
 			
 			<div class = "col-xs-12 col-sm-6">
 				
-				<h3 class="text-xs-center">{{c.text}}</h3>
-				<button id = "{{c.id}}"
+				<h3 class = "text-xs-center">{{c.text}}</h3>
+				<button ng-show = "isLoggedIn()"
+				        ng-click = "saveToFavorites(c.id)"
 				        class = "btn btn-danger">
-					<i class = "glyphicon glyphicon-plus"></i>
+					<i class = "glyphicon glyphicon-heart"></i>
 					<span class = "">Add to favorite</span>
 				</button>
 				<br>

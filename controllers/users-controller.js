@@ -1,100 +1,81 @@
-module.exports = function(db) {
-  const AUTH_KEY_LENGTH = 60,
-      AUTH_KEY_CHARS = 'qwertyuiopasdfghjklzxcvbnmWERTYUIOPASDFGHJKLZXCVBNM';
+'use strict';
 
-  function validate(user) {
+module.exports = function userControllerModule(db) {
+	const AUTH_KEY_LENGTH = 60,
+		AUTH_KEY_CHARS = 'qwertyuiopasdfghjklzxcvbnmWERTYUIOPASDFGHJKLZXCVBNM';
 
-  }
+	function generateAuthKey(uniquePart) {
+		let authKey = uniquePart,
+			index;
 
-  function generateAuthKey(uniquePart) {
-    var authKey = uniquePart,
-        index;
-    while (authKey.length < AUTH_KEY_LENGTH) {
-      index = Math.floor(Math.random() * AUTH_KEY_CHARS.length);
-      authKey += AUTH_KEY_CHARS[index];
-    }
-    return authKey;
-  }
+		while (authKey.length < AUTH_KEY_LENGTH) {
+			index = Math.floor(Math.random() * AUTH_KEY_CHARS.length);
+			authKey += AUTH_KEY_CHARS[index];
+		}
 
-  function get(req, res) {
-    var user = req.user;
-    if (!user) {
-      res.status(401)
-          .json('Unauthorized user!');
-      return;
-    }
-    var users = db('users')
-        .map(function(user) {
-          return {
-            username: user.username,
-            id: user.id
-          };
-        });
+		return authKey;
+	}
 
-    res.json({
-      result: users
-    });
-  }
+	function post(req, res) {
+		let user = req.body;
 
-  function post(req, res) {
-    var user = req.body;
-    if (!user || typeof user.username !== 'string' || typeof user.passHash !== 'string') {
-      res.status(400)
-          .json('Invalid user');
-      return;
-    }
-    var error = validate(user);
+		if (!user ||
+			typeof user.username !== 'string' ||
+			typeof user.passHash !== 'string') {
 
-    if (error) {
-      res.status(400)
-          .json(error.message);
-      return;
-    }
-    var dbUser = db('users').find({
-      usernameToLower: user.username.toLowerCase()
-    });
+			return res
+				.status(400)
+				.json('Invalid user');
+		}
 
-    if (dbUser) {
-      res.status(400)
-          .json('Duplicated user');
-      return;
-    }
-    user.usernameToLower = user.username.toLowerCase();
-    db('users').insert(user);
-    res.status(201)
-        .json({
-          result: {
-            username: user.username
-          }
-        });
-  }
+		let duplicateUser = db('users')
+			.find({username: user.username});
 
-  function put(req, res) {
-    var reqUser = req.body;
-    var user = db('users').find({
-      usernameToLower: reqUser.username.toLowerCase()
-    });
-    if (!user || user.passHash !== reqUser.passHash) {
-      res.status(404)
-          .json('Invalid username or password');
-      return;
-    }
-    if (!user.authKey) {
-      user.authKey = generateAuthKey(user.id);
-      db.save();
-    }
+		if (duplicateUser) {
+			return res
+				.status(400)
+				.json('Duplicated user');
+		}
 
-    res.json({
-      result: {
-        username: user.username,
-        authKey: user.authKey
-      }
-    });
-  }
+		user.favorites = [];
+		user.dailyCookie = {};
 
-  return {
-    get: get,
-    post: post,
-    put: put
-  };
+		db('users')
+			.insert(user);
+
+		return res
+			.status(201)
+			.json({result: user.username});
+	}
+
+	function put(req, res) {
+		let reqUser = req.body;
+		let user = db('users')
+			.find({username: reqUser.username});
+
+		if (!user || user.passHash !== reqUser.passHash) {
+			return res
+				.status(404)
+				.json('Invalid username or password');
+		}
+
+		if (!user.authKey) {
+			user.authKey = generateAuthKey(user.id);
+			db.save();
+		}
+
+		return res
+			.status(200)
+			.json({
+				result: {
+					username: user.username,
+					authKey : user.authKey
+				}
+			});
+	}
+
+	return {
+		post,
+		put
+	};
 };
