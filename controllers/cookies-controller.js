@@ -1,24 +1,24 @@
 'use strict';
 
-let DEFAULT_COOKIE_IMAGE =
-	'https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg';
+let {
+	DEFAULT_COOKIE_IMAGE,
+	COOKIE_ID_KEY_LENGTH,
+	COOKIE_ID_KEY_CHARS
+} = require('../util/constants');
 
 module.exports = function cookiesControllerModule(db) {
-	const ID_KEY_LENGTH = 100,
-		ID_KEY_CHARS = '0123456qwertyuiopasdfghjklzxcvbnmWERTYUIOPASDFGHJKLZXCVBNM';
-
 	function generateCookieId(uniquePart) {
 		let id = uniquePart,
 			index;
 
-		while (id.length < ID_KEY_LENGTH) {
-			index = Math.floor(Math.random() * ID_KEY_CHARS.length);
-			id += ID_KEY_CHARS[index];
+		while (id.length < COOKIE_ID_KEY_LENGTH) {
+			index = Math.floor(Math.random() * COOKIE_ID_KEY_CHARS.length);
+			id += COOKIE_ID_KEY_CHARS[index];
 		}
 
 		return id;
 	}
-	//eslint-disable-next-line
+
 	let get = function (req, res) {
 		return res
 			.status(200)

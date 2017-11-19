@@ -17,7 +17,7 @@
 				$scope.cookie = {
 					text    : '',
 					category: '',
-					img     : ''
+					img     : null
 				};
 
 				$scope.url = new RegExp([

@@ -54,17 +54,17 @@
 					       placeholder = "Category"
 					       ng-model = "cookie.category"
 					       ng-required = "true"
-					       ng-pattern = "/^[A-Za-z0-9]{1,40}$/"/>
+					       ng-pattern = "/^[A-Za-z0-9\s]{1,40}$/"/>
 					
 					<div ng-show = "!form.share.category.$pristine"
 					     class = "help-block  col-sm-offset-6">
 						<div ng-show =
 							     "form.share.category.$error.required">
-							Your password is required.
+							Cookie category is required.
 						</div>
 						<div ng-show = "form.share.category.$error.pattern"
 						     class = "help-block">
-							Text should be between 6 and 40 characters long.
+							Category should be between 6 and 40 characters long.
 							Only alpha numeric characters.
 						</div>
 					</div>

@@ -4,14 +4,37 @@
       "name": "",
       "username": "vangel",
       "passHash": "eab0e357e139af50eff4542d60f161ec",
-      "favorites": [],
+      "favorites": [
+        {
+          "text": "A chance meeting opens new doors to success and friendship",
+          "category": "Success",
+          "img": "http://www.pd4pic.com/images/dice-cube-die-fun-game-play-chance-luck-gamble.png",
+          "id": "vangeltucdstxCXg4JojFbJejxPdN6slfzZSDhHLEvIIXswowIkwGsvcK3sXmMxVaD5FIaiqbiKcJrshvwrjx4vqkVGO32g2qgmV",
+          "shareDate": "2017-11-19T10:39:46.696Z"
+        },
+        {
+          "text": "Your golden opportunity is coming shortly",
+          "category": "Luck",
+          "img": "http://www.profitguide.com/wp-content/uploads/2013/01/Opportunity-next-exit-sign.jpg",
+          "shareDate": "2017-11-18T08:56:47.406Z",
+          "id": "beca4eba50cf4919981dcee3f138ec1b"
+        },
+        {
+          "text": "Change can hurt, but it leads a path to something better",
+          "category": "Inspiration",
+          "img": "https://tech.co/wp-content/uploads/2015/11/evolution.jpg",
+          "shareDate": "2016-06-29T02:51:19.877Z",
+          "id": "56458e537056414da4335641fe3b5479",
+          "day": 0
+        }
+      ],
       "dailyCookie": {
-        "text": "A smile is your passport into the hearts of others",
-        "category": "Wisdom",
-        "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
-        "shareDate": "2016-06-27T17:47:35.116Z",
-        "id": "2523b55753c945b5a36198f2bfddd892",
-        "day": 6
+        "text": "Change can hurt, but it leads a path to something better",
+        "category": "Inspiration",
+        "img": "https://tech.co/wp-content/uploads/2015/11/evolution.jpg",
+        "shareDate": "2016-06-29T02:51:19.877Z",
+        "id": "56458e537056414da4335641fe3b5479",
+        "day": 0
       },
       "id": "772b8506-d713-434b-93ee-91d06fbe5828",
       "authKey": "772b8506-d713-434b-93ee-91d06fbe5828HJkWasbbySRsoSqYYTwoYGVw"
@@ -98,7 +121,8 @@
       "category": "Inspiration",
       "img": "https://tech.co/wp-content/uploads/2015/11/evolution.jpg",
       "shareDate": "2016-06-29T02:51:19.877Z",
-      "id": "56458e537056414da4335641fe3b5479"
+      "id": "56458e537056414da4335641fe3b5479",
+      "day": 0
     },
     {
       "text": "Expect the unexpected",
@@ -120,6 +144,20 @@
       "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
       "id": "vangelDRdMhTVVwEgj6os6fNtqrLCwbwtbf2wpg13B4vOhSNAicTCTXI45oW2CGtnfvrJ3AW5dKAaCPSvh0bBXaNvUaIFfTLOh13",
       "shareDate": "2017-11-18T17:45:12.084Z"
+    },
+    {
+      "text": "A chance meeting opens new doors to success and friendship",
+      "category": "Success",
+      "img": "http://www.pd4pic.com/images/dice-cube-die-fun-game-play-chance-luck-gamble.png",
+      "id": "vangeltucdstxCXg4JojFbJejxPdN6slfzZSDhHLEvIIXswowIkwGsvcK3sXmMxVaD5FIaiqbiKcJrshvwrjx4vqkVGO32g2qgmV",
+      "shareDate": "2017-11-19T10:39:46.696Z"
+    },
+    {
+      "text": "You learn from your mistakes... You will learn a lot today",
+      "category": "Wisdom",
+      "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
+      "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
+      "shareDate": "2017-11-19T10:44:34.226Z"
     }
   ]
 }

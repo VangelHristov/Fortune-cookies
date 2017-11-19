@@ -10,14 +10,7 @@ db._.mixin(require('underscore-db'));
 let app = express();
 app.use(bodyParser.json());
 app.use(express.static('public'));
-
-// Authentication
-app.use('/api', function authenticate(req, res, next) {
-	req.user = db('users')
-		.find({authKey: req.headers['x-auth-key']});
-
-	next();
-});
+app.use('/api', require('./util/authenticate')(db));
 
 //User routes
 let usersController = require('./controllers/users-controller')(db);
@@ -30,8 +23,8 @@ app.get('/api/cookies', cookiesController.get);
 app.post('/api/cookies', cookiesController.post);
 
 // My daily fortune cookies
-let dailyCookieController = require('./controllers/daily-cookie-controller')(db);
-app.get('/api/my-cookie', dailyCookieController.get);
+let dailyCookie = require('./controllers/daily-cookie-controller')(db);
+app.get('/api/my-cookie', dailyCookie.get);
 
 // Categories
 let favoritesController = require('./controllers/favorites-controller')(db);
@@ -39,12 +32,12 @@ app.get('/api/favorites', favoritesController.get);
 app.post('/api/favorites/:cookieId', favoritesController.post);
 app.delete('/api/favorites/:cookieId', favoritesController.del);
 
-app.use(function errorHandler(err,req,res,next){
-    if(err){
-        return next('ERROR');
-    }
+app.use(function errorHandler(err, req, res, next) {
+	if (err) {
+		return next('ERROR');
+	}
 
-    return next();
+	return next();
 });
 
 let port = 3000;

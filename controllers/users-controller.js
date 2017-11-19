@@ -1,9 +1,11 @@
 'use strict';
 
-module.exports = function userControllerModule(db) {
-	const AUTH_KEY_LENGTH = 60,
-		AUTH_KEY_CHARS = 'qwertyuiopasdfghjklzxcvbnmWERTYUIOPASDFGHJKLZXCVBNM';
+let {
+	AUTH_KEY_LENGTH,
+	AUTH_KEY_CHARS
+} = require('../util/constants');
 
+module.exports = function userControllerModule(db) {
 	function generateAuthKey(uniquePart) {
 		let authKey = uniquePart,
 			index;
