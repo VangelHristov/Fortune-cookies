@@ -31,7 +31,7 @@
 					let stateGo = function (state) {
 						//When calling both $state.go and notification
 						//without timeout only one of them executes.
-						$timeout($state.transitionTo, 200, true, state);
+						$timeout($state.transitionTo, 400, true, state);
 					};
 
 					$scope.category = '';
@@ -82,6 +82,7 @@
 							.logOut()
 							.then(() => {
 								notification.success('You have logged out');
+								stateGo('login');
 							})
 							.catch(err => notification.error(err));
 					};
@@ -92,7 +93,7 @@
 
 					$scope.saveToFavorites = function save(cookieId) {
 						favorites
-							.save({cookieId:cookieId})
+							.save({cookieId: cookieId})
 							.then(res => notification.success(res))
 							.catch(err => notification.error(err));
 					};

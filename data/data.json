@@ -5,14 +5,21 @@
       "passHash": "eab0e357e139af50eff4542d60f161ec",
       "favorites": [
         {
-          "text": "Expect the unexpected",
-          "category": "Luck",
-          "img": "http://www.redarrowinternational.tv/photo/formats/real_life/mr_luck_50.jpg",
-          "shareDate": "2017-11-17T18:20:06.571Z",
-          "id": "vangellksoO0Ts4z0916vFTe3MwXfimhcoENU2HyABViA1gSaknMdd9JKq2aC0OBjalyS71xnG4nJy1iOdrhPecWSTVVfHodLDNz"
+          "text": "something",
+          "category": "asdfsadfs",
+          "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+          "id": "vangelc6q4pJO2vqBftaesddqkxuIgza94pDuTHWhS7NksV6tIvpqOAFBPGAHHAPbUn0xx1U1pA0qn9PonIYc7UJht398gusfV1L",
+          "shareDate": "2017-11-19T20:16:40.322Z"
         }
       ],
-      "dailyCookie": {},
+      "dailyCookie": {
+        "text": "May the Force be with you",
+        "category": "Star wars",
+        "id": "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
+        "img": "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
+        "shareDate": "2016-06-26T23:16:06.753Z",
+        "day": 0
+      },
       "id": "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
       "authKey": "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
     }
@@ -31,7 +38,7 @@
       "id": "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
       "img": "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
       "shareDate": "2016-06-26T23:16:06.753Z",
-      "day": 6
+      "day": 0
     },
     {
       "text": "If you refuse to accept anything but the best, you very often get it",
@@ -113,6 +120,13 @@
       "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
       "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
       "shareDate": "2017-11-19T10:44:34.226Z"
+    },
+    {
+      "text": "something",
+      "category": "asdfsadfs",
+      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
+      "id": "vangelc6q4pJO2vqBftaesddqkxuIgza94pDuTHWhS7NksV6tIvpqOAFBPGAHHAPbUn0xx1U1pA0qn9PonIYc7UJht398gusfV1L",
+      "shareDate": "2017-11-19T20:16:40.322Z"
     }
   ]
 }

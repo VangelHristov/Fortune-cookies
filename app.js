@@ -12,13 +12,17 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use('/api', require('./util/authenticate')(db));
 
+//Helmet setup
+let helmet = require('helmet');
+app.use(helmet(require('./util/helmet-settings')));
+
 //Validation middleware
 let validator = require('./util/validator');
-let checlValidationErrors = require('./util/check-validation-result');
+let checkValidationErrors = require('./util/check-validation-result');
 
 //User routes
 let usersController = require('./controllers/users-controller')(db);
-app.all('/api/users', [validator.validateUser, checlValidationErrors]);
+app.all('/api/users', [validator.validateUser, checkValidationErrors]);
 app.post('/api/users', usersController.post);
 app.put('/api/users', usersController.put);
 
@@ -27,7 +31,7 @@ let cookiesController = require('./controllers/cookies-controller')(db);
 app.get('/api/cookies', cookiesController.get);
 app.post(
 	'/api/cookies',
-	[validator.validateCookie, checlValidationErrors],
+	[validator.validateCookie, checkValidationErrors],
 	cookiesController.post
 );
 
@@ -40,12 +44,12 @@ let favoritesController = require('./controllers/favorites-controller')(db);
 app.get('/api/favorites', favoritesController.get);
 app.post(
 	'/api/favorites/:cookieId',
-	[validator.validateCookieId, checlValidationErrors],
+	[validator.validateCookieId, checkValidationErrors],
 	favoritesController.post
 );
 app.delete(
 	'/api/favorites/:cookieId',
-	[validator.validateCookieId, checlValidationErrors],
+	[validator.validateCookieId, checkValidationErrors],
 	favoritesController.del
 );
 

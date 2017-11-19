@@ -5,6 +5,7 @@ module.exports = function moduleExports(db) {
 	let getRandomCookie = function () {
 		let cookies = db('cookies')
 			.value();
+
 		let index = Math.floor(Math.random() * cookies.length);
 		return cookies[index];
 	}
@@ -21,7 +22,7 @@ module.exports = function moduleExports(db) {
 		let today = new Date().getDay();
 		if (user.dailyCookie.day !== today) {
 			user.dailyCookie = getRandomCookie();
-			user.dailyCookie.day = new Date().getDay();
+			user.dailyCookie.day = today;
 		}
 
 		db.save();
