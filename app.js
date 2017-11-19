@@ -12,25 +12,42 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use('/api', require('./util/authenticate')(db));
 
+//Validation middleware
+let validator = require('./util/validator');
+let checlValidationErrors = require('./util/check-validation-result');
+
 //User routes
 let usersController = require('./controllers/users-controller')(db);
+app.all('/api/users', [validator.validateUser, checlValidationErrors]);
 app.post('/api/users', usersController.post);
 app.put('/api/users', usersController.put);
 
 // Fortune cookies
 let cookiesController = require('./controllers/cookies-controller')(db);
 app.get('/api/cookies', cookiesController.get);
-app.post('/api/cookies', cookiesController.post);
+app.post(
+	'/api/cookies',
+	[validator.validateCookie, checlValidationErrors],
+	cookiesController.post
+);
 
 // My daily fortune cookies
 let dailyCookie = require('./controllers/daily-cookie-controller')(db);
 app.get('/api/my-cookie', dailyCookie.get);
 
-// Categories
+// Favorites
 let favoritesController = require('./controllers/favorites-controller')(db);
 app.get('/api/favorites', favoritesController.get);
-app.post('/api/favorites/:cookieId', favoritesController.post);
-app.delete('/api/favorites/:cookieId', favoritesController.del);
+app.post(
+	'/api/favorites/:cookieId',
+	[validator.validateCookieId, checlValidationErrors],
+	favoritesController.post
+);
+app.delete(
+	'/api/favorites/:cookieId',
+	[validator.validateCookieId, checlValidationErrors],
+	favoritesController.del
+);
 
 app.use(function errorHandler(err, req, res, next) {
 	if (err) {

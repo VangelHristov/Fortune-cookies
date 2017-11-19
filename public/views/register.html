@@ -22,7 +22,7 @@
 					       placeholder = "Username"
 					       ng-model = "user.username"
 					       ng-required = "true"
-					       ng-pattern = "/^[A-Za-z0-9-_]{6,30}$/"/>
+					       ng-pattern = "/^[A-Za-z0-9]{6,30}$/"/>
 					
 					<div ng-show = "!form.register.username.$pristine"
 					     class = "help-block  col-sm-offset-6">
@@ -32,8 +32,7 @@
 						</div>
 						<div ng-show = "form.register.username.$error.pattern"
 						     class = "help-block">
-							Username should be between 6 and 30 characters long.
-							Only alpha numeric characters, _ and -
+							Username should be between 6 and 30 alpha numeric characters.
 						</div>
 					</div>
 				</div>
@@ -54,7 +53,7 @@
 					       placeholder = "Password"
 					       ng-model = "user.password"
 					       ng-required = "true"
-					       ng-pattern = "/^[A-Za-z0-9-_]{6,30}$/"/>
+					       ng-pattern = "/^[A-Za-z0-9]{6,30}$/"/>
 					
 					<div ng-show = "!form.register.password.$pristine"
 					     class = "help-block  col-sm-offset-6">
@@ -64,8 +63,7 @@
 						</div>
 						<div ng-show = "form.register.password.$error.pattern"
 						     class = "help-block">
-							Password should be between 6 and 30 characters long.
-							Only alpha numeric characters, _ and -
+							Password should be between 6 and 30  alpha numeric characters.
 						</div>
 					</div>
 				</div>

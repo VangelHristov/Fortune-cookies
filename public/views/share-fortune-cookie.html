@@ -22,7 +22,7 @@
 					       placeholder = "Text"
 					       ng-model = "cookie.text"
 					       ng-required = "true"
-					       ng-pattern = "/^[A-Za-z0-9-_.,?\s]{6,230}$/"/>
+					       ng-pattern = "/.{6,250}$/"/>
 					
 					<div ng-show = "!form.share.text.$pristine"
 					     class = "help-block  col-sm-offset-6">
@@ -32,8 +32,7 @@
 						</div>
 						<div ng-show = "form.share.text.$error.pattern"
 						     class = "help-block">
-							Text should be between 6 and 230 characters long.
-							Only alpha numeric characters, _,.,? and -
+							Text should be between 6 and 250 characters long.
 						</div>
 					</div>
 				</div>

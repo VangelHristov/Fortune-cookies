@@ -43,7 +43,7 @@ module.exports = function cookiesControllerModule(db) {
 			.insert(cookie);
 
 		return res
-			.status(200)
+			.status(201)
 			.json({result: cookie});
 	};
 
