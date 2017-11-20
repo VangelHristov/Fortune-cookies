@@ -1,36 +1,20 @@
-/* eslint-disable no-unused-expressions */
 'use strict';
 
-const authentication = require('../middlewares/authenticate');
 const sinon = require('sinon');
-const {describe, it, afterEach} = require('mocha');
+const {describe, it, afterEach, after} = require('mocha');
 const {assert} = require('chai');
-const {
-	AUTH_HEADER,
-	AUTH_KEY_CHARS,
-	AUTH_KEY_LENGTH
-} = require('../util/constants');
-
-const getValidAuthKey = function () {
-	let key = '';
-	let len = AUTH_KEY_LENGTH;
-
-	while (key.length < len) {
-		key += AUTH_KEY_CHARS[Math.floor(Math.random() * len)];
-	}
-
-	return key;
-};
+const {AUTH_HEADER, AUTH_KEY_CHARS} = require('../util/constants');
+const VALID_AUTH_KEY = require('../util/generate-auth-key')('topSecret');
+const authentication = require('../middlewares/authenticate');
 
 const getInvalidAuthKey = function (type) {
 	let short = function () {
-		let key = getValidAuthKey();
-		key = key.substr(0, key.length - 2);
-		return key;
+		let len = VALID_AUTH_KEY.length - 2;
+		return VALID_AUTH_KEY.slice(0, len);
 	};
 
 	let long = function () {
-		let key = getValidAuthKey();
+		let key = VALID_AUTH_KEY;
 		key += AUTH_KEY_CHARS[0];
 		return key;
 	};
@@ -58,8 +42,6 @@ const getInvalidAuthKey = function (type) {
 	return getKey[type]();
 };
 
-const VALID_AUTH_KEY = getValidAuthKey();
-
 const dbMock = function () {
 	return {
 		find: function (obj) {
@@ -71,26 +53,33 @@ const dbMock = function () {
 		}
 	};
 };
-
-const requestMock = {headers: {}},
-	responseMock = {status: ()=>undefined},
-	nextMock = ()=>undefined;
+const requestMock = {headers: {}};
+const responseMock = {status: () => undefined};
 
 let responseSpy = sinon.spy(responseMock, 'status');
+let nextSpy = sinon.spy();
 
-let testSubject = authentication(dbMock);
+let auth = authentication(dbMock);
 
 describe('authentication.js', function authenticationJS() {
 	afterEach(function afterEach() {
 		responseSpy.reset();
+		nextSpy.reset();
+	});
+
+	after(function after(){
+	    responseSpy.restore();
 	});
 
 	it(
-		'add property `user` to request object when credentials are valid',
+		'add property `user` to request object when authKey is valid',
 		function validCredentials() {
 			requestMock.headers[AUTH_HEADER] = VALID_AUTH_KEY;
-			testSubject(requestMock, responseMock, nextMock);
+
+			auth(requestMock, responseMock, nextSpy);
+
 			assert.isNotNull(requestMock.user);
+			assert.isTrue(nextSpy.calledWithExactly());
 		}
 	);
 
@@ -98,7 +87,9 @@ describe('authentication.js', function authenticationJS() {
 		'return status code 401 when authKey is too short',
 		function shortKey() {
 			requestMock.headers[AUTH_HEADER] = getInvalidAuthKey('short');
-			testSubject(requestMock, responseMock, nextMock);
+
+			auth(requestMock, responseMock, nextSpy);
+
 			assert.isTrue(responseSpy.calledWith(401));
 		}
 	);
@@ -107,7 +98,9 @@ describe('authentication.js', function authenticationJS() {
 		'return status code 401 when authKey is too long',
 		function longKey() {
 			requestMock.headers[AUTH_HEADER] = getInvalidAuthKey('long');
-			testSubject(requestMock, responseMock, nextMock);
+
+			auth(requestMock, responseMock, nextSpy);
+
 			assert.isTrue(responseSpy.calledWith(401));
 		}
 	);
@@ -117,14 +110,18 @@ describe('authentication.js', function authenticationJS() {
 		' allowed',
 		function invalidChar() {
 			requestMock.headers[AUTH_HEADER] = getInvalidAuthKey('invalidChar');
-			testSubject(requestMock, responseMock, nextMock);
+
+			auth(requestMock, responseMock, nextSpy);
+
 			assert.isTrue(responseSpy.calledWith(401));
 		}
 	);
 
 	it('return status code 401 when authKey is missing', function missingKey() {
 		requestMock.headers[AUTH_HEADER] = undefined;
-		testSubject(requestMock, responseMock, nextMock);
+
+		auth(requestMock, responseMock, nextSpy);
+
 		assert.isTrue(responseSpy.calledWith(401));
 	});
 });

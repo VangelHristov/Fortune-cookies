@@ -3,7 +3,9 @@
 let constants = require('../util/constants');
 
 module.exports = function authenticationModule(db) {
+
 	return function authenticateMiddleware(req, res, next) {
+
 		let key = req.headers[constants.AUTH_HEADER];
 		let isString = function (obj) {
 			return Object.prototype.toString.call(obj) === '[object String]';

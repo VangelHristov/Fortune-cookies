@@ -1,6 +1,6 @@
 'use strict';
 
-let generateAuthKey =require('../util/generate-auth-key');
+const generateAuthKey = require('../util/generate-auth-key');
 
 module.exports = function userControllerModule(db) {
 
