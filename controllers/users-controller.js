@@ -1,24 +1,10 @@
 'use strict';
 
-let {
-	AUTH_KEY_LENGTH,
-	AUTH_KEY_CHARS
-} = require('../util/constants');
+let generateAuthKey =require('../util/generate-auth-key');
 
 module.exports = function userControllerModule(db) {
-	function generateAuthKey(uniquePart) {
-		let authKey = uniquePart,
-			index;
 
-		while (authKey.length < AUTH_KEY_LENGTH) {
-			index = Math.floor(Math.random() * AUTH_KEY_CHARS.length);
-			authKey += AUTH_KEY_CHARS[index];
-		}
-
-		return authKey;
-	}
-
-	function post(req, res) {
+	let post = function (req, res) {
 		let user = req.body;
 
 		if (!user ||
@@ -48,9 +34,9 @@ module.exports = function userControllerModule(db) {
 		return res
 			.status(201)
 			.json({result: user.username});
-	}
+	};
 
-	function put(req, res) {
+	let put = function (req, res) {
 		let reqUser = req.body;
 		let user = db('users')
 			.find({username: reqUser.username});
@@ -74,7 +60,7 @@ module.exports = function userControllerModule(db) {
 					authKey : user.authKey
 				}
 			});
-	}
+	};
 
 	return {
 		post,
