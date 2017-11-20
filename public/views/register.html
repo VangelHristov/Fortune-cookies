@@ -4,7 +4,8 @@
 		<form name = "form.register"
 		      class = "form-horizontal"
 		      ng-submit = "register()"
-		      novalidate>
+		      novalidate
+		      autocomplete = "off">
 			
 			<div class = "row"
 			     ng-class = "{'has-error':
@@ -32,7 +33,8 @@
 						</div>
 						<div ng-show = "form.register.username.$error.pattern"
 						     class = "help-block">
-							Username should be between 6 and 30 alpha numeric characters.
+							Username should be between 6 and 30 alpha numeric
+							characters.
 						</div>
 					</div>
 				</div>
@@ -63,7 +65,8 @@
 						</div>
 						<div ng-show = "form.register.password.$error.pattern"
 						     class = "help-block">
-							Password should be between 6 and 30  alpha numeric characters.
+							Password should be between 6 and 30 alpha numeric
+							characters.
 						</div>
 					</div>
 				</div>

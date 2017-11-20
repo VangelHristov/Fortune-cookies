@@ -4,7 +4,8 @@
 		<form name = "form.share"
 		      class = "form-horizontal"
 		      ng-submit = "share()"
-		      novalidate>
+		      novalidate
+		      autocomplete = "off">
 			
 			<div class = "row"
 			     ng-class = "{'has-error':
@@ -22,7 +23,7 @@
 					       placeholder = "Text"
 					       ng-model = "cookie.text"
 					       ng-required = "true"
-					       ng-pattern = "/.{6,250}$/"/>
+					       ng-pattern = "/*{6,250}/"/>
 					
 					<div ng-show = "!form.share.text.$pristine"
 					     class = "help-block  col-sm-offset-6">
@@ -53,7 +54,7 @@
 					       placeholder = "Category"
 					       ng-model = "cookie.category"
 					       ng-required = "true"
-					       ng-pattern = "/^[A-Za-z0-9\s]{1,40}$/"/>
+					       ng-pattern = "/^[A-Za-z\s]{1,40}$/"/>
 					
 					<div ng-show = "!form.share.category.$pristine"
 					     class = "help-block  col-sm-offset-6">
@@ -64,7 +65,6 @@
 						<div ng-show = "form.share.category.$error.pattern"
 						     class = "help-block">
 							Category should be between 6 and 40 characters long.
-							Only alpha numeric characters.
 						</div>
 					</div>
 				</div>

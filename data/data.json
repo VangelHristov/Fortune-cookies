@@ -5,6 +5,42 @@
       "passHash": "eab0e357e139af50eff4542d60f161ec",
       "favorites": [
         {
+          "text": "A chance meeting opens new doors to success and friendship",
+          "category": "Success",
+          "img": "http://www.pd4pic.com/images/dice-cube-die-fun-game-play-chance-luck-gamble.png",
+          "id": "vangeltucdstxCXg4JojFbJejxPdN6slfzZSDhHLEvIIXswowIkwGsvcK3sXmMxVaD5FIaiqbiKcJrshvwrjx4vqkVGO32g2qgmV",
+          "shareDate": "2017-11-19T10:39:46.696Z"
+        },
+        {
+          "text": "Your golden opportunity is coming shortly",
+          "category": "Luck",
+          "img": "http://www.profitguide.com/wp-content/uploads/2013/01/Opportunity-next-exit-sign.jpg",
+          "shareDate": "2017-11-18T08:56:47.406Z",
+          "id": "vangelCNkKZ2WR0ojrfpPM0kBEXVOCrETgDiYmfIdyzu3yV8sgYlnWPqrI8J7KEX5bJkXUtraDVklF3TJM0CimWRlJtfWATgZ18p"
+        },
+        {
+          "text": "Hard work pays off in the future, laziness pays off now",
+          "category": "Motivation",
+          "img": "http://1.bp.blogspot.com/-M2MHHvT_M04/T1iqFZYotBI/AAAAAAAAAps/9Fz3_dHcQYw/s1600/easy-hard.jpg",
+          "shareDate": "2016-06-29T02:49:21.738Z",
+          "id": "vangeloIEuC5XjwsUMmEvDN3jVZW3JN1CkLjc5UrZhWM0zrVMMd0Wx5XSWkL4w7lVpyTCV6YenTcKFDk5geSt8ULbzrxUUUEuT18"
+        },
+        {
+          "text": "A smile is your passport into the hearts of others",
+          "category": "Wisdom",
+          "img": "https://rocketdock.com/images/screenshots/Smile1024x768.jpg",
+          "shareDate": "2016-06-27T17:47:35.116Z",
+          "id": "vangeld3Buc7ztiCnbDoZ0hp0WuNvTk2EvqSC3lNwbEpInMIwrcWkkNqueuo8WbJwGKtJWfn7LtFquvUBurq4Vyx6q2ePBHCHFGg",
+          "day": 6
+        },
+        {
+          "text": "Hidden in a valley beside an open stream- This will be the type of place where you will find your dream",
+          "category": "Wisdom",
+          "id": "vangelWmPbrT7G7DpZ1PuGT0maPjStwWn3x7gBXRmARZORweMsAFZvb1R3VS6zn3NdtWoZxVS8KkzSkycZbhL5Lx1PUDWu5b4RrA",
+          "img": "http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/valley-stream-robert-balog.jpg",
+          "shareDate": "2016-06-26T23:08:44.996Z"
+        },
+        {
           "text": "something",
           "category": "asdfsadfs",
           "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
@@ -13,12 +49,12 @@
         }
       ],
       "dailyCookie": {
-        "text": "May the Force be with you",
-        "category": "Star wars",
-        "id": "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
-        "img": "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
-        "shareDate": "2016-06-26T23:16:06.753Z",
-        "day": 0
+        "text": "You learn from your mistakes... You will learn a lot today",
+        "category": "Wisdom",
+        "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
+        "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
+        "shareDate": "2017-11-19T10:44:34.226Z",
+        "day": 1
       },
       "id": "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
       "authKey": "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
@@ -140,7 +176,8 @@
       "category": "Wisdom",
       "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
       "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
-      "shareDate": "2017-11-19T10:44:34.226Z"
+      "shareDate": "2017-11-19T10:44:34.226Z",
+      "day": 1
     },
     {
       "text": "something",

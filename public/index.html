@@ -12,8 +12,9 @@
 	      href = "bower_components/bootstrap/dist/css/bootstrap-theme.css">
 	<link rel = "stylesheet" href = "bower_components/toastr/toastr.css">
 	<link rel = "stylesheet" href = "css/main.css">
+	<link rel = "stylesheet" href = "bower_components/angular/angular-csp.css">
 </head>
-<body ng-controller = "UserController">
+<body ng-controller = "UserController" ng-csp>
 
 <nav class = "navbar navbar-inverse bg-inverse navbar-fixed-top"
      role = "navigation">
@@ -66,7 +67,7 @@
 						Favorites
 					</a>
 				</li>
-				<li ng-show = "category"
+				<li ng-if = "category"
 				    ui-sref-active-eq = "active">
 					<a ui-sref = "category">
 						<i class = "glyphicon glyphicon-tag"></i>
@@ -75,21 +76,21 @@
 				</li>
 			</ul>
 			<ul class = "nav navbar-nav navbar-right">
-				<li ng-hide = "isLoggedIn()"
+				<li ng-if = "!isLoggedIn()"
 					ui-sref-active-eq = "active">
 					<a ui-sref = "login">
 						<i class = "glyphicon glyphicon-log-in"></i>
 						Login
 					</a>
 				</li>
-				<li ng-hide = "isLoggedIn()"
+				<li ng-if = "!isLoggedIn()"
 				    ui-sref-active-eq = "active">
 					<a ui-sref = "register">
 						<i class = "glyphicon glyphicon-pencil"></i>
 						Register
 					</a>
 				</li>
-				<li ng-show = "isLoggedIn()">
+				<li ng-if = "isLoggedIn()">
 					<a ng-click="logOut()">
 						<i class = "glyphicon glyphicon-log-out"></i>
 						Logout
