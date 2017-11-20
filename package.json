@@ -1,10 +1,11 @@
 {
   "name": "fortune-cookies",
   "version": "1.0.0",
-  "description": "##  App description",
+  "description": "Fortune Cookies",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node_modules/forever/bin/forever start app.js",
+    "test": "node_modules/mocha/bin/mocha --reporter spec -w"
   },
   "author": "Vangel Hristov (vangel.hristov@yahoo.com)",
   "license": "MIT",
@@ -21,7 +22,11 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "chai": "^4.1.2",
+    "forever": "^0.15.3",
     "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1"
+    "gulp-nodemon": "^2.2.1",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
   }
 }

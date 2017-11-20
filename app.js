@@ -2,27 +2,31 @@
 
 let express = require('express'),
 	bodyParser = require('body-parser'),
-	lowdb = require('lowdb');
+	lowdb = require('lowdb'),
+	helmet = require('helmet');
 
 let db = lowdb('./data/data.json');
 db._.mixin(require('underscore-db'));
 
 let app = express();
+app.use(helmet(require('./util/helmet-settings')));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-app.use('/api', require('./util/authenticate')(db));
-
-//Helmet setup
-let helmet = require('helmet');
-app.use(helmet(require('./util/helmet-settings')));
 
 //Validation middleware
-let validator = require('./util/validator');
-let checkValidationErrors = require('./util/check-validation-result');
+let {
+	validateCookieId,
+	validateUser,
+	validateCookie
+} = require('./middlewares/validator');
+let checkValidationResult = require('./middlewares/check-validation-result');
+
+//Authentication middleware
+let authenticate = require('./middlewares/authenticate')(db);
 
 //User routes
 let usersController = require('./controllers/users-controller')(db);
-app.all('/api/users', [validator.validateUser, checkValidationErrors]);
+app.all('/api/users', [validateUser, checkValidationResult]);
 app.post('/api/users', usersController.post);
 app.put('/api/users', usersController.put);
 
@@ -31,38 +35,33 @@ let cookiesController = require('./controllers/cookies-controller')(db);
 app.get('/api/cookies', cookiesController.get);
 app.post(
 	'/api/cookies',
-	[validator.validateCookie, checkValidationErrors],
+	[authenticate, validateCookie, checkValidationResult],
 	cookiesController.post
 );
 
 // My daily fortune cookies
 let dailyCookie = require('./controllers/daily-cookie-controller')(db);
-app.get('/api/my-cookie', dailyCookie.get);
+app.get('/api/my-cookie', authenticate, dailyCookie.get);
 
 // Favorites
 let favoritesController = require('./controllers/favorites-controller')(db);
-app.get('/api/favorites', favoritesController.get);
+app.get('/api/favorites', authenticate, favoritesController.get);
 app.post(
 	'/api/favorites/:cookieId',
-	[validator.validateCookieId, checkValidationErrors],
+	[authenticate, validateCookieId, checkValidationResult],
 	favoritesController.post
 );
 app.delete(
 	'/api/favorites/:cookieId',
-	[validator.validateCookieId, checkValidationErrors],
+	[authenticate, validateCookieId, checkValidationResult],
 	favoritesController.del
 );
-
-app.use(function errorHandler(err, req, res, next) {
-	if (err) {
-		return next('ERROR');
-	}
-
-	return next();
-});
 
 let port = 3000;
 app.listen(port, function listen() {
 	//eslint-disable-next-line no-console
 	console.log('Server is running at http://localhost:' + port);
 });
+
+//For testing
+module.exports = app;

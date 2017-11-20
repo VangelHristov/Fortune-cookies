@@ -22,6 +22,27 @@
       },
       "id": "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
       "authKey": "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
+    },
+    {
+      "username": "johnDoe1",
+      "passHash": "348b58b828dac71ddc65c2f347305426",
+      "favorites": [],
+      "dailyCookie": {},
+      "id": "a2aacf07-c4d3-479d-915b-009a70c057c2"
+    },
+    {
+      "username": "johnDoe2",
+      "passHash": "348b58b828dac71ddc65c2f347305426",
+      "favorites": [],
+      "dailyCookie": {},
+      "id": "39ec9d62-a493-4cbb-a96d-49ec10dd1dd0"
+    },
+    {
+      "username": "johnDoe11",
+      "passHash": "348b58b828dac71ddc65c2f347305426",
+      "favorites": [],
+      "dailyCookie": {},
+      "id": "10cc37b8-fa05-4ac1-ab13-d55137314080"
     }
   ],
   "cookies": [

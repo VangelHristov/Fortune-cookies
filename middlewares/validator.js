@@ -2,7 +2,7 @@
 
 const {body, param} = require('express-validator/check');
 const {sanitizeBody, sanitizeParam} = require('express-validator/filter');
-const constants = require('./constants');
+const constants = require('../util/constants');
 
 let validateCookie = [
 	body('text')
