@@ -5,36 +5,18 @@ const {assert} = require('chai');
 const {describe, it, beforeEach, afterEach} = require('mocha');
 const favoritesController = require('../controllers/favorites-controller');
 
-const testCookie1 =
-	{
-		id       : '1',
-		img      : 'http://localhost:300',
-		text     : 'test cookie 1',
-		category : 'testing',
-		shareDate: new Date().toISOString()
-	};
-const testCookie2 =
-	{
-		id       : '2',
-		img      : 'http://localhost:300',
-		text     : 'test cookie 2',
-		category : 'testing',
-		shareDate: new Date().toISOString()
-	};
-const testCookie3 =
-	{
-		id       : '3',
-		img      : 'http://localhost:300',
-		text     : 'test cookie 1',
-		category : 'testing',
-		shareDate: new Date().toISOString()
-	};
+//Test cookies
+const testCookie1 = {id: '1'};
+const testCookie2 = {id: '2'};
+const testCookie3 = {id: '3'};
 const dailyCookie = testCookie3;
 dailyCookie.day = 1;
 
+//Test user
 const dbUserUsername = 'johnDoe';
 const dbPassHash = 'topSecret';
 const dbAuthKey = 'someAuthKey';
+
 const dbUserStub = {
 	username   : dbUserUsername,
 	passHash   : dbPassHash,
@@ -43,8 +25,9 @@ const dbUserStub = {
 	dailyCookie: dailyCookie
 };
 
-let dbStub, dbFindStub, dbSaveSpy, requestStub, responseStub, jsonSpy,
-	statusStub, controller;
+//Stubs and spies
+let dbStub, dbFindStub, dbSaveSpy, requestStub, responseStub,
+	jsonSpy, statusStub, controller;
 
 describe('favorites-controller.js', function favCtrl() {
 	beforeEach(function beforeEach() {
@@ -68,11 +51,7 @@ describe('favorites-controller.js', function favCtrl() {
 		dbStub
 			.withArgs('cookies')
 			.returns({find: dbFindStub});
-		dbStub
-			.throws(
-				Error('controller should query only users or' +
-					' cookies collections')
-			);
+		dbStub.throws();
 		dbStub.save = dbSaveSpy;
 
 		// request setup
@@ -84,10 +63,13 @@ describe('favorites-controller.js', function favCtrl() {
 
 		// response setup
 		jsonSpy = sinon.spy();
+
 		statusStub = sinon.stub();
 		statusStub.returns({json: jsonSpy});
+
 		responseStub = {status: statusStub};
 
+		// controller to test
 		controller = favoritesController(dbStub);
 	});
 
@@ -105,10 +87,7 @@ describe('favorites-controller.js', function favCtrl() {
 			controller.get(requestStub, responseStub);
 
 			assert.isTrue(statusStub.calledWith(200));
-			assert.isTrue(
-				jsonSpy
-					.calledWith({result: dbUserStub.favorites})
-			);
+			assert.isTrue(jsonSpy.calledWith({result: dbUserStub.favorites}));
 		}
 	);
 
@@ -125,7 +104,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 	it(
 		'del returns 401 when user is not authenticated',
-		function getUnauthenticated() {
+		function delUnauthenticated() {
 			requestStub.user = {};
 
 			controller.del(requestStub, responseStub);
@@ -136,7 +115,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 	it(
 		'post returns 401 when user is not authenticated',
-		function getUnauthenticated() {
+		function postUnauthenticated() {
 			requestStub.user = {};
 
 			controller.post(requestStub, responseStub);
@@ -187,7 +166,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 	it(
 		'del returns 400 when cookie not in user\'s favorites',
-		function getUnauthenticated() {
+		function delNonExisting() {
 			requestStub.params.cookieId = testCookie3.id;
 
 			controller.del(requestStub, responseStub);
@@ -198,7 +177,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 	it(
 		'del returns 200 and removes cookie from user\'s favorites',
-		function getUnauthenticated() {
+		function deleteCookie() {
 			let cookieToDelete = dbUserStub.favorites[0];
 			requestStub.params.cookieId = cookieToDelete.id;
 

@@ -8,7 +8,7 @@ module.exports = function moduleExports(db) {
 
 		let index = Math.floor(Math.random() * cookies.length);
 		return cookies[index];
-	}
+	};
 
 	let get = function (req, res) {
 		let user = req.user;
@@ -23,14 +23,14 @@ module.exports = function moduleExports(db) {
 		if (user.dailyCookie.day !== today) {
 			user.dailyCookie = getRandomCookie();
 			user.dailyCookie.day = today;
+
+			db.save();
 		}
 
-		db.save();
-
-		return res.json({
-			result: user.dailyCookie
-		});
-	}
+		return res
+			.status(200)
+			.json({result: user.dailyCookie});
+	};
 
 	return {get};
 };

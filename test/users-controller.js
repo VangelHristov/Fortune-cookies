@@ -10,10 +10,10 @@ const existing_username = 'johnDoe';
 const existing_passHash = 'topSecret';
 const new_username = 'johnDoe2';
 const new_passHash = 'topSecret2';
-const authKey = 'someKey';
+const existing_authKey = 'someKey';
 
-let dbFindStub, dbInsertStub, dbSaveStub,
-	dbStub, jsonStub, statusStub,
+let dbFindStub, dbInsertSpy, dbSaveSpy,
+	dbStub, jsonSpy, statusStub,
 	responseStub, requestStub, usrCtrl;
 
 describe('users-controller.js', function usersController() {
@@ -24,17 +24,20 @@ describe('users-controller.js', function usersController() {
 		          .returns({
 			          username: existing_username,
 			          passHash: existing_passHash,
-			          authKey : authKey
+			          authKey : existing_authKey
 		          });
 		dbFindStub.returns(null);
-		dbInsertStub = sinon.stub();
-		dbSaveStub = sinon.stub();
+
+		dbInsertSpy = sinon.spy();
+
+		dbSaveSpy = sinon.spy();
+
 		dbStub = sinon.stub();
 		dbStub.withArgs('users')
 		      .returns({
 			      find  : dbFindStub,
-			      save  : dbSaveStub,
-			      insert: dbInsertStub
+			      save  : dbSaveSpy,
+			      insert: dbInsertSpy
 		      });
 		dbStub.throws(Error('controller should query users collection'));
 
@@ -47,12 +50,12 @@ describe('users-controller.js', function usersController() {
 		};
 
 		// response setup
-		jsonStub = sinon.stub();
+		jsonSpy = sinon.spy();
+
 		statusStub = sinon.stub();
-		statusStub.returns({json: jsonStub});
-		responseStub = {
-			status: statusStub
-		};
+		statusStub.returns({json: jsonSpy});
+
+		responseStub = {status: statusStub};
 
 		// controller to test
 		usrCtrl = userController(dbStub);
@@ -61,10 +64,10 @@ describe('users-controller.js', function usersController() {
 	afterEach(function afterEach() {
 		dbStub.reset();
 		dbFindStub.reset();
-		dbSaveStub.reset();
-		dbInsertStub.reset();
 		statusStub.reset();
-		jsonStub.reset();
+		dbSaveSpy.reset();
+		dbInsertSpy.reset();
+		jsonSpy.reset();
 	});
 
 	it(
@@ -82,8 +85,7 @@ describe('users-controller.js', function usersController() {
 			usrCtrl.post(requestStub, responseStub);
 
 			assert.isTrue(responseStub.status.calledWith(201));
-			assert.isTrue(jsonStub
-				.calledWith({result: new_username}));
+			assert.isTrue(jsonSpy.calledWith({result: new_username}));
 		}
 	);
 
@@ -92,7 +94,8 @@ describe('users-controller.js', function usersController() {
 		function postUnique() {
 			usrCtrl.post(requestStub, responseStub);
 
-			let user = dbInsertStub.args[0][0];
+			let user = dbInsertSpy.args[0][0];
+
 			assert.isString(user.username);
 			assert.isString(user.passHash);
 			assert.isObject(user.dailyCookie);
@@ -121,7 +124,9 @@ describe('users-controller.js', function usersController() {
 			usrCtrl.put(requestStub, responseStub);
 
 			assert.isTrue(statusStub.calledWith(200));
-			let res = jsonStub.args[0][0];
+
+			let res = jsonSpy.args[0][0];
+
 			assert.isObject(res.result);
 			assert.isString(res.result.username);
 			assert.isString(res.result.authKey);

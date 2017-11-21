@@ -22,7 +22,7 @@ module.exports = function cookiesControllerModule(db) {
 	let get = function (req, res) {
 		return res
 			.status(200)
-			.json({result: db('cookies')});
+			.json({result: db('cookies').value()});
 	};
 
 	let post = function (req, res) {
