@@ -67,8 +67,8 @@ describe('authentication.js', function authenticationJS() {
 		nextSpy.reset();
 	});
 
-	after(function after(){
-	    responseSpy.restore();
+	after(function after() {
+		responseSpy.restore();
 	});
 
 	it(
@@ -84,7 +84,7 @@ describe('authentication.js', function authenticationJS() {
 	);
 
 	it(
-		'return status code 401 when authKey is too short',
+		'return 401 when authKey is too short',
 		function shortKey() {
 			requestMock.headers[AUTH_HEADER] = getInvalidAuthKey('short');
 
@@ -95,7 +95,7 @@ describe('authentication.js', function authenticationJS() {
 	);
 
 	it(
-		'return status code 401 when authKey is too long',
+		'return 401 when authKey is too long',
 		function longKey() {
 			requestMock.headers[AUTH_HEADER] = getInvalidAuthKey('long');
 
@@ -106,8 +106,7 @@ describe('authentication.js', function authenticationJS() {
 	);
 
 	it(
-		'return status code 401 when authKey contain a char that is not' +
-		' allowed',
+		'return 401 when authKey contain a char that is not allowed',
 		function invalidChar() {
 			requestMock.headers[AUTH_HEADER] = getInvalidAuthKey('invalidChar');
 
@@ -117,11 +116,14 @@ describe('authentication.js', function authenticationJS() {
 		}
 	);
 
-	it('return status code 401 when authKey is missing', function missingKey() {
-		requestMock.headers[AUTH_HEADER] = undefined;
+	it(
+		'return 401 when authKey is missing',
+		function missingKey() {
+			requestMock.headers[AUTH_HEADER] = undefined;
 
-		auth(requestMock, responseMock, nextSpy);
+			auth(requestMock, responseMock, nextSpy);
 
-		assert.isTrue(responseSpy.calledWith(401));
-	});
+			assert.isTrue(responseSpy.calledWith(401));
+		}
+	);
 });

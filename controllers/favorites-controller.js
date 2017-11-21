@@ -76,11 +76,14 @@ module.exports = function moduleExport(db) {
 			}
 		});
 
-		if (cookieIndex > -1) {
-			user.favorites.splice(cookieIndex, 1);
-			db.save();
+		if (cookieIndex === -1) {
+			return res
+				.status(400)
+				.json('Cookie not in favorites');
 		}
 
+		user.favorites.splice(cookieIndex, 1);
+		db.save();
 		return res
 			.status(200)
 			.json({result: 'Cookie deleted from Favorites'});

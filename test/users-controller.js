@@ -17,7 +17,7 @@ let dbFindStub, dbInsertStub, dbSaveStub,
 	responseStub, requestStub, usrCtrl;
 
 describe('users-controller.js', function usersController() {
-	beforeEach(function beforeEach(){
+	beforeEach(function beforeEach() {
 		// db setup
 		dbFindStub = sinon.stub();
 		dbFindStub.withArgs({username: existing_username})
@@ -58,7 +58,7 @@ describe('users-controller.js', function usersController() {
 		usrCtrl = userController(dbStub);
 	});
 
-	afterEach(function afterEach(){
+	afterEach(function afterEach() {
 		dbStub.reset();
 		dbFindStub.reset();
 		dbSaveStub.reset();
@@ -68,32 +68,19 @@ describe('users-controller.js', function usersController() {
 	});
 
 	it(
-		'put and post call db `users` collection',
-		function postCallDbUsers() {
-			assert.doesNotThrow(() => usrCtrl.post(
-				requestStub,
-				responseStub
-			));
-			assert.doesNotThrow(() => usrCtrl.put(
-				requestStub,
-				responseStub
-			))
-		}
-	);
-
-	it(
-		'post calls db.find to validate the username is unique',
+		'post validates the username is unique',
 		function postUnique() {
 			usrCtrl.post(requestStub, responseStub);
+
 			assert.isTrue(dbFindStub.calledWith({username: new_username}));
 		}
 	);
 
 	it(
-		'post responds with status code 201 and {result:username} when the' +
-		' username is unique',
+		'post returns 201 and username',
 		function postUnique() {
 			usrCtrl.post(requestStub, responseStub);
+
 			assert.isTrue(responseStub.status.calledWith(201));
 			assert.isTrue(jsonStub
 				.calledWith({result: new_username}));
@@ -101,8 +88,7 @@ describe('users-controller.js', function usersController() {
 	);
 
 	it(
-		'post calls db.insert with user object containing all required' +
-		' properties',
+		'post adds in db new user containing all required properties',
 		function postUnique() {
 			usrCtrl.post(requestStub, responseStub);
 
@@ -115,7 +101,7 @@ describe('users-controller.js', function usersController() {
 	);
 
 	it(
-		'post returns status code 400 when username not unique',
+		'post returns 400 when username not unique',
 		function postNotUnique() {
 			requestStub.body.username = existing_username;
 			requestStub.body.passHash = existing_passHash;
@@ -126,10 +112,8 @@ describe('users-controller.js', function usersController() {
 		}
 	);
 
-
 	it(
-		'put responds with status code 200 and returns username and authKey' +
-		' when username is in db',
+		'put returns 200 and result containing username and authKey',
 		function putExisting() {
 			requestStub.body.username = existing_username;
 			requestStub.body.passHash = existing_passHash;
@@ -145,23 +129,25 @@ describe('users-controller.js', function usersController() {
 	);
 
 	it(
-		'put responds with status code 404 when username not in db',
+		'put returns 404 when username not in db',
 		function putUnique() {
 			requestStub.body.username = new_username;
 			requestStub.body.passHash = new_passHash;
 
 			usrCtrl.put(requestStub, responseStub);
+
 			assert.isTrue(statusStub.calledWith(404));
 		}
 	);
 
 	it(
-		'put responds with status code 404 when passHashes don\'t match',
+		'put returns 404 when passHashes don\'t match',
 		function putUnique() {
 			requestStub.body.username = existing_username;
 			requestStub.body.passHash = new_passHash;
 
 			usrCtrl.put(requestStub, responseStub);
+
 			assert.isTrue(statusStub.calledWith(404));
 		}
 	);
