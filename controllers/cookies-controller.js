@@ -1,6 +1,6 @@
 'use strict';
 
-let {
+const {
 	DEFAULT_COOKIE_IMAGE,
 	COOKIE_ID_KEY_LENGTH,
 	COOKIE_ID_KEY_CHARS
@@ -27,17 +27,20 @@ module.exports = function cookiesControllerModule(db) {
 
 	let post = function (req, res) {
 		let user = req.user;
+
 		if (!user) {
 			return res
 				.status(401)
 				.json('User not authorized');
 		}
 
-		let cookie = req.body;
-
-		cookie.id = generateCookieId(user.username);
-		cookie.img = cookie.img || DEFAULT_COOKIE_IMAGE;
-		cookie.shareDate = new Date().toISOString();
+		let cookie = {
+			text:req.body.text,
+			category:req.body.category,
+			img:req.body.img || DEFAULT_COOKIE_IMAGE,
+			shareDate:new Date().toISOString(),
+			id:generateCookieId(user.username)
+		};
 
 		db('cookies')
 			.insert(cookie);

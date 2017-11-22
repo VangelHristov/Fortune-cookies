@@ -12,7 +12,9 @@ module.exports = function authenticationModule(db) {
 		};
 
 		if (!(key && isString(key))) {
-			return res.status(401);
+			return res
+				.status(401)
+				.json('Unauthorized');
 		}
 
 		let keyLen = constants
@@ -24,14 +26,18 @@ module.exports = function authenticationModule(db) {
 			new RegExp(['^[0-9A-Z-]{', keyLen, '}$'].join(''), 'i');
 
 		if (!(ascii.test(key) && alphanumeric.test(key))) {
-			return res.status(401);
+			return res
+				.status(401)
+				.json('Unauthorized');
 		}
 
 		let user = db('users')
 			.find({authKey: key});
 
 		if (!user) {
-			return res.status(401);
+			return res
+				.status(401)
+				.json('Unauthorized');
 		}
 
 		req.user = user;

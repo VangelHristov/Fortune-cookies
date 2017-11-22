@@ -19,7 +19,6 @@ let validateCookie = [
 
 	body('category')
 		.isAscii()
-		.isAlpha('en-US')
 		.isLength({
 			min: constants.CATEGORY_MIN_LENGTH,
 			max: constants.CATEGORY_MAX_LENGTH

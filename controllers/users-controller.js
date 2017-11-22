@@ -5,7 +5,10 @@ const generateAuthKey = require('../util/generate-auth-key');
 module.exports = function userControllerModule(db) {
 
 	let post = function (req, res) {
-		let user = req.body;
+		let user = {
+			username: req.body.username,
+			passHash: req.body.passHash
+		};
 
 		if (!user ||
 			typeof user.username !== 'string' ||
