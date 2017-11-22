@@ -4,8 +4,10 @@
   "description": "Fortune Cookies",
   "main": "app.js",
   "scripts": {
-    "start": "node_modules/forever/bin/forever start app.js",
-    "test": "node_modules/mocha/bin/mocha --reporter spec -w -c --recursive"
+    "start": "NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=test gulp",
+    "production": "NODE_ENV=production node_modules/forever/bin/forever app.js",
+    "test": "NODE_ENV=test node_modules/mocha/bin/mocha --reporter spec -c --recursive -w"
   },
   "author": "Vangel Hristov (vangel.hristov@yahoo.com)",
   "license": "MIT",

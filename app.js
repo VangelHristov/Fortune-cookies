@@ -5,8 +5,15 @@ let express = require('express'),
 	lowdb = require('lowdb'),
 	helmet = require('helmet');
 
-let db = lowdb('./data/data.json');
-db._.mixin(require('underscore-db'));
+let db;
+
+if (process.env.NODE_ENV === 'test') {
+	db = lowdb('./data/test-data.json');
+	db._.mixin(require('underscore-db'));
+} else {
+	db = lowdb('./data/data.json');
+	db._.mixin(require('underscore-db'));
+}
 
 let app = express();
 app.use(helmet(require('./util/helmet-settings')));
@@ -57,11 +64,16 @@ app.delete(
 	favoritesController.del
 );
 
-let port = 3000;
-app.listen(port, function listen() {
-	//eslint-disable-next-line no-console
-	console.log('Server is running at http://localhost:' + port);
-});
+let port = process.env.PORT || 3000;
+
+// This check is needed for integration tests
+if (!module.parent) {
+
+	app.listen(port, function listen() {
+		//eslint-disable-next-line no-console
+		console.log('Server is running at http://localhost:' + port);
+	});
+}
 
 //For testing
 module.exports = app;
