@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production node app.js",
-    "dev": "NODE_ENV=test gulp",
+    "dev": "NODE_ENV=development gulp",
     "production": "NODE_ENV=production node_modules/forever/bin/forever app.js",
-    "test": "NODE_ENV=test node_modules/mocha/bin/mocha --reporter spec -c --recursive -w"
+    "test": "NODE_ENV=development node_modules/mocha/bin/mocha --reporter spec -c --recursive"
   },
   "author": "Vangel Hristov (vangel.hristov@yahoo.com)",
   "license": "MIT",
@@ -27,8 +27,11 @@
     "chai": "^4.1.2",
     "forever": "^0.15.3",
     "gulp": "^3.9.1",
+    "gulp-mocha": "^4.3.1",
     "gulp-nodemon": "^2.2.1",
+    "gulp-watch": "^4.3.11",
     "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "sinon": "^4.1.2",
     "supertest": "^3.0.0"
   }

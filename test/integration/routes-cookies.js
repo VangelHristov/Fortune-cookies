@@ -8,16 +8,16 @@ const dbUser = testDbSeed.users[0];
 const restoreDb = require('../../util/reset-test-data');
 
 const {assert} = require('chai');
-const {describe, it, after, before} = require('mocha');
+const {describe, it, afterEach, beforeEach} = require('mocha');
 
 const {AUTH_HEADER} = require('../../util/constants');
 
 describe('/api/cookies', function apiCookiesTests() {
-	before(function before(done) {
+	beforeEach(function before(done) {
 		restoreDb(testDbSeed, done);
 	});
 
-	after(function after(done) {
+	afterEach(function after(done) {
 		restoreDb(testDbSeed, done);
 	});
 

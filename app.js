@@ -7,7 +7,7 @@ let express = require('express'),
 
 let db;
 
-if (process.env.NODE_ENV === 'test') {
+if (process.env.NODE_ENV === 'development') {
 	db = lowdb('./data/test-data.json');
 	db._.mixin(require('underscore-db'));
 } else {
