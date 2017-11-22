@@ -3,7 +3,7 @@
 const sinon = require('sinon');
 const {describe, it, afterEach} = require('mocha');
 const {assert} = require('chai');
-const userController = require('../controllers/users-controller');
+const userController = require('../../../controllers/users-controller');
 
 // Test users credentials
 const existing_username = 'johnDoe';

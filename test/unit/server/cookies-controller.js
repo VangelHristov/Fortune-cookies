@@ -3,8 +3,8 @@
 const sinon = require('sinon');
 const {describe, it, beforeEach, afterEach} = require('mocha');
 const {assert} = require('chai');
-const dailyCookieController = require('../controllers/daily-cookie-controller');
-const cookiesController = require('../controllers/cookies-controller');
+const dailyCookieController = require('../../../controllers/daily-cookie-controller');
+const cookiesController = require('../../../controllers/cookies-controller');
 
 const dbCookiesStub = [
 	{id: '1'},

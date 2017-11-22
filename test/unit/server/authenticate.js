@@ -3,9 +3,9 @@
 const sinon = require('sinon');
 const {describe, it, afterEach, after} = require('mocha');
 const {assert} = require('chai');
-const {AUTH_HEADER, AUTH_KEY_CHARS} = require('../util/constants');
-const VALID_AUTH_KEY = require('../util/generate-auth-key')('topSecret');
-const authentication = require('../middlewares/authenticate');
+const {AUTH_HEADER, AUTH_KEY_CHARS} = require('../../../util/constants');
+const VALID_AUTH_KEY = require('../../../util/generate-auth-key')('topSecret');
+const authentication = require('../../../middlewares/authenticate');
 
 const getInvalidAuthKey = function (type) {
 	let short = function () {

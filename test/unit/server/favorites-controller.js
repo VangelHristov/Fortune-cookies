@@ -3,7 +3,7 @@
 const sinon = require('sinon');
 const {assert} = require('chai');
 const {describe, it, beforeEach, afterEach} = require('mocha');
-const favoritesController = require('../controllers/favorites-controller');
+const favoritesController = require('../../../controllers/favorites-controller');
 
 //Test cookies
 const testCookie1 = {id: '1'};

@@ -9,7 +9,7 @@ module.exports = {
 			scriptSrc : ["'self'"]
 		}
 	},
-	hidePoweredBy:{
-		setTo:'PHP 4.2.0'
+	hidePoweredBy        : {
+		setTo: 'PHP 4.2.0'
 	}
 };
