@@ -8,6 +8,10 @@ let express = require('express'),
 let db;
 
 if (process.env.NODE_ENV === 'development') {
+	const writeJSON = require('./util/fsWriteJSON');
+
+	writeJSON();
+
 	db = lowdb('./data/test-data.json');
 	db._.mixin(require('underscore-db'));
 } else {

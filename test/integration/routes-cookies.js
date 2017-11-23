@@ -3,7 +3,7 @@
 const supertest = require('supertest');
 const request = supertest(require('../../app'));
 
-const testDbSeed = require('../../util/test-data-seed');
+const testDbSeed = require('../../util/test-data-json');
 const dbUser = testDbSeed.users[0];
 
 const {assert} = require('chai');

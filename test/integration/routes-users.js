@@ -6,7 +6,7 @@ const request = supertest(require('../../app'));
 const {describe, it} = require('mocha');
 const {assert} = require('chai');
 
-const testDbSeed = require('../../util/test-data-seed');
+const testDbSeed = require('../../util/test-data-json');
 const dbUser = testDbSeed.users[0];
 
 const crypto = require('crypto');

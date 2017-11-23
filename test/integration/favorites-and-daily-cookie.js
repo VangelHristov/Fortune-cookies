@@ -1,6 +1,6 @@
 'use strict';
 
-const testDbSeed = require('../../util/test-data-seed');
+const testDbSeed = require('../../util/test-data-json');
 const dbUser = testDbSeed.users[0];
 
 const {assert} = require('chai');
@@ -82,28 +82,10 @@ describe('/api/favorites', function apiFavoritesTests() {
 		'DELETE returns 200 when cookie in favorites',
 		function delCookie(done) {
 			request
-				.get('/api/cookies')
+				.delete('/api/favorites/' + favoriteCookieId)
+				.set(AUTH_HEADER, dbUser.authKey)
 				.set('Accepts', 'json')
-				.expect(200)
-				.end(function delExisting(err, res) {
-					assert.notExists(err);
-
-					let existingId = res.body.result[0].id;
-					request
-						.post('/api/favorites/' + existingId)
-						.set(AUTH_HEADER, dbUser.authKey)
-						.set('Accepts', 'json')
-						.expect(200)
-						.end(function deleteExisting(err) {
-							assert.notExists(err);
-
-							request
-								.delete('/api/favorites/' + existingId)
-								.set(AUTH_HEADER, dbUser.authKey)
-								.set('Accepts', 'json')
-								.expect(200, done);
-						});
-				});
+				.expect(200, done);
 		}
 	);
 });
