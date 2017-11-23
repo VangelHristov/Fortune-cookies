@@ -31,14 +31,3 @@ gulp.task('nodemon', function nodemonTask(cb) {
 			}
 		});
 });
-
-gulp.task('development', function development() {
-	process.env.NODE_ENV = 'development';
-	watch('./**/*.js',
-		function onChange() {
-		gulp.src('tests/**/**.js', {read: false})
-		    .pipe(mocha({recursive: true}))
-		    .once('error', () => process.exit(1))
-		    .once('end', () => process.exit())
-	});
-});

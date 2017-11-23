@@ -18,8 +18,7 @@ module.exports = {
 					"category" : "Star wars",
 					"id"       : "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
 					"img"      : "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
-					"shareDate": "2016-06-26T23:16:06.753Z",
-					"day"      : 0
+					"shareDate": "2016-06-26T23:16:06.753Z"
 				}
 			],
 			"dailyCookie": {
@@ -27,8 +26,7 @@ module.exports = {
 				"category" : "Star wars",
 				"id"       : "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
 				"img"      : "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
-				"shareDate": "2016-06-26T23:16:06.753Z",
-				"day"      : 0
+				"shareDate": "2016-06-26T23:16:06.753Z"
 			},
 			"id"         : "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
 			"authKey"    : "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
@@ -47,8 +45,7 @@ module.exports = {
 			"category" : "Star wars",
 			"id"       : "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
 			"img"      : "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
-			"shareDate": "2016-06-26T23:16:06.753Z",
-			"day"      : 0
+			"shareDate": "2016-06-26T23:16:06.753Z"
 		}
 	]
 };

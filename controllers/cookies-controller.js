@@ -11,7 +11,7 @@ module.exports = function cookiesControllerModule(db) {
 		let id = uniquePart,
 			index;
 
-		while (id.length < COOKIE_ID_KEY_LENGTH) {
+		while (id.length <= COOKIE_ID_KEY_LENGTH) {
 			index = Math.floor(Math.random() * COOKIE_ID_KEY_CHARS.length);
 			id += COOKIE_ID_KEY_CHARS[index];
 		}

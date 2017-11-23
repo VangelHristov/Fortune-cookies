@@ -3,13 +3,11 @@
 const supertest = require('supertest');
 const request = supertest(require('../../app'));
 
-const {describe, it, before, after} = require('mocha');
+const {describe, it} = require('mocha');
 const {assert} = require('chai');
 
 const testDbSeed = require('../../util/test-data-seed');
 const dbUser = testDbSeed.users[0];
-
-const resetTestData = require('../../util/reset-test-data');
 
 const crypto = require('crypto');
 const {
@@ -64,16 +62,6 @@ const getUniqueHash = (function getUniqueHashIIFE() {
 }());
 
 describe('/api/users', function apiUsers() {
-	before(function before(done) {
-		// Restore the test database to its original state
-		resetTestData(testDbSeed, done);
-	});
-
-	after(function after(done) {
-		// Restore the test database to its original state
-		resetTestData(testDbSeed, done);
-	});
-
 	it(
 		'POST returns 201 when username and passHash are provided and' +
 		' valid',

@@ -51,8 +51,8 @@ let validateCookieId = [
 		.isAscii()
 		.isAlphanumeric('en-US')
 		.isLength({
-			min:constants.COOKIE_ID_KEY_LENGTH,
-			max:constants.COOKIE_ID_KEY_LENGTH
+			min: constants.COOKIE_ID_KEY_LENGTH,
+			max: constants.COOKIE_ID_KEY_LENGTH
 		})
 ];
 

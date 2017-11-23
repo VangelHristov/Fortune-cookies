@@ -5,31 +5,34 @@ const request = supertest(require('../../app'));
 
 const testDbSeed = require('../../util/test-data-seed');
 const dbUser = testDbSeed.users[0];
-const restoreDb = require('../../util/reset-test-data');
 
 const {assert} = require('chai');
-const {describe, it, afterEach, beforeEach} = require('mocha');
+const {describe, it} = require('mocha');
 
 const {AUTH_HEADER} = require('../../util/constants');
 
 describe('/api/cookies', function apiCookiesTests() {
-	beforeEach(function before(done) {
-		restoreDb(testDbSeed, done);
-	});
-
-	afterEach(function after(done) {
-		restoreDb(testDbSeed, done);
-	});
-
 	it(
 		'GET returns 200 and all cookies',
 		function getAll(done) {
 			request
 				.get('/api/cookies')
 				.set('Accepts', 'json')
-				.expect(200, {
-					result: testDbSeed.cookies
-				}, done);
+				.expect(200)
+				.end(function assertions(err, res) {
+					let resultCookiesCount = res
+						.body
+						.result
+						.length;
+					let initialCookiesCount = testDbSeed
+						.cookies
+						.length;
+
+					assert.isAtLeast(resultCookiesCount, initialCookiesCount);
+					assert.notExists(err);
+
+					done();
+				});
 		}
 	);
 
@@ -119,14 +122,13 @@ describe('/api/cookies', function apiCookiesTests() {
 				})
 				.expect(201)
 				.end(function assertions(err, res) {
-					assert.notExists(err);
-
 					let resResult = res.body.result;
 					let encodedText = '&lt;script&gt;alert(&quot;you have' +
 						' been hacked&quot;)&lt;&#x2F;script&gt;';
 
 					assert.equal(resResult.text, encodedText);
 					assert.equal(resResult.category, '&lt;br&gt;hack');
+					assert.notExists(err);
 
 					done();
 				});
@@ -148,9 +150,9 @@ describe('/api/cookies', function apiCookiesTests() {
 				.set(AUTH_HEADER, dbUser.authKey)
 				.expect(201)
 				.end(function assertions(err, res) {
-					assert.notExists(err);
-
 					let resResult = res.body.result;
+
+					assert.notExists(err);
 					assert.notExists(resResult.hack);
 
 					done();
