@@ -54,16 +54,7 @@ describe('/api/favorites', function apiFavoritesTests() {
 			request
 				.get('/api/favorites')
 				.set(AUTH_HEADER, dbUser.authKey)
-				.set('Accepts', 'json')
-				.expect(200)
-				.end(function assertions(err, res) {
-					let favoritesCount = res.body.result.length;
-
-					assert.notExists(err);
-					assert.isAtLeast(favoritesCount, dbUser.favorites.length);
-
-					done();
-				})
+				.expect(200, done);
 		}
 	);
 
@@ -78,19 +69,8 @@ describe('/api/favorites', function apiFavoritesTests() {
 	);
 
 	it(
-		'POST returns 400 is cookie is already in favorites',
-		function postExisting(done) {
-			request
-				.post('/api/favorites/' + favoriteCookieId)
-				.set(AUTH_HEADER, dbUser.authKey)
-				.set('Accepts', 'json')
-				.expect(400, done);
-		}
-	);
-
-	it(
 		'DELETE returns 401 when user is not authenticated',
-		function delNonExisting(done) {
+		function delUnauthenticated(done) {
 			request
 				.delete('/api/favorites/' + favoriteCookieId)
 				.set('Accepts', 'json')
@@ -98,24 +78,32 @@ describe('/api/favorites', function apiFavoritesTests() {
 		}
 	);
 
-	it.skip('DELETE returns 200 when cookie in favorites',
+	it(
+		'DELETE returns 200 when cookie in favorites',
 		function delCookie(done) {
-	        request
-		        .delete('/api/favorites/'+favoriteCookieId)
-		        .set(AUTH_HEADER, dbUser.authKey)
-		        .set('Accepts', 'json')
-		        .expect(200);
+			request
+				.get('/api/cookies')
+				.set('Accepts', 'json')
+				.expect(200)
+				.end(function delExisting(err, res) {
+					assert.notExists(err);
 
-	        request
-		        .get('/api/favorites')
-		        .set(AUTH_HEADER, dbUser.authKey)
-		        .set('Accepts', 'json')
-		        .expect(200)
-		        .end(function assertions(err, res){
-		        	assert.notExists(err);
-		        	assert.notIncludes(res.body.result,
-				        dbUser.favorites[0]);
-		        	done();
-		        })
-	});
+					let existingId = res.body.result[0].id;
+					request
+						.post('/api/favorites/' + existingId)
+						.set(AUTH_HEADER, dbUser.authKey)
+						.set('Accepts', 'json')
+						.expect(200)
+						.end(function deleteExisting(err) {
+							assert.notExists(err);
+
+							request
+								.delete('/api/favorites/' + existingId)
+								.set(AUTH_HEADER, dbUser.authKey)
+								.set('Accepts', 'json')
+								.expect(200, done);
+						});
+				});
+		}
+	);
 });
