@@ -5,6 +5,13 @@
       "passHash": "eab0e357e139af50eff4542d60f161ec",
       "favorites": [
         {
+          "text": "Hidden in a valley beside an open stream- This will be the type of place where you will find your dream",
+          "category": "Wisdom",
+          "id": "vangelWmPbrT7G7DpZ1PuGT0maPjStwWn3x7gBXRmARZORweMsAFZvb1R3VS6zn3NdtWoZxVS8KkzSkycZbhL5Lx1PUDWu5b4RrA",
+          "img": "http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/valley-stream-robert-balog.jpg",
+          "shareDate": "2016-06-26T23:08:44.996Z"
+        },
+        {
           "text": "May the Force be with you",
           "category": "Star wars",
           "id": "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
@@ -13,29 +20,14 @@
         }
       ],
       "dailyCookie": {
-        "text": "Hidden in a valley beside an open stream- This will be the type of place where you will find your dream",
-        "category": "Wisdom",
-        "id": "vangelWmPbrT7G7DpZ1PuGT0maPjStwWn3x7gBXRmARZORweMsAFZvb1R3VS6zn3NdtWoZxVS8KkzSkycZbhL5Lx1PUDWu5b4RrA",
-        "img": "http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/valley-stream-robert-balog.jpg",
-        "shareDate": "2016-06-26T23:08:44.996Z",
-        "day": 4
+        "text": "May the Force be with you",
+        "category": "Star wars",
+        "id": "vangelVHT1v1JHXjhsdZfeUN85DRNdJJbaIkf5aXK9Emi36IUrjhUZSWMSYYaHH6OtAhlbdjs9ZIN9BHkhfVuRH4N4gyaa7HajVD",
+        "img": "https://www.sideshowtoy.com/wp-content/uploads/2016/03/star-wars-yoda-life-size-figure-feature-400302.jpg",
+        "shareDate": "2016-06-26T23:16:06.753Z"
       },
       "id": "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
       "authKey": "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
-    },
-    {
-      "username": "yw41hsktwjzwrzet6gpaz6p71owe0t",
-      "passHash": "f27af392de0f02d26aecfaa803515b23",
-      "favorites": [],
-      "dailyCookie": {},
-      "id": "a73e7fde-ee2f-4468-9b90-047be67ef82a"
-    },
-    {
-      "username": "9p7g6wjypzl51sff4gp4uee92rg9tp",
-      "passHash": "7acc8a0a5ed17e25dea811ef80679110",
-      "favorites": [],
-      "dailyCookie": {},
-      "id": "3759394b-1d4a-4936-b5de-925c066a9ca8"
     }
   ],
   "cookies": [
@@ -44,8 +36,7 @@
       "category": "Wisdom",
       "id": "vangelWmPbrT7G7DpZ1PuGT0maPjStwWn3x7gBXRmARZORweMsAFZvb1R3VS6zn3NdtWoZxVS8KkzSkycZbhL5Lx1PUDWu5b4RrA",
       "img": "http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/valley-stream-robert-balog.jpg",
-      "shareDate": "2016-06-26T23:08:44.996Z",
-      "day": 4
+      "shareDate": "2016-06-26T23:08:44.996Z"
     },
     {
       "text": "May the Force be with you",
@@ -55,25 +46,11 @@
       "shareDate": "2016-06-26T23:16:06.753Z"
     },
     {
-      "text": "I am a new cookie",
+      "text": "ala bala",
       "category": "testing",
       "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2017-11-23T09:38:20.789Z",
-      "id": "vangelVLNFXc8yGmnjUV0qx5UZzPM82zX00IGjCERmdjigGa6VNtgRhNBW5JxD4tOPGmn5gxCr6mOpmelx7OJK5iwMppcquWnVRYy"
-    },
-    {
-      "text": "&lt;script&gt;alert(&quot;you have been hacked&quot;)&lt;&#x2F;script&gt;",
-      "category": "&lt;br&gt;hack",
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2017-11-23T09:38:20.809Z",
-      "id": "vangelwHRB7g8H4ThqiKjI9AAoTKXiOHY4z8bWk2jH7YKKRMlf95N4BRZSyOdtmuHTP9fC5XcsEaPMick9JanyJgw88xEjLfMa1GC"
-    },
-    {
-      "text": "I am a new cookie",
-      "category": "testing",
-      "img": "https://dayinthelifeofapurpleminion.files.wordpress.com/2014/12/batman-exam.jpg",
-      "shareDate": "2017-11-23T09:38:20.815Z",
-      "id": "vangelk6J1LvwA7s8mYKbSb5c9nCbRx46X0uIviCU3sK1YE5qqS9qiH5i2ICUVfZjtRaVxri1bPHS4BaUCLLabafryDPnGCcZLNov"
+      "shareDate": "2017-11-25T13:16:57.132Z",
+      "id": "vangel4ofEdZdvyxOLX0sOA5etpEix2RFmnrJUkcRHVvOYyflqCgWiKuSLlvEPKb3EmWgRioPRJjbVYeCWbwa1RNU65VHfmW2fc6"
     }
   ]
 }
