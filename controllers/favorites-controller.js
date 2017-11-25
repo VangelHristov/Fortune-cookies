@@ -50,7 +50,7 @@ module.exports = function moduleExport(db) {
 		if (exists) {
 			return res
 				.status(400)
-				.json('Cookie already in Favorites')
+				.json({result:cookieId});
 		}
 
 		user.favorites.push(cookie);

@@ -160,6 +160,7 @@ describe('favorites-controller.js', function favCtrl() {
 			controller.post(requestStub, responseStub);
 
 			assert.isTrue(statusStub.calledWith(400));
+			assert.isTrue(jsonSpy.calledWith({result:testCookie3.id}));
 
 			dbUserStub.favorites.pop();
 		}
