@@ -26,6 +26,7 @@ module.exports = function moduleExport(db) {
 
 	let post = function (req, res) {
 		let user = find(req.user);
+		let cookieId = req.params.cookieId;
 
 		if (!user) {
 			return res
@@ -34,12 +35,12 @@ module.exports = function moduleExport(db) {
 		}
 
 		let cookie = db('cookies')
-			.find({id: req.params.cookieId});
+			.find({id: cookieId});
 
 		if (!cookie) {
 			return res
-				.status(400)
-				.json('Invalid cookie id');
+				.status(404)
+				.json({result: cookieId});
 		}
 
 		let exists = user

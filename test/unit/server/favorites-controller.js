@@ -140,13 +140,14 @@ describe('favorites-controller.js', function favCtrl() {
 	);
 
 	it(
-		'post returns 400 when cookieId does not exist in db',
+		'post returns 404 when cookieId does not exist in db',
 		function postWrongId() {
 			requestStub.params.cookieId = testCookie1.id;
 
 			controller.post(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(400));
+			assert.isTrue(statusStub.calledWith(404));
+			assert.isTrue(jsonSpy.calledWithExactly({result:testCookie1.id}));
 		}
 	);
 
