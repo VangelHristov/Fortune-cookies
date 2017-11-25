@@ -72,9 +72,9 @@ describe('cookies-controllers', function cookiesControllers() {
 				function getCookie() {
 					dailyCookieCtrl.get(requestStub, responseStub);
 
-					assert.isTrue(statusStub.calledWith(200));
-					assert.isTrue(jsonSpy.calledWith({result: dbCookiesStub[0]}) ||
-						jsonSpy.calledWith({result: dbCookiesStub[1]}));
+					assert.isTrue(statusStub.calledWithExactly(200));
+					assert.isTrue(jsonSpy.calledWithExactly({result: dbCookiesStub[0]}) ||
+						jsonSpy.calledWithExactly({result: dbCookiesStub[1]}));
 
 					assert.isTrue(dbSaveSpy.called);
 				}
@@ -87,7 +87,7 @@ describe('cookies-controllers', function cookiesControllers() {
 
 					dailyCookieCtrl.get(requestStub, responseStub);
 
-					assert.isTrue(statusStub.calledWith(401));
+					assert.isTrue(statusStub.calledWithExactly(401));
 				}
 			);
 		}
@@ -99,8 +99,8 @@ describe('cookies-controllers', function cookiesControllers() {
 			function getAllCookies() {
 				cookieCtrl.get(requestStub, responseStub);
 
-				assert.isTrue(statusStub.calledWith(200));
-				assert.isTrue(jsonSpy.calledWith({result: dbCookiesStub}));
+				assert.isTrue(statusStub.calledWithExactly(200));
+				assert.isTrue(jsonSpy.calledWithExactly({result: dbCookiesStub}));
 			}
 		);
 
@@ -111,7 +111,7 @@ describe('cookies-controllers', function cookiesControllers() {
 
 				cookieCtrl.post(requestStub, responseStub);
 
-				assert.isTrue(statusStub.calledWith(201));
+				assert.isTrue(statusStub.calledWithExactly(201));
 				assert.isTrue(jsonSpy.called);
 
 				let resResult = jsonSpy.args[0][0].result;
@@ -131,7 +131,7 @@ describe('cookies-controllers', function cookiesControllers() {
 
 				cookieCtrl.post(requestStub, responseStub);
 
-				assert.isTrue(statusStub.calledWith(201));
+				assert.isTrue(statusStub.calledWithExactly(201));
 				assert.isTrue(jsonSpy.called);
 
 				let resResult = jsonSpy.args[0][0].result;
@@ -149,7 +149,7 @@ describe('cookies-controllers', function cookiesControllers() {
 
 				cookieCtrl.post(requestStub, responseStub);
 
-				assert.isTrue(statusStub.calledWith(401));
+				assert.isTrue(statusStub.calledWithExactly(401));
 			}
 		);
 	});

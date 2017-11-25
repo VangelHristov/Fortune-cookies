@@ -75,7 +75,7 @@ describe('users-controller.js', function usersController() {
 		function postUnique() {
 			usrCtrl.post(requestStub, responseStub);
 
-			assert.isTrue(dbFindStub.calledWith({username: new_username}));
+			assert.isTrue(dbFindStub.calledWithExactly({username: new_username}));
 		}
 	);
 
@@ -84,8 +84,8 @@ describe('users-controller.js', function usersController() {
 		function postUnique() {
 			usrCtrl.post(requestStub, responseStub);
 
-			assert.isTrue(responseStub.status.calledWith(201));
-			assert.isTrue(jsonSpy.calledWith({result: new_username}));
+			assert.isTrue(responseStub.status.calledWithExactly(201));
+			assert.isTrue(jsonSpy.calledWithExactly({result: new_username}));
 		}
 	);
 
@@ -111,7 +111,7 @@ describe('users-controller.js', function usersController() {
 
 			usrCtrl.post(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(400));
+			assert.isTrue(statusStub.calledWithExactly(400));
 		}
 	);
 
@@ -123,7 +123,7 @@ describe('users-controller.js', function usersController() {
 
 			usrCtrl.put(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(200));
+			assert.isTrue(statusStub.calledWithExactly(200));
 
 			let res = jsonSpy.args[0][0];
 
@@ -141,7 +141,7 @@ describe('users-controller.js', function usersController() {
 
 			usrCtrl.put(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(404));
+			assert.isTrue(statusStub.calledWithExactly(404));
 		}
 	);
 
@@ -153,7 +153,7 @@ describe('users-controller.js', function usersController() {
 
 			usrCtrl.put(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(404));
+			assert.isTrue(statusStub.calledWithExactly(404));
 		}
 	);
 });

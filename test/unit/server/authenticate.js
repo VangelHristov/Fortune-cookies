@@ -109,7 +109,7 @@ describe('authentication.js', function authenticationJS() {
 
 			auth(requestStub, responseStub, nextSpy);
 
-			assert.isTrue(statusStub.calledWith(401));
+			assert.isTrue(statusStub.calledWithExactly(401));
 		}
 	);
 
@@ -120,7 +120,7 @@ describe('authentication.js', function authenticationJS() {
 
 			auth(requestStub, responseStub, nextSpy);
 
-			assert.isTrue(statusStub.calledWith(401));
+			assert.isTrue(statusStub.calledWithExactly(401));
 		}
 	);
 
@@ -132,7 +132,7 @@ describe('authentication.js', function authenticationJS() {
 
 			auth(requestStub, responseStub, nextSpy);
 
-			assert.isTrue(statusStub.calledWith(401));
+			assert.isTrue(statusStub.calledWithExactly(401));
 		}
 	);
 
@@ -140,6 +140,6 @@ describe('authentication.js', function authenticationJS() {
 		requestStub.headers[AUTH_HEADER] = undefined;
 		auth(requestStub, responseStub, nextSpy);
 
-		assert.isTrue(statusStub.calledWith(401));
+		assert.isTrue(statusStub.calledWithExactly(401));
 	});
 });

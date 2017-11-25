@@ -86,8 +86,8 @@ describe('favorites-controller.js', function favCtrl() {
 		function getFavorites() {
 			controller.get(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(200));
-			assert.isTrue(jsonSpy.calledWith({result: dbUserStub.favorites}));
+			assert.isTrue(statusStub.calledWithExactly(200));
+			assert.isTrue(jsonSpy.calledWithExactly({result: dbUserStub.favorites}));
 		}
 	);
 
@@ -98,7 +98,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.get(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(401));
+			assert.isTrue(statusStub.calledWithExactly(401));
 		}
 	);
 
@@ -109,7 +109,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.del(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(401));
+			assert.isTrue(statusStub.calledWithExactly(401));
 		}
 	);
 
@@ -120,7 +120,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.post(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(401));
+			assert.isTrue(statusStub.calledWithExactly(401));
 		}
 	);
 
@@ -131,7 +131,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.post(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(200));
+			assert.isTrue(statusStub.calledWithExactly(200));
 			assert.include(dbUserStub.favorites, testCookie3);
 			assert.isTrue(dbSaveSpy.called);
 
@@ -146,7 +146,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.post(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(404));
+			assert.isTrue(statusStub.calledWithExactly(404));
 			assert.isTrue(jsonSpy.calledWithExactly({result:testCookie1.id}));
 		}
 	);
@@ -159,8 +159,8 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.post(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(400));
-			assert.isTrue(jsonSpy.calledWith({result:testCookie3.id}));
+			assert.isTrue(statusStub.calledWithExactly(400));
+			assert.isTrue(jsonSpy.calledWithExactly({result:testCookie3.id}));
 
 			dbUserStub.favorites.pop();
 		}
@@ -173,7 +173,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.del(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(400));
+			assert.isTrue(statusStub.calledWithExactly(400));
 		}
 	);
 
@@ -185,7 +185,7 @@ describe('favorites-controller.js', function favCtrl() {
 
 			controller.del(requestStub, responseStub);
 
-			assert.isTrue(statusStub.calledWith(200));
+			assert.isTrue(statusStub.calledWithExactly(200));
 			assert.notInclude(dbUserStub.favorites, cookieToDelete);
 
 			dbUserStub.favorites.push(cookieToDelete);
