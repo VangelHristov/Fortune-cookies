@@ -1,12 +1,12 @@
 'use strict';
 
 const supertest = require('supertest');
-const request = supertest(require('../../app'));
+const request = supertest(require('../../../app'));
 
 const {describe, it} = require('mocha');
 const {assert} = require('chai');
 
-const testDbSeed = require('../../util/test-data-json');
+const testDbSeed = require('../../../util/test-data-json');
 const dbUser = testDbSeed.users[0];
 
 const crypto = require('crypto');
@@ -14,7 +14,7 @@ const {
 	USERNAME_MIN_LENGTH,
 	USERNAME_MAX_LENGTH,
 	USERNAME_CHARS
-} = require('../../util/constants');
+} = require('../../../util/constants');
 
 const getUniqueName = (function getUniqueNameIIFE() {
 	const floor = Math.floor;

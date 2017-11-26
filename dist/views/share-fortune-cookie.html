@@ -1,0 +1,114 @@
+<div class = "jumbotron text-xs-center">
+	
+	<div class = "container">
+		<form name = "form.share"
+		      class = "form-horizontal"
+		      ng-submit = "share()"
+		      novalidate
+		      autocomplete = "off">
+			
+			<div class = "row"
+			     ng-class = "{'has-error':
+			                    !form.share.text.$pristine &&
+									(form.share.text.$error.required ||
+									form.share.text.$error.pattern)}">
+				<div class = "form-group col-xs-12 col-sm-6">
+					<label for = "text" class = "sr-only">Text</label>
+					
+					<input autofocus
+					       type = "text"
+					       id = "text"
+					       class = "form-control col-sm-offset-6"
+					       name = "text"
+					       placeholder = "Text"
+					       ng-model = "cookie.text"
+					       ng-required = "true"
+					       ng-pattern = "/.{6,250}/"/>
+					
+					<div ng-show = "!form.share.text.$pristine"
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show =
+							     "form.share.text.$error.required">
+							Fortune cookie text is required.
+						</div>
+						<div ng-show = "form.share.text.$error.pattern"
+						     class = "help-block">
+							Text should be between 6 and 250 characters long.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "row"
+			     ng-class = "{'has-error':
+			                    !form.share.category.$pristine &&
+									(form.share.category.$error.required ||
+							        form.share.category.$error.pattern)}">
+				<div class = "form-group col-xs-12 col-sm-6">
+					<label for = "category" class = "sr-only">Category</label>
+					
+					<input type = "text"
+					       id = "category"
+					       class = "form-control col-sm-offset-6"
+					       name = "category"
+					       placeholder = "Category"
+					       ng-model = "cookie.category"
+					       ng-required = "true"
+					       ng-pattern = "/^[A-Za-z\s]{1,40}$/"/>
+					
+					<div ng-show = "!form.share.category.$pristine"
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show =
+							     "form.share.category.$error.required">
+							Cookie category is required.
+						</div>
+						<div ng-show = "form.share.category.$error.pattern"
+						     class = "help-block">
+							Category should be between 6 and 40 characters long.
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "row"
+			     ng-class = "{'has-error':
+				                !form.share.url.$pristine &&
+									(form.share.url.$error.required ||
+							        form.share.url.$error.pattern)}">
+				<div class = "form-group col-xs-12 col-sm-6">
+					<label for = "url" class = "sr-only">url</label>
+					
+					<input type = "text"
+					       id = "url"
+					       class = "form-control col-sm-offset-6"
+					       name = "url"
+					       placeholder = "url"
+					       ng-model = "cookie.img"
+					       ng-pattern = "url"/>
+					
+					<div ng-show = "!form.share.url.$pristine"
+					     class = "help-block  col-sm-offset-6">
+						<div ng-show = "form.share.url.$error.pattern"
+						     class = "help-block">
+							Invalid url
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class = "row">
+				<div class = "form-group">
+					<div class = "">
+						<button ng-disabled = "form.share.$invalid"
+						        type = "submit"
+						        class = "btn btn-success
+								         col-xs-6 col-xs-offset-2
+								         col-sm-2 col-sm-offset-5">
+							Share
+						</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

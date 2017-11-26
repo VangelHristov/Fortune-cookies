@@ -1,0 +1,57 @@
+<div>
+	<section class = "jumbotron text-xs-center">
+		<div class = "container">
+			<p>
+				<label for = "filter">
+					Sort by:
+				</label>
+				
+				<select ng-model = "order" id = "filter">
+					<option value = "-shareDate">date</option>
+					<option value = "category">category</option>
+				</select>
+			</p>
+		</div>
+	</section>
+	<div class = "container">
+		<div class = "row" ng-repeat = "c in cookies| orderBy:order">
+			
+			<div class = "col-xs-12 col-sm-6">
+				
+				<h3>{{c.text}}</h3>
+				<div class = "btn btn-default btn-label">
+					<a class = "btn-category"
+					   ui-sref = "category({category:c.category})">
+						<span
+							class = "glyphicon glyphicon-tag"></span>
+						{{c.category}}
+					</a>
+				</div>
+				<button ng-show="isLoggedIn()"
+						ng-click = "saveToFavorites(c.id)"
+				        class = "btn btn-danger">
+					<i class = "glyphicon glyphicon-heart"></i>
+					<span class = "">Add to favorite</span>
+				</button>
+				<br>
+				<br>
+				<div >Share Date:
+					<span class = "badge">{{c.shareDate | date:'MMM d yyyy'}}
+					</span>
+				</div>
+			</div>
+			<div class = "col-xs-0 col-sm-5">
+				<div class = "media">
+					
+					<div class = "media-right">
+						<a ui-sref = "category({category:c.category})">
+							<img class = "img-responsive img-thumbnail"
+							     ng-src = "{{c.img}}">
+						</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>

@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node app.js",
     "dev": "NODE_ENV=development gulp",
     "production": "NODE_ENV=production node_modules/forever/bin/forever app.js",
-    "test": "NODE_ENV=development node_modules/mocha/bin/mocha --reporter spec -c --recursive"
+    "server-tests": "NODE_ENV=development node_modules/mocha/bin/mocha  --recursive test/server"
   },
   "author": "Vangel Hristov (vangel.hristov@yahoo.com)",
   "license": "MIT",
@@ -17,7 +17,6 @@
     "express": "^4.13.3",
     "express-validator": "^4.3.0",
     "helmet": "^3.9.0",
-    "jspm": "^0.16.53",
     "lodash": "^3.10.1",
     "lowdb": "^0.10.2",
     "underscore-db": "^0.9.0"
@@ -25,11 +24,19 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "chai": "^4.1.2",
+    "del": "^3.0.0",
     "forever": "^0.15.3",
     "gulp": "^3.9.1",
+    "gulp-cache": "^1.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-ng-annotate": "^2.0.0",
     "gulp-nodemon": "^2.2.1",
+    "gulp-rev": "^8.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.28",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
+    "pump": "^1.0.3",
     "sinon": "^4.1.2",
     "supertest": "^3.0.0"
   }

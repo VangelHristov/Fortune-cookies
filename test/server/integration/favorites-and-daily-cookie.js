@@ -1,15 +1,15 @@
 'use strict';
 
-const testDbSeed = require('../../util/test-data-json');
+const testDbSeed = require('../../../util/test-data-json');
 const dbUser = testDbSeed.users[0];
 
 const {assert} = require('chai');
 const {describe, it} = require('mocha');
 
-const {AUTH_HEADER} = require('../../util/constants');
+const {AUTH_HEADER} = require('../../../util/constants');
 
 const supertest = require('supertest');
-const request = supertest(require('../../app'));
+const request = supertest(require('../../../app'));
 
 describe('/api/my-cookie', function myCookieTestSuit() {
 	it(

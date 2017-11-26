@@ -9,8 +9,6 @@
 			function HomeController($scope, fortuneCookies) {
 				$scope.order = '-shareDate';
 
-				$scope.rate = fortuneCookies.rate;
-
 				fortuneCookies
 					.getAll()
 					.then(cookies => {

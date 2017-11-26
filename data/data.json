@@ -3,14 +3,23 @@
     {
       "username": "vangel",
       "passHash": "eab0e357e139af50eff4542d60f161ec",
-      "favorites": [],
+      "favorites": [
+        {
+          "text": "You learn from your mistakes... You will learn a lot today",
+          "category": "Wisdom",
+          "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
+          "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
+          "shareDate": "2017-11-19T10:44:34.226Z",
+          "day": 1
+        }
+      ],
       "dailyCookie": {
-        "text": "You learn from your mistakes... You will learn a lot today",
-        "category": "Wisdom",
-        "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
-        "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
-        "shareDate": "2017-11-19T10:44:34.226Z",
-        "day": 1
+        "text": "A chance meeting opens new doors to success and friendship",
+        "category": "Success",
+        "img": "http://www.pd4pic.com/images/dice-cube-die-fun-game-play-chance-luck-gamble.png",
+        "id": "vangeltucdstxCXg4JojFbJejxPdN6slfzZSDhHLEvIIXswowIkwGsvcK3sXmMxVaD5FIaiqbiKcJrshvwrjx4vqkVGO32g2qgmV",
+        "shareDate": "2017-11-19T10:39:46.696Z",
+        "day": 0
       },
       "id": "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
       "authKey": "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
@@ -90,7 +99,8 @@
       "category": "Luck",
       "img": "http://www.redarrowinternational.tv/photo/formats/real_life/mr_luck_50.jpg",
       "shareDate": "2017-11-17T18:20:06.571Z",
-      "id": "vangellksoO0Ts4z0916vFTe3MwXfimhcoENU2HyABViA1gSaknMdd9JKq2aC0OBjalyS71xnG4nJy1iOdrhPecWSTVVfHodLDNz"
+      "id": "vangellksoO0Ts4z0916vFTe3MwXfimhcoENU2HyABViA1gSaknMdd9JKq2aC0OBjalyS71xnG4nJy1iOdrhPecWSTVVfHodLDNz",
+      "day": 6
     },
     {
       "text": "Your golden opportunity is coming shortly",
@@ -104,7 +114,8 @@
       "category": "Success",
       "img": "http://www.pd4pic.com/images/dice-cube-die-fun-game-play-chance-luck-gamble.png",
       "id": "vangeltucdstxCXg4JojFbJejxPdN6slfzZSDhHLEvIIXswowIkwGsvcK3sXmMxVaD5FIaiqbiKcJrshvwrjx4vqkVGO32g2qgmV",
-      "shareDate": "2017-11-19T10:39:46.696Z"
+      "shareDate": "2017-11-19T10:39:46.696Z",
+      "day": 0
     },
     {
       "text": "You learn from your mistakes... You will learn a lot today",

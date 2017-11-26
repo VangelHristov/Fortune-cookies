@@ -1,0 +1,43 @@
+<div class = "jumbotron text-xs-center">
+	<div class = "container">
+		<div class = "row">
+			
+			<div class = "col-xs-12 col-sm-6">
+				
+				<h3>{{myCookie.text}}</h3>
+				<div class = "btn btn-default btn-label">
+					<a class = "btn-category"
+					   ui-sref = "category({category:myCookie.category})">
+						<span
+							class = "glyphicon glyphicon-tag"></span>
+						{{myCookie.category}}
+					</a>
+				</div>
+				<button ng-click = "saveToFavorites(myCookie.id)"
+				        class = "btn btn-danger">
+					<i class = "glyphicon glyphicon-heart"></i>
+					<span class = "">Add to favorite</span>
+				</button>
+				<br>
+				<br>
+				<div>Share Date:
+					<span class = "badge">{{myCookie.shareDate | date:'MMM d yyyy'}}
+					</span>
+				</div>
+			
+			</div>
+			<div class = "col-xs-0 col-sm-5">
+				<div class = "media">
+					
+					<div class = "media-right">
+						<a ui-sref = "category({category:myCookie.category})">
+							<img class = "img-responsive img-thumbnail"
+							     ng-src = "{{myCookie.img}}">
+						</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>

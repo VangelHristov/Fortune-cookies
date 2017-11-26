@@ -22,7 +22,12 @@ if (process.env.NODE_ENV === 'development') {
 let app = express();
 app.use(helmet(require('./util/helmet-settings')));
 app.use(bodyParser.json());
-app.use(express.static('public'));
+
+if (process.env.NODE_ENV === 'development') {
+	app.use(express.static('public'));
+} else {
+	app.use(express.static('dist'));
+}
 
 //Validation middleware
 let {

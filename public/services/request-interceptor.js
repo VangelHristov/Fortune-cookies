@@ -16,10 +16,9 @@
 				) {
 					return {
 						'request': function (config) {
-								let key = $window
+							config.headers['x-auth-key'] = $window
 									.localStorage
 									.getItem(storageKeys.authKey);
-								config.headers['x-auth-key'] = key;
 
 							return config;
 						}

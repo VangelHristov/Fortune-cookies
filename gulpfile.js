@@ -1,10 +1,15 @@
 'use strict';
 
-let gulp = require('gulp');
-let browserSync = require('browser-sync');
-let nodemon = require('gulp-nodemon');
-let mocha = require('gulp-mocha');
-let watch = require('gulp-watch');
+let gulp = require('gulp'),
+	browserSync = require('browser-sync'),
+	nodemon = require('gulp-nodemon'),
+	minifycss = require('gulp-minify-css'),
+	uglify = require('gulp-uglify'),
+	usemin = require('gulp-usemin'),
+	rev = require('gulp-rev'),
+	del = require('del'),
+	ngannotate = require('gulp-ng-annotate'),
+	pump = require('pump');
 
 gulp.task('default', ['browser-sync'], function defaultTask() {
 });
@@ -30,4 +35,38 @@ gulp.task('nodemon', function nodemonTask(cb) {
 				started = true;
 			}
 		});
+});
+
+gulp.task('clean', function cleanDist() {
+	return del(['dist']);
+});
+
+gulp.task('build', ['clean'], function build() {
+	gulp.start('usemin', 'copyfonts', 'copyviews');
+});
+gulp.task('usemin', function minify() {
+	pump([
+			gulp.src('./public/index.html'),
+			usemin({
+				css: [minifycss(), rev()],
+				js : [ngannotate(), uglify(), rev()]
+			}),
+			gulp.dest('./dist/')
+		], (err) => {
+			if(err){
+			    console.log(err.toString());
+			}
+		}
+	);
+});
+
+gulp.task('copyfonts', function copyfonts() {
+	gulp.src(
+		'./public/bower_components/bootstrap/dist/fonts/*.{ttf,woff,eof,svg}*')
+	    .pipe(gulp.dest('./dist/fonts'));
+});
+
+gulp.task('copyviews', function copyViews() {
+	return gulp.src('./public/views/*.html')
+	           .pipe(gulp.dest('./dist/views'));
 });

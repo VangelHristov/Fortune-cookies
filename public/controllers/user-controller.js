@@ -95,7 +95,8 @@
 						favorites
 							.save({cookieId: cookieId})
 							.then(res => notification.success(res))
-							.catch(err => notification.error(err));
+							.catch(err => notification.error('Cookie already' +
+								' in favorites'));
 					};
 				}
 			]

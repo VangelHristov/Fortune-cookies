@@ -26,7 +26,19 @@
 					toastr.success(text, 'Success:');
 				},
 				error  : function (text) {
-					toastr.error(text.data, 'Error:');
+					let msg;
+					if (text.data) {
+						if (text.data.result) {
+							msg = text.data.result;
+						}else{
+							msg = text.data;
+						}
+
+					} else {
+						msg = text;
+					}
+
+					toastr.error(msg, 'Error:');
 				},
 				warn   : function (text) {
 					toastr.warning(text, 'Warning:');

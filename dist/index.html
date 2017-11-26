@@ -7,21 +7,8 @@
 	
 	<title>Fortune cookies</title>
 	
-	<!-- build:css styles/main.css -->
-	
-	<link rel = "stylesheet"
-	      href = "../public/bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel = "stylesheet"
-	      href =
-		      "../public/bower_components/bootstrap/dist/css/bootstrap-theme.css">
-	<link rel = "stylesheet" href =
-		"../public/bower_components/toastr/toastr.css">
-	<link rel = "stylesheet" href =
-		"../public/bower_components/angular/angular-csp.css">
-	<link rel = "stylesheet" href = "../public/css/main.css">
-	
-	<!-- endbuild -->
-	
+	<link rel = "stylesheet" href = "styles/main.css">
+
 </head>
 <body ng-controller = "UserController" ng-csp>
 
@@ -70,7 +57,7 @@
 					</a>
 				</li>
 				<li ng-if = "isLoggedIn()"
-					ui-sref-active-eq = "active">
+				    ui-sref-active-eq = "active">
 					<a ui-sref = "favorites">
 						<i class = "glyphicon glyphicon-heart"></i>
 						Favorites
@@ -86,7 +73,7 @@
 			</ul>
 			<ul class = "nav navbar-nav navbar-right">
 				<li ng-if = "!isLoggedIn()"
-					ui-sref-active-eq = "active">
+				    ui-sref-active-eq = "active">
 					<a ui-sref = "login">
 						<i class = "glyphicon glyphicon-log-in"></i>
 						Login
@@ -117,35 +104,6 @@
 	<div class = "text-center">Fortune Cookies</div>
 </footer>
 <!-- build:js scripts/main.js -->
-<script src = "bower_components/jquery/dist/jquery.js"></script>
-<script src = "bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src = "bower_components/toastr/toastr.js"></script>
-<script src = "bower_components/crypto-js/crypto-js.js"></script>
-<script src = "bower_components/angular/angular.js"></script>
-<script src =
-	        "bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script
-	src = "bower_components/angular-resource/angular-resource.js"></script>
-
-<script src = "app.js"></script>
-<script src = "app.config.js"></script>
-
-<script src = "constants/storage-keys.js"></script>
-
-<script src = "services/crypto.js"></script>
-<script src = "services/data-context.js"></script>
-<script src = "services/notification.js"></script>
-<script src = "services/request-interceptor.js"></script>
-<script src = "services/fortune-cookies-service.js"></script>
-<script src = "services/user-auth.js"></script>
-<script src = "services/favorites-service.js"></script>
-
-<script src = "controllers/user-controller.js"></script>
-<script src = "controllers/share-cookie-controller.js"></script>
-<script src = "controllers/home-controller.js"></script>
-<script src = "controllers/my-cookie-controller.js"></script>
-<script src = "controllers/favorites-controller.js"></script>
-<script src = "controllers/cookies-by-category-controller.js"></script>
-<!-- endbuild -->
+<script src = "scripts/main.js"></script>
 </body>
 </html>
