@@ -3,7 +3,8 @@
 let express = require('express'),
 	bodyParser = require('body-parser'),
 	lowdb = require('lowdb'),
-	helmet = require('helmet');
+	helmet = require('helmet'),
+	compression = require('compression');
 
 let db;
 
@@ -22,6 +23,7 @@ if (process.env.NODE_ENV === 'development') {
 let app = express();
 app.use(helmet(require('./util/helmet-settings')));
 app.use(bodyParser.json());
+app.use(compression());
 
 if (process.env.NODE_ENV === 'development') {
 	app.use(express.static('public'));
