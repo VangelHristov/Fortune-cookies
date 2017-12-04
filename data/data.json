@@ -5,15 +5,30 @@
       "passHash": "eab0e357e139af50eff4542d60f161ec",
       "favorites": [
         {
-          "text": "You learn from your mistakes... You will learn a lot today",
-          "category": "Wisdom",
-          "img": "https://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-learn-from-your-mistakes-27.png",
-          "id": "vangelodi02uU1y2yU4P56CbOC6IlfEw6LJT6AJj6T3xb0Td3ecTj3VavOK6ojyhEIWRlK6EHmjc1wzeKMTdqOaiF1FJoKWHbIs5",
-          "shareDate": "2017-11-19T10:44:34.226Z",
+          "text": "Hard work pays off in the future, laziness pays off now",
+          "category": "Motivation",
+          "img": "https://1.bp.blogspot.com/-M2MHHvT_M04/T1iqFZYotBI/AAAAAAAAAps/9Fz3_dHcQYw/s1600/easy-hard.jpg",
+          "shareDate": "2016-06-29T02:49:21.738Z",
+          "id": "vangeloIEuC5XjwsUMmEvDN3jVZW3JN1CkLjc5UrZhWM0zrVMMd0Wx5XSWkL4w7lVpyTCV6YenTcKFDk5geSt8ULbzrxUUUEuT18",
           "day": 1
+        },
+        {
+          "text": "Expect the unexpected",
+          "category": "Luck",
+          "img": "https://www.redarrowinternational.tv/photo/formats/real_life/mr_luck_50.jpg",
+          "shareDate": "2017-11-17T18:20:06.571Z",
+          "id": "vangellksoO0Ts4z0916vFTe3MwXfimhcoENU2HyABViA1gSaknMdd9JKq2aC0OBjalyS71xnG4nJy1iOdrhPecWSTVVfHodLDNz",
+          "day": 6
         }
       ],
-      "dailyCookie": {},
+      "dailyCookie": {
+        "text": "Hard work pays off in the future, laziness pays off now",
+        "category": "Motivation",
+        "img": "https://1.bp.blogspot.com/-M2MHHvT_M04/T1iqFZYotBI/AAAAAAAAAps/9Fz3_dHcQYw/s1600/easy-hard.jpg",
+        "shareDate": "2016-06-29T02:49:21.738Z",
+        "id": "vangeloIEuC5XjwsUMmEvDN3jVZW3JN1CkLjc5UrZhWM0zrVMMd0Wx5XSWkL4w7lVpyTCV6YenTcKFDk5geSt8ULbzrxUUUEuT18",
+        "day": 1
+      },
       "id": "c95cf7a3-8985-4758-a87c-ae4b44c88cfb",
       "authKey": "c95cf7a3-8985-4758-a87c-ae4b44c88cfbYbbPNNh0Nusq7W7bhDlATEky"
     }
@@ -77,7 +92,8 @@
       "category": "Motivation",
       "img": "https://1.bp.blogspot.com/-M2MHHvT_M04/T1iqFZYotBI/AAAAAAAAAps/9Fz3_dHcQYw/s1600/easy-hard.jpg",
       "shareDate": "2016-06-29T02:49:21.738Z",
-      "id": "vangeloIEuC5XjwsUMmEvDN3jVZW3JN1CkLjc5UrZhWM0zrVMMd0Wx5XSWkL4w7lVpyTCV6YenTcKFDk5geSt8ULbzrxUUUEuT18"
+      "id": "vangeloIEuC5XjwsUMmEvDN3jVZW3JN1CkLjc5UrZhWM0zrVMMd0Wx5XSWkL4w7lVpyTCV6YenTcKFDk5geSt8ULbzrxUUUEuT18",
+      "day": 1
     },
     {
       "text": "Change can hurt, but it leads a path to something better",

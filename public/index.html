@@ -8,20 +8,13 @@
 	<title>Fortune cookies</title>
 	
 	<!-- build:css styles/main.css -->
-	
-	<link rel = "stylesheet"
-	      href = "../public/bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel = "stylesheet"
-	      href =
-		      "../public/bower_components/bootstrap/dist/css/bootstrap-theme.css">
-	<link rel = "stylesheet" href =
-		"../public/bower_components/toastr/toastr.css">
-	<link rel = "stylesheet" href =
-		"../public/bower_components/angular/angular-csp.css">
-	<link rel = "stylesheet" href = "../public/css/main.css">
-	
+	<link rel = "stylesheet" href = "css/bootstrap.css">
+	<link rel = "stylesheet" href ="css/bootstrap-theme.css">
+	<link rel = "stylesheet" href = "bower_components/toastr/toastr.css">
+	<link rel = "stylesheet" href = "bower_components/angular/angular-csp.css">
+	<link rel = "stylesheet" href = "css/main.css">
 	<!-- endbuild -->
-	
+
 </head>
 <body ng-controller = "UserController" ng-csp ng-cloak>
 
@@ -70,7 +63,7 @@
 					</a>
 				</li>
 				<li ng-if = "isLoggedIn()"
-					ui-sref-active-eq = "active">
+				    ui-sref-active-eq = "active">
 					<a ui-sref = "favorites">
 						<i class = "glyphicon glyphicon-heart"></i>
 						Favorites
@@ -86,7 +79,7 @@
 			</ul>
 			<ul class = "nav navbar-nav navbar-right">
 				<li ng-if = "!isLoggedIn()"
-					ui-sref-active-eq = "active">
+				    ui-sref-active-eq = "active">
 					<a ui-sref = "login">
 						<i class = "glyphicon glyphicon-log-in"></i>
 						Login
@@ -100,7 +93,7 @@
 					</a>
 				</li>
 				<li ng-if = "isLoggedIn()">
-					<a ng-click="logOut()">
+					<a ng-click = "logOut()">
 						<i class = "glyphicon glyphicon-log-out"></i>
 						Logout
 					</a>
